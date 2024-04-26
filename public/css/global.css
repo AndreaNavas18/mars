@@ -1,0 +1,44 @@
+/* Colores primarios MARS
+
+Azul rgb(0,0,160)
+Verde rgb(0,215,185)
+rojo rgb(255,20,20)
+amarrillo rgb(255,220,0)
+*/
+
+/*Estilos moviles*/
+/* vertical */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 575.98px)and (orientation:portrait) {
+    body {
+        min-height: 100vh;
+    }
+
+    
+} 
+/* horizontal */
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+    body{background: black;}
+}
+
+/*Estilos tabletas*/
+/*Vertical*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+    body{background: orange;}
+}
+
+/*Horizontal*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+    body{background: blue;}
+}
+
+/*Estilos desktop*/
+@media (min-width: 1199.98px)  {
+    body{background: red;}
+}

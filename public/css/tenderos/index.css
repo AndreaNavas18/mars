@@ -1,0 +1,261 @@
+/* Colores primarios MARS
+
+Azul rgb(0,0,160)
+Verde rgb(0,215,185)
+rojo rgb(255,20,20)
+amarrillo rgb(255,220,0)
+amarillo mars vecino rgb(255 197 71) #ffc547
+morado mars vecino rgb(129 38 127) #81267f
+cafecito mars vecino #ffc5477d
+*/
+@font-face {
+    font-family: 'Graphie';
+    src: url('../../../public/fonts/GraphieLight.ttf') format('truetype');
+}
+
+/*Estilos moviles*/
+/* vertical */
+@media (max-width: 575.98px)and (orientation:portrait) {
+    .fondo {
+        display: flex;
+        background-color: white;
+        width: 99.9%;
+    }
+    .divAma {
+        background-color: #ffc547;
+        border-bottom-left-radius: 200px;
+        width: 99%;
+        height: 250px;
+    }
+
+    .contenido {
+        display: flex;
+        width: 90%;
+    }
+    .logomars {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-left: 100px;
+        max-width: 90%;
+        
+    }
+
+    .divImg {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .MMV {
+        font-size: 65px;
+        text-align: center;
+        color: rgb(163, 24, 24);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 800;
+        margin:0 0 0 0;
+        padding-top: 57px;
+    }
+
+    .MMV1 {
+        font-size: 65px;
+        text-align: center;
+        color: rgb(163, 24, 24);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 800;
+        margin: 0 0 0 0;
+        display: flex;
+        justify-content: flex-start;
+        position: absolute;
+        top: 120px;
+        left: 20px;
+    }
+
+    .diVeci {
+        display: flex;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 5px;
+    }
+    .vecino {
+        width: 100px;
+        height: 200px;
+    }
+
+    .divIngreso {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        font-family: 'Graphie', sans-serif;
+    }
+
+    .tituloIngreso {
+        color: rgb(111 50 20);
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .divinput {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .iconocedula {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        margin-top: 8px;
+    }
+
+    .inputIngreso {
+        width: 250px;
+        height: 55px;   
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        border-radius: 5px;
+        padding-left: 45px;
+        font-size: 20px;
+        box-shadow: 0 0 5px #ffc5477d;
+        border: 2px solid #ffc547;
+    }
+    .btnIngreso {
+        width: 250px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+        background-color: #ffc547;
+        color: #6f3214;
+        font-weight: bold;
+        font-size: 25px;
+        border: none;
+    }
+
+    .btnIngreso:active {
+        background-color: rgb(255, 255, 255);
+        border: 2px solid #ffdc00;
+        color: #ffdc00;
+        transition: 0.3s ease;
+    }
+
+    .divinput2 {
+        position: relative;
+        margin: 0 auto;
+    }
+    .inputIngreso2 {
+        width: 250px;
+        height: 55px;   
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        border-radius: 5px;
+        padding-left: 45px;
+        font-size: 20px;
+        box-shadow: 0 0 5px #ffc5477d;
+        border: 2px solid #ffc547;
+    }
+    .iconotienda {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        margin-top: 8px;
+    }
+    
+    .divFooter {
+        display: flex;
+        background-image: url('../../images/new/footer.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 100%;
+        height: 55px;
+        margin-top: 50px;
+    }
+
+    .footer {
+
+    }
+
+    #loading-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffffda; /* Color blanco */
+        z-index: 9999; 
+    }
+
+    .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .alert {
+        padding: 3px 8px 3px 8px;
+        top: 360px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        position: absolute;
+        margin-left: 10%;
+    }
+    
+    .alert-danger {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+    
+    .alert-danger a {
+        color: #721c24;
+        text-decoration: underline;
+    }
+    
+    .alert-danger a:hover {
+        color: #491217;
+        text-decoration: none;
+    }
+    
+} 
+/* horizontal */
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+    body{background: black;}
+}
+
+/*Estilos tabletas*/
+/*Vertical*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+    body{background: orange;}
+}
+
+/*Horizontal*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+    body{background: blue;}
+}
+
+/*Estilos desktop*/
+@media (min-width: 1199.98px)  {
+    body{background: red;}
+}

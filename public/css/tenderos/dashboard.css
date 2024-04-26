@@ -1,0 +1,251 @@
+/* Colores primarios MARS
+
+Azul rgb(0,0,160)
+Verde rgb(0,215,185)
+rojo rgb(255,20,20) #a31818
+amarrillo rgb(255,220,0)
+amarillo mars vecino rgb(255 197 71) #ffc547
+morado mars vecino rgb(129 38 127) #81267f
+cafecito mars vecino #6f3214
+*/
+
+@font-face {
+    font-family: 'Graphie';
+    src: url('../../../public/fonts/GraphieLight.ttf') format('truetype');
+}
+
+
+/*Estilos moviles*/
+/* vertical */
+
+@media (max-width: 575.98px)and (orientation:portrait) {
+
+    #loading-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffffda; /* Color blanco */
+        z-index: 9999; 
+    }
+
+    .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .fondoDashboard {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffc547;
+        font-family: 'Graphie', sans-serif;
+
+    }
+    .primerDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+    .Encabezado {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-top: 10px;
+    }
+    .bienvenida {
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+    .fraseI {
+        color: white;
+        font-size: 20px;
+    }
+    .puntos {
+        color: #81267f;
+        font-size: 28px;
+    }
+    .usericon {
+        width: 80px;
+        height: 80px;
+        border-radius: 30px;
+        background-color: white;
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    .segunDiv {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-top-left-radius: 55px;
+        border-top-right-radius: 55px;
+    }
+    .titulo2 {
+        color: #000000;
+        font-size: 25px;
+        font-weight:normal;
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    .divCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .card1, .card10, .card11{
+        display: flex;
+        flex-direction: column;
+    }
+    .card2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ffc547;
+        border-radius: 10px;
+        width: 80%;
+        margin: 0 auto;
+        height: 150px;
+        box-shadow: 0px 0px 10px 0px #ffc547;
+        background-color: #ffc5471c;
+    }
+    .iconoCard {
+        width: 80px;
+        height: 80px;
+        border-radius: 30px;
+        border: 0.5 solid #ffc547;
+        margin-left: 10px;
+    }
+    .tit1{
+        color: #000000;
+        font-size: 30px;
+        font-weight: normal;
+        margin-right: 10px;
+        text-align: center;
+    }
+    .card1, .card10, .card11 {
+        cursor: pointer;
+    }
+
+    .contenidoPremios {
+        overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+        max-height: 0;
+        transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
+        visibility: hidden; 
+        gap: 10px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffc5471c;
+        border: 1px solid #ffc547;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+       
+        padding-top: 10px;
+    }
+
+    .card1.open .contenidoPremios {
+        max-height: 800px; /* Altura máxima del menú desplegable */
+        transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
+        visibility: visible;
+        overflow-y: scroll;
+    }
+
+    .contenidoRedim {
+        overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+        max-height: 0;
+        transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
+        visibility: hidden; 
+        gap: 10px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffc5471c;
+        border: 1px solid #ffc547;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .card10.open .contenidoRedim {
+        max-height: 800px; /* Altura máxima del menú desplegable */
+        transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
+        visibility: visible;
+        overflow-y: scroll;
+        
+    }
+
+    .contenidoRecur {
+        overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+        max-height: 0;
+        transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
+        visibility: hidden; 
+        gap: 10px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffc5471c;
+        border: 1px solid #ffc547;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .card11.open .contenidoRecur {
+        max-height: 800px; /* Altura máxima del menú desplegable */
+        transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
+        visibility: visible;
+        overflow-y: scroll;
+        
+    }
+
+    .ulCard {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .p1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .i {
+        width: 80px;
+        height: 80px;
+
+    }
+
+    .sub {
+        font-size: 18px;
+
+    }
+      
+       
+    
+} 
+/* horizontal */
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+    body{background: black;}
+}
+
+/*Estilos tabletas*/
+/*Vertical*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+    body{background: orange;}
+}
+
+/*Horizontal*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+    body{background: blue;}
+}
+
+/*Estilos desktop*/
+@media (min-width: 1199.98px)  {
+    body{background: red;}
+}
