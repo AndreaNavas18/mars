@@ -24,10 +24,11 @@
                 <div class="divvv2">
                     <h1 class="fraseII">¿Observaciones pendientes?</h1>
                     <div class="divOb">
-                        <select name="tendero_id" class="selectI">
-                            <option value="1">Observación 1</option>
-                            <option value="2">Observación 2</option>
-                            <option value="3">Observación 3</option>
+                        <select name="tendero_id" id="tendero_id" class="selectAdmin">
+                            <option value="">--Seleccione--</option>
+                            @foreach ($tenderos as $tendero)
+                                <option value="{{ $tendero->id }}">{{ $tendero->nombre }}</option>
+                            @endforeach
                         </select>
                         <textarea name="observacion" class="textareaI"></textarea>
                     </div>
