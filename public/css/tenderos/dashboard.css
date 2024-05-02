@@ -58,6 +58,8 @@ cafecito mars vecino #6f3214
         flex-direction: column;
         width: 70%;
         margin-top: 10px;
+        gap: 10px;
+        margin-bottom: 15px;
     }
     .bienvenida {
         color: white;
@@ -93,7 +95,8 @@ cafecito mars vecino #6f3214
         font-size: 25px;
         font-weight:normal;
         margin-top: 5px;
-        margin-left: 30px;
+        text-align: center;
+        margin-bottom: 15px;
     }
     .divCards {
         display: flex;

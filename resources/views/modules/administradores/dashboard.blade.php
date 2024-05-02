@@ -18,25 +18,19 @@
             <div class="obss" id="menuObs">
                 <a id="botonObs" class="botonObs">Ver observaciones</a>
                 <div class="contenidoObs" id="contenidoObs">
-                    <h1>HOLA</h1>
+                    <h1>Observaciones creadas por el vendedor</h1>
                 </div>
             </div>
             <div class="creacionn" id="menuCrear">
                 <a id="botonCrear" class="botonCrear">Crear tendero</a>
                 <div class="contenidoCrear" id="contenidoCrear">
-                    <h1>HOLI</h1>
+                    <h1>Formulario para crear el tendero</h1>
                 </div>
             </div>
             <div class="administrar" id="menuAdmin">
                 <a id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
                 <div class="contenidoAdmin" id="contenidoAdmin">
-                    <label for="id_tendero">Escoja un tendero.</label>
-                    <select name="tendero_id" id="tendero_id" class="selectAdmin">
-                        <option value="">--Seleccione--</option>
-                        @foreach ($tenderos as $tendero)
-                            <option value="{{ $tendero->id }}">{{ $tendero->nombre }}</option>
-                        @endforeach
-                    </select>
+                    @include('modules.administradores.admintend')
                 </div>
             </div>
         </div>
@@ -46,24 +40,24 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("menuAdmin").addEventListener("click", function() {
-            this.classList.toggle("open");
+        document.getElementById("botonAdmin").addEventListener("click", function() {
+            document.getElementById('contenidoAdmin').classList.toggle("open");
         });
     });
 </script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("menuCrear").addEventListener("click", function() {
-            this.classList.toggle("open");
+        document.getElementById("botonCrear").addEventListener("click", function() {
+            document.getElementById('contenidoCrear').classList.toggle("open");
         });
     });
 </script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("menuObs").addEventListener("click", function() {
-            this.classList.toggle("open");
+        document.getElementById("botonObs").addEventListener("click", function() {
+            document.getElementById('contenidoObs').classList.toggle("open");
         });
     });
 </script>
