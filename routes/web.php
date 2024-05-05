@@ -24,7 +24,19 @@ use App\Http\Controllers\Tenderos\TenderoController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
+});
+
+Route::get('/hola', function () {
+    return view('hola');
+});
+
+Route::get('/holatu', function () {
+    return view('holatu');
+});
+
+Route::get('/holayo', function () {
+    return view('holayo');
 });
 
 Auth::routes();

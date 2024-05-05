@@ -199,7 +199,7 @@ cafecito mars vecino #ffc5477d
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #ffffffda; /* Color blanco */
+        background-color: #ffffffad; /* Color blanco */
         z-index: 9999; 
     }
 
@@ -208,8 +208,8 @@ cafecito mars vecino #ffc5477d
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
 
     }
 
@@ -237,6 +237,158 @@ cafecito mars vecino #ffc5477d
         color: #491217;
         text-decoration: none;
     }
+
+    .fondoImg {
+        width: 100%;
+        height: 100vh;
+        background-image: url('../../images/new/fondoprev4.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:90%;
+    }
+
+    .fondoImg2 {
+        width: 100%;
+        height: 100vh;
+        background-image: url('../../images/new/fondoprev5.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:30%;
+    }
+    .fondoEnc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        width: 100%;
+        height: 100%;
+        background-color: #0000007b;
+        font-family: 'Graphie', sans-serif;
+    }
+
+    .bienvenn {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120%;
+    }
+
+    .vecinoTT {
+        width: 60px;
+        height: 120px;
+        margin: 0 auto;
+        
+    }
+
+    .nuevoTT {
+        color: white;
+        font-size: 40px;
+        margin-bottom: 0px;
+        text-align: center;
+        font-family: 'Graphie', sans-serif;
+        margin-top: 0px;
+
+    }
+    .nuevo2TT {
+        color: white;
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 0px;
+        font-family: 'Graphie', sans-serif;
+
+    }
+
+    .marss {
+        color: #ffc547;
+    }
+
+    .btnTT {
+        background-color: transparent;
+        color: white;
+        width: 110px;
+        padding: 10px 10px;
+        border: 2px solid white;
+        border-radius: 8px;
+        font-size: 22px;
+        margin: 0 auto;
+        font-family: 'Graphie', sans-serif;
+        box-shadow: 0 0 5px #ffffff7d;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .btnTT:active {
+        background-color: white;
+        color: #000000;
+        transition: 0.3s ease;
+    }
+
+    .divIngresoTT {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Graphie', sans-serif;
+    }
+
+    .inputIngresoTT {
+        width: 250px;
+        height: 55px;   
+        margin: 0 auto;
+        padding-left: 50px;
+        font-size: 20px;
+        background-color: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        border-left: transparent;
+        border-bottom: 2px solid #ffffff;
+        color: white;
+    }
+
+    .labelTT {
+        color: white;
+        font-size: 20px;
+    }
+    
+    .nuevo3TT {
+        color: #ffc547;
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 0px;
+        font-family: 'Graphie', sans-serif;
+
+    }
+
+    .btnIngresoTT {
+        width: 180px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+        background-color: transparent;
+        color: #ffc547;
+        font-weight: bold;
+        font-size: 25px;
+        border: 1px solid #ffc547;
+    }
+
+    .btnIngresoTT:active {
+        background-color: #ffc547;
+        color: #000000;
+        transition: 0.3s ease;
+    }
+
+    .iconocedulaTT {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        margin-top: 1px;
+    }
+    
     
 } 
 /* horizontal */
