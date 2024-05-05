@@ -1,4 +1,4 @@
-@extends('hola')
+@extends('layouts.appT')
 
 @section('content')
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
             <h2 class="tituTTT">Puntos acumulados</h2>
         </div>
         <div class="opcTT">
-            <h2 class="titu2TTT">Lista de premios</h2>
+            <h2 class="titu2TTT">Marcas</h2>
         </div>
     </div>
     

@@ -74,33 +74,3 @@
     }, 2000); // 2000 milisegundos = 2 segundos
 });
 </script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Agregar evento clic al contenedor del menú
-    document.getElementById("menuPremios").addEventListener("click", function() {
-        // Alternar la clase 'open' para mostrar u ocultar el menú
-        this.classList.toggle("open");
-    });
-});
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Agregar evento clic al contenedor del menú
-        document.getElementById("menuRedim").addEventListener("click", function() {
-            // Alternar la clase 'open' para mostrar u ocultar el menú
-            this.classList.toggle("open");
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Agregar evento clic al contenedor del menú
-        document.getElementById("menuRecur").addEventListener("click", function() {
-            // Alternar la clase 'open' para mostrar u ocultar el menú
-            this.classList.toggle("open");
-        });
-    });
-</script>

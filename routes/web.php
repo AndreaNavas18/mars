@@ -27,6 +27,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/marcas', function () {
+    return view('modules.tenderos.marcas');
+});
+Route::get('/premios', function () {
+    return view('modules.tenderos.premios');
+});
+Route::get('/recursos', function () {
+    return view('modules.tenderos.recursos');
+});
+Route::get('/redimir', function () {
+    return view('modules.tenderos.redimir');
+});
+
 Route::get('/hola', function () {
     return view('hola');
 });

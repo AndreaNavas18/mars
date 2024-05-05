@@ -25,7 +25,7 @@ amarrillo rgb(255,220,0)
     }
     .soloHeaderImg {
         width: 100%;
-        height: 18%;
+        height: 20%;
         background-image: url('../../images/new/fondoprev5.png');
         background-size: cover;
         background-repeat: no-repeat;
@@ -34,7 +34,7 @@ amarrillo rgb(255,220,0)
 
     .mainHH {
         width: 100%;
-        height: 82%;
+        height: 80%;
     }
     .soloHeader {
         display: flex;
@@ -63,7 +63,7 @@ amarrillo rgb(255,220,0)
         align-items: center;
         flex-direction: column;
         height: 70%;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
     }
 
     .avatarTT{
@@ -73,9 +73,10 @@ amarrillo rgb(255,220,0)
     }
 
     .nombreHH {
-        font-size: 20px;
+        font-size: 26px;
         font-weight: 700;
         color: white;
+        margin: 0;
     }
     
 

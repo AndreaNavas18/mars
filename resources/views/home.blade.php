@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.appT')
 
 @section('content')
     @can('vista.tendero')
