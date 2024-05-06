@@ -78,7 +78,54 @@ amarrillo rgb(255,220,0)
         color: white;
         margin: 0;
     }
+
+    .menuDesplegable {
+        position: absolute;
+        top: 0px;
+        right: 0px; 
+        padding: 10px;
+        display: none;
+    }
     
+    .menuDesplegable ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menuDesplegable ul li {
+        margin-bottom: 5px;
+    }
+    
+    .menuDesplegable ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+    
+    .menuDesplegable ul li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .btnH {
+        background-color: #ffc547;
+        color: white;
+        border: 2px solid white;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Graphie', sans-serif;
+        text-align: center;
+        cursor: pointer;
+        padding: 3px 8px 3px 8px;
+
+    }
+    
+    .btnH:active {
+        background-color: white;
+        color: #ffc547;
+        transition: 0.3s ease;
+    
+    }
 
 
 }

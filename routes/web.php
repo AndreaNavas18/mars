@@ -26,6 +26,10 @@ use App\Http\Controllers\Tenderos\TenderoController;
 Route::get('/', function () {
     return view('welcome');
 });
+/**************************************
+ * 
+ * Rutas para el modulo de tenderos
+ */
 
 Route::get('/marcas', function () {
     return view('modules.tenderos.marcas');
@@ -38,6 +42,18 @@ Route::get('/recursos', function () {
 });
 Route::get('/redimir', function () {
     return view('modules.tenderos.redimir');
+});
+
+/**************************************
+ * 
+ * Rutas para el modulo de administradores
+ */
+
+Route::get('/crear-tendero', function () {
+    return view('modules.administradores.crear');
+});
+Route::get('/administrar-tenderos', function () {
+    return view('modules.administradores.administrar');
 });
 
 Route::get('/hola', function () {

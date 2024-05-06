@@ -15,6 +15,11 @@ amarrillo rgb(255,220,0)
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Graphie';
+    src: url('../../../public/fonts/GraphieLight.ttf') format('truetype');
+}
+
 @media (max-width: 575.98px)and (orientation:portrait) {
     body {
         min-height: 100vh;
@@ -22,7 +27,8 @@ amarrillo rgb(255,220,0)
 
     .fondoAdmin {
         background-color: rgb(225, 225, 225);
-    
+        font-family: 'Graphie', sans-serif;
+        
     }
 
     .primDivAdmin {
@@ -46,16 +52,15 @@ amarrillo rgb(255,220,0)
         background-color: white;
         display: flex;
         flex-direction: column;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 20px;
         gap: 20px;
     }
     .title2Admin {
-        font-size: 1.2rem;
+        font-size: 20px;
         color: black;
+        text-align: center;
     }
     .botonAdmin {
         background-color: rgb(0, 0, 160);

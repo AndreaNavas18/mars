@@ -9,10 +9,6 @@
 </head>
 <body>
     <div class="fondoAdmin">
-        <div class="primDivAdmin">
-            <img src="{{ asset('images/new/1.png') }}" class="iconoAdmin" alt="Icono">
-            <h1 class="title1Admin">Bienvenido(a) {{ auth()->user()->name }}! </h1>
-        </div>
         <div class="segDivAdmin">
             <h2 class="title2Admin">Qué desea hacer hoy?</h2>
             <div class="obss" id="menuObs">
@@ -22,16 +18,10 @@
                 </div>
             </div>
             <div class="creacionn" id="menuCrear">
-                <a id="botonCrear" class="botonCrear">Crear tendero</a>
-                <div class="contenidoCrear" id="contenidoCrear">
-                    <h1>Formulario para crear el tendero</h1>
-                </div>
+                <a href="{{ url('crear-tenderos')}}" id="botonCrear" class="botonCrear">Crear tendero</a>
             </div>
             <div class="administrar" id="menuAdmin">
-                <a id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
-                <div class="contenidoAdmin" id="contenidoAdmin">
-                    @include('modules.administradores.admintend')
-                </div>
+                <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
             </div>
         </div>
     </div>
@@ -42,22 +32,6 @@
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("botonAdmin").addEventListener("click", function() {
             document.getElementById('contenidoAdmin').classList.toggle("open");
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("botonCrear").addEventListener("click", function() {
-            document.getElementById('contenidoCrear').classList.toggle("open");
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("botonObs").addEventListener("click", function() {
-            document.getElementById('contenidoObs').classList.toggle("open");
         });
     });
 </script>
