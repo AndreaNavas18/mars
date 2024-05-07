@@ -12,15 +12,13 @@
     <title>Ingreso</title>
 </head>
 <body style="margin: 0px">
-    <div id="loading-container">
-        <img src="{{ asset('images/new/cargandopng.gif') }}" class="loading" alt="Cargando">
-    </div>
     <div class="fondoImg">
         <div class="fondoEnc">
             <div class="bienvenn">
                 {{-- <img src="{{ asset('images/new/vecino.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino"> --}}
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
+                    <input type="hidden" name="token" value="{{ request()->query('token') }}">
                     <div class="divIngresoTT">
                         <h1 class="nuevo3TT">Iniciar Sesión</h1>
                         <label for="username">
@@ -54,12 +52,3 @@
     
 </body>
 </html>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    // Ocultar la pantalla de carga después de 2 segundos
-    setTimeout(function() {
-        document.getElementById('loading-container').style.display = 'none';
-    }, 2000); // 2000 milisegundos = 2 segundos
-});
-</script>

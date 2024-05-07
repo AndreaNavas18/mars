@@ -13,21 +13,16 @@
     {{-- <title>Header</title> --}}
 </head>
 <body>
-<div class="headerCompleto">
-        <div class="soloHeaderImg">
-            <div class="soloHeader">
+    <div class="headerCompletoAdmin">
+        <div class="soloHeaderImgAdmin">
+            <div class="soloHeaderAdmin">
                 <div class="iconosHH">
-                    <img src="{{ asset('images/new/menu1.png') }}" class="menuTT" alt="Menu" id="menuHamburguesa">
+                    <img src="{{ asset('images/new/menu1.png') }}" class="menuTTAdmin" alt="Menu" id="menuHamburguesa">
                     {{-- <img src="{{ asset('images/new/ajuste1.png') }}" class="menuTT" alt="Menu" id="menuAjustes"> --}}
-                </div>
-                <div class="avatarHH">
-                    <img src="{{ asset('images/new/vendedor2.png') }}" class="avatarTT" alt="Avatar">
-                    <h3 class="nombreHH">{{ ucfirst(auth()->user()->name) }}</h3>
-                    {{-- <h3 class="nombreHH">Hola, tu</h3> --}}
                 </div>
             </div>
         </div>
-        <main class="mainHH">
+        <main class="mainHHAdmin">
             @yield('content')
         </main>
     </div>

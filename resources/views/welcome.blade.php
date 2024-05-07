@@ -16,7 +16,7 @@
                 {{-- <img src="{{ asset('images/new/vecino.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino"> --}}
                 <h1 class="nuevoTT animate__animated animate__backInDown">Bienvenido</h1>
                 <h2 class="nuevo2TT animate__animated animate__backInDown">a Mi <span class="marss">Mars</span> Vecino</h2>
-                <a href="{{ url('login')}}" class="btnTT animate__animated animate__bounceInUp">Ingresar</a>
+                <a href="{{ route('login.token', ['token' => 'abc123'])}}" class="btnTT animate__animated animate__bounceInUp">Ingresar</a>
             </div>
 
         </div>

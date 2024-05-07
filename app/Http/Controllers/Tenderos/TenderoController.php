@@ -12,12 +12,17 @@ class TenderoController extends BaseController
     public function index()
     {
         $tenderos = DB::table('tenderos')->get();
-        return view('tenderos.index', ['tenderos' => $tenderos]);
+        return view('tendero.index', ['tenderos' => $tenderos]);
+    }
+
+    public function adminTenderos() {
+        $tenderos = DB::table('tenderos')->get();
+        return view('modules.admin.administrar', ['tenderos' => $tenderos]);
     }
 
     public function create()
     {
-        return view('tenderos.create');
+        return view('modules.admin.crear-tenderos');
     }
 
     public function store(Request $request)
@@ -28,20 +33,19 @@ class TenderoController extends BaseController
                 'apellido' => $request->apellido,
                 'direccion' => $request->direccion,
                 'telefono' => $request->telefono,
-                'email' => $request->email,
-                'password' => $request->password,
+                'puntos' => 0,
             ]);
-            return redirect()->route('tenderos.index');
+            return redirect()->route('create.tenderos')->with('success', 'Tendero creado con éxito');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
-            return redirect()->route('tenderos.create');
+            return redirect()->route('create.tenderos');
         }
     }
 
     public function edit($id)
     {
         $tendero = DB::table('tenderos')->where('id', $id)->first();
-        return view('tenderos.edit', ['tendero' => $tendero]);
+        return view('modules.admin.editar-tendero', ['tendero' => $tendero]);
     }
 
     public function update(Request $request, $id)
@@ -52,13 +56,12 @@ class TenderoController extends BaseController
                 'apellido' => $request->apellido,
                 'direccion' => $request->direccion,
                 'telefono' => $request->telefono,
-                'email' => $request->email,
-                'password' => $request->password,
+                'puntos' => $request->puntos,
             ]);
-            return redirect()->route('tenderos.index');
+            return redirect()->back()->with('success', 'Datos del tendero actualizados exitosamente');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
-            return redirect()->route('tenderos.edit', $id);
+            return redirect()->route('tendero.edit', $id);
         }
     }
 
@@ -66,10 +69,10 @@ class TenderoController extends BaseController
     {
         try {
             DB::table('tenderos')->where('id', $id)->delete();
-            return redirect()->route('tenderos.index');
+            return redirect()->route('tendero.index');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
-            return redirect()->route('tenderos.index');
+            return redirect()->route('tendero.index');
         }
     }
 }

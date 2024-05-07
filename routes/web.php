@@ -24,7 +24,12 @@ use App\Http\Controllers\Tenderos\TenderoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
+});
+
+// Ruta para la página de ingreso con token
+Route::get('/token/{token}', function ($token) {
+    return redirect()->route('login', ['token' => $token]);
 });
 /**************************************
  * 
@@ -32,16 +37,16 @@ Route::get('/', function () {
  */
 
 Route::get('/marcas', function () {
-    return view('modules.tenderos.marcas');
+    return view('modules.tendero.marcas');
 });
 Route::get('/premios', function () {
-    return view('modules.tenderos.premios');
+    return view('modules.tendero.premios');
 });
 Route::get('/recursos', function () {
-    return view('modules.tenderos.recursos');
+    return view('modules.tendero.recursos');
 });
 Route::get('/redimir', function () {
-    return view('modules.tenderos.redimir');
+    return view('modules.tendero.redimir');
 });
 
 /**************************************
@@ -49,12 +54,24 @@ Route::get('/redimir', function () {
  * Rutas para el modulo de administradores
  */
 
-Route::get('/crear-tendero', function () {
-    return view('modules.administradores.crear');
-});
-Route::get('/administrar-tenderos', function () {
-    return view('modules.administradores.administrar');
-});
+// Route::get('/crear-tenderos', function () {
+//     return view('modules.administradores.crear-tenderos');
+// });
+
+Route::get('/crear-tenderos', [TenderoController::class, 'create'])->name('create.tenderos');
+
+Route::post('/crear-tenderos', [TenderoController::class, 'store'])->name('store.tenderos');
+
+Route::get('/administrar-tenderos', [TenderoController::class, 'adminTenderos'])->name('admin.tenderos');
+
+Route::get('/editar-tendero/{id}', [TenderoController::class, 'edit'])->name('edit.tendero');
+
+Route::post('/editar-tendero/{id}', [TenderoController::class, 'update'])->name('update.tendero');
+
+
+
+
+
 
 Route::get('/hola', function () {
     return view('hola');
@@ -69,6 +86,21 @@ Route::get('/holayo', function () {
 });
 
 Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/login/token/{token}', [LoginController::class, 'loginWithToken'])->name('login.token');
+// Route::get('/login/token/{token}', [LoginController::class, 'showLoginFormWithToken'])->name('login.token');
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+
+
+
+
+
+
+
 
 // Login Routes...
 // Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -96,4 +128,3 @@ Auth::routes();
 // Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
 // Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');

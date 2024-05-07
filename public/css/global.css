@@ -171,6 +171,19 @@ amarrillo rgb(255,220,0)
         
     }
 
+    .adminTendTT {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .adminTendTT h1 {
+        font-size: 1.5rem;
+        color: black;
+        margin: 10px 0px 10px 5px;
+    }
+
     .tablaTendero {
         width: 100%;
         border-collapse: collapse;
@@ -179,7 +192,7 @@ amarrillo rgb(255,220,0)
 
     .tablaTendero td, th {
         border: 1px solid #000;
-        padding: 8px;
+        padding: 8px 3px 8px 3px;
         text-align: left;
     }
 
@@ -232,6 +245,52 @@ amarrillo rgb(255,220,0)
         display: flex;
         justify-content: flex-end;
         margin-right: 10px;
+    }
+
+    .divFormu h1 {
+        font-size: 1.5rem;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+
+    .formCrear {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'Graphie', sans-serif;
+        margin-top: 20px;
+    }
+
+    .formCrear label {
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .formCrear input {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+
+    .formCrear button {
+        background-color: rgb(0, 0, 160);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .qrForm {
+        padding: 40px;
+        background-color: #0000a062;
+        font-size: 50px;
+        text-align: center;
     }
 
     
