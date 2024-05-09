@@ -126,6 +126,8 @@ cafecito mars vecino #6f3214
         display: flex;
         flex-direction: column;
         background-color: white;
+        border-top-left-radius: 90px;
+        border-top-right-radius: 90px;
     }
 
     .divPTT {
@@ -136,9 +138,10 @@ cafecito mars vecino #6f3214
         margin: 10px 15px 0px 15px;
     }
     .punTT {
-        font-size: 30px;
+        font-size: 35px;
         color: #ffc547;
-        font-weight: 800;
+        font-weight:bolder;
+        text-shadow: 2px 2px 4px #ffc5477b;
     }
     .tituTTT {
         color: #2b2b2b;
@@ -177,7 +180,9 @@ cafecito mars vecino #6f3214
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #81267f;
+        border-radius: 20px;
+
     }
     
     .linksTT {
@@ -194,6 +199,7 @@ cafecito mars vecino #6f3214
         height: 100%;
         align-items: center;
         justify-content: center;
+        border-radius: 20px;
     }
     .iTT {
         width: 70px;
@@ -213,7 +219,8 @@ cafecito mars vecino #6f3214
         background-repeat: no-repeat;
         background-position: center;
         height: 200px;
-        box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #81267f;
+        border-radius: 20px;
 
     }
     .card3TT {
@@ -222,8 +229,10 @@ cafecito mars vecino #6f3214
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #81267f;
         height: 200px;
+        border-radius: 20px;
+
 
     }
     .card4TT {
@@ -233,7 +242,9 @@ cafecito mars vecino #6f3214
         background-repeat: no-repeat;
         background-position: center;
         height: 200px;
-        box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #81267f;
+        border-radius: 20px;
+
     }
 
     .card1TT:active {
@@ -253,7 +264,7 @@ cafecito mars vecino #6f3214
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #81267f;
         border-radius: 10px;
     }
     

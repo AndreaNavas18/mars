@@ -241,10 +241,11 @@ cafecito mars vecino #ffc5477d
     .fondoImg {
         width: 100%;
         height: 100vh;
-        background-image: url('../../images/new/fondoprev4.png');
+        background-image: url('../../images/new/fon1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position:90%;
+        
+        /* background-color: #81267f; */
     }
 
     .fondoImg2 {
@@ -262,19 +263,19 @@ cafecito mars vecino #ffc5477d
         gap: 2px;
         width: 100%;
         height: 100%;
-        background-color: #0000007b;
+        /* background-color: #0000007b; */
         font-family: 'Graphie', sans-serif;
     }
 
     .bienvenn {
         display: flex;
         flex-direction: column;
-        margin-top: 120%;
+        margin-top: 40%;
     }
 
     .vecinoTT {
-        width: 60px;
-        height: 120px;
+        width: auto;
+        height: 200px;
         margin: 0 auto;
         
     }
@@ -286,6 +287,7 @@ cafecito mars vecino #ffc5477d
         text-align: center;
         font-family: 'Graphie', sans-serif;
         margin-top: 0px;
+        font-weight: bold;
 
     }
     .nuevo2TT {
@@ -295,11 +297,11 @@ cafecito mars vecino #ffc5477d
         text-align: center;
         margin-top: 0px;
         font-family: 'Graphie', sans-serif;
-
+        font-weight: bold;
     }
 
     .marss {
-        color: #ffc547;
+        color: #81267f;
     }
 
     .btnTT {
@@ -387,6 +389,12 @@ cafecito mars vecino #ffc5477d
         left: 12px;
         transform: translateY(-50%);
         margin-top: 1px;
+    }
+
+    .inicioTTT {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
     }
     
     

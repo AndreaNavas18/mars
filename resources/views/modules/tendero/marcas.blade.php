@@ -1,26 +1,56 @@
 @extends('layouts.appT')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-    width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/tenderos/dashboard.css') }}">
     <title>Tendero</title>
-</head>
-<body>
     <div> 
         <div class="divPTT">
-            <h1 class="punTT">$$$$$$$</h1>
+            <h1 class="punTT">{{ auth()->user()->tendero->puntos }}</h1>
             <h2 class="tituTTT">Puntos acumulados</h2>
         </div>
         <div class="opcTT">
-            <h2 class="titu2TTT">Marcas</h2>
+            <h2 class="titu2TTT">Marcas participantes</h2>
+            <div class="contenedorPre">
+                <div class="divPremioTTP">
+                    <h3>WHISKAS</h3>
+                    <div class="rowTTP">
+                        {{-- <h4>Merchandising sencillo</h4> --}}
+                        <img src="{{ asset('images/new/mym.jpg') }}" class="premio1" alt="Premios">
+                    </div>
+                </div>
+                <div class="divPremioTTP">
+                    <h3>SNICKERS</h3>
+                    <div class="rowTTP">
+                        <div>
+                            {{-- <h4>Entradas a cine</h4>
+                            <p>Incuye crispetas y gaseosa</p> --}}
+                        </div>
+                        <img src="{{ asset('images/new/snicker.jpg') }}" class="premio1" alt="Premios">
+                    </div>
+
+                </div>
+                <div class="divPremioTTP">
+                    <h3>PEDIGREE</h3>
+                    <div class="rowTTP">
+                        {{-- <h4>Bono sodexo</h4> --}}
+                    <img src="{{ asset('images/new/pedigree.jpg') }}" class="premio1" alt="Premios">
+                    </div>
+
+                </div>
+                <div class="divPremioTTP">
+                    <h3>M&M'S</h3>
+                    <div class="rowTTP">
+                        {{-- <div>
+                            <h4>Bono de regalo</h4>
+                            <p>de diferentes almacenes de cadena</p>
+                        </div> --}}
+                    <img src="{{ asset('images/new/mym.jpg') }}" class="premio11" alt="Premios">
+                   </div>
+
+                </div>
+                
+            </div>
         </div>
     </div>
     
-</body>
-</html>
 @endsection

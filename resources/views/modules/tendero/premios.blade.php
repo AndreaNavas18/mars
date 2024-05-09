@@ -1,16 +1,8 @@
 @extends('layouts.appT')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-    width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/tenderos/dashboard.css') }}">
     <title>Tendero</title>
-</head>
-<body>
     <div> 
         <div class="divPTT">
             <h1 class="punTT">{{ auth()->user()->tendero->puntos }}</h1>
@@ -82,7 +74,5 @@
             </div>
         </div>
     </div>
-    
-</body>
-</html>
+   
 @endsection

@@ -15,7 +15,11 @@
     <div class="fondoImg">
         <div class="fondoEnc">
             <div class="bienvenn">
-                {{-- <img src="{{ asset('images/new/vecino.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino"> --}}
+                <div class="inicioTTT">
+                    <h1 class="nuevoTT animate__animated animate__backInDown">Bienvenido</h1>
+                    <h2 class="nuevo2TT animate__animated animate__backInDown">a Mi <span class="marss">Mars</span> Vecino</h2>
+                    <img src="{{ asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
+                </div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <input type="hidden" name="token" value="{{ request()->query('token') }}">
