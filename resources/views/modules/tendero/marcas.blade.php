@@ -15,7 +15,7 @@
                     <h3>WHISKAS</h3>
                     <div class="rowTTP">
                         {{-- <h4>Merchandising sencillo</h4> --}}
-                        <img src="{{ asset('images/new/mym.jpg') }}" class="premio1" alt="Premios">
+                        <img src="{{ asset('images/new/whiskas.png') }}" class="premio11" alt="Premios">
                     </div>
                 </div>
                 <div class="divPremioTTP">
@@ -25,7 +25,7 @@
                             {{-- <h4>Entradas a cine</h4>
                             <p>Incuye crispetas y gaseosa</p> --}}
                         </div>
-                        <img src="{{ asset('images/new/snicker.jpg') }}" class="premio1" alt="Premios">
+                        <img src="{{ asset('images/new/snicker.jpg') }}" class="premio11" alt="Premios">
                     </div>
 
                 </div>
@@ -33,7 +33,7 @@
                     <h3>PEDIGREE</h3>
                     <div class="rowTTP">
                         {{-- <h4>Bono sodexo</h4> --}}
-                    <img src="{{ asset('images/new/pedigree.jpg') }}" class="premio1" alt="Premios">
+                    <img src="{{ asset('images/new/pedigree.jpg') }}" class="premio11" alt="Premios">
                     </div>
 
                 </div>

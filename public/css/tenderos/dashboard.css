@@ -145,7 +145,8 @@ cafecito mars vecino #6f3214
     }
     .tituTTT {
         color: #2b2b2b;
-        font-weight: 700;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px #0000007b;
 
     }
     .opcTT {
@@ -313,7 +314,7 @@ cafecito mars vecino #6f3214
 
     
     .premio11 {
-        width: 300px;
+        width: 200px;
         height: auto;
         display: flex;
         align-items: center;
