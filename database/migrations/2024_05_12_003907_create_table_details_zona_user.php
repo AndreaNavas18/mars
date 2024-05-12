@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('observations', function (Blueprint $table) {
+        Schema::create('details_zona_user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id')->nullable();
-            $table->bigInteger('tendero_id')->nullable();
-            $table->string('observacion');
+            $table->string('zona_id');
+            $table->string('user_id');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('observations');
+        Schema::dropIfExists('details_zona_user');
     }
 };

@@ -2,19 +2,19 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <title>Administrar tendero</title>
+    <title>Listado tenderos</title>
 
     <div class="adminTendTT">
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
-        @elseif (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
+            @elseif (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
         @endif
-        <h1>Administracion de tendero</h1>
+        <h1>Listado de tendero</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>
@@ -29,7 +29,7 @@
                     <td>{{ $tendero->nombre }} {{ $tendero->apellido }}</td>
                     <td>{{ $tendero->puntos }}</td>
                     <td>
-                        <a href="{{ route('edit.tendero', $tendero->id) }}" class="btnTen">Editar</a>
+                        <a href="{{ route('create.observations', $tendero->id) }}" class="btnTen">Crear Observación</a>
                     </td>
                 </tr>
                 @endforeach
@@ -38,6 +38,3 @@
     
     </div>
 @endsection
-{{-- 
-<input type="hidden" name="tendero_id" id="tendero_id" value="">
-<div id="tendero_contenido" style="display: none"></div> --}}

@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Tenderos\TenderoController;
+use App\Http\Controllers\Vendedores\VendedorController;
 
 
 /*
@@ -54,10 +55,6 @@ Route::get('/redimir', function () {
  * Rutas para el modulo de administradores
  */
 
-// Route::get('/crear-tenderos', function () {
-//     return view('modules.administradores.crear-tenderos');
-// });
-
 Route::get('/crear-tenderos', [TenderoController::class, 'create'])->name('create.tenderos');
 
 Route::post('/crear-tenderos', [TenderoController::class, 'store'])->name('store.tenderos');
@@ -66,9 +63,30 @@ Route::get('/administrar-tenderos', [TenderoController::class, 'adminTenderos'])
 
 Route::get('/editar-tendero/{id}', [TenderoController::class, 'edit'])->name('edit.tendero');
 
-Route::post('/editar-tendero/{id}', [TenderoController::class, 'update'])->name('update.tendero');
+Route::put('/editar-tendero/{id}', [TenderoController::class, 'update'])->name('update.tendero');
 
+Route::get('/ver-observaciones', [TenderoController::class, 'historialObs'])->name('obs.tenderos');
 
+Route::get('/listado-observaciones/{id}', [TenderoController::class, 'listObs'])->name('listado.observations');
+
+/**************************************
+ * 
+ * Rutas para el modulo de vendedores
+ */
+
+ Route::get('/crear-observaciones/{id} ', [VendedorController::class, 'create'])->name('create.observations');
+
+Route::post('/crear-observaciones/{id}', [VendedorController::class, 'store'])->name('store.observations');
+
+Route::get('/listado-tenderos', [VendedorController::class, 'listTenderos'])->name('listado.tenderos');
+
+Route::get('/historial-observaciones', [VendedorController::class, 'historialObs'])->name('historial.observations');
+
+Route::get('/listado-observaciones/{id}', [VendedorController::class, 'listObs'])->name('listado.observations');
+
+Route::get('/activar-tendero', [VendedorController::class, 'activarVista'])->name('activar.vista.tendero');
+
+Route::post('/activar-tendero', [VendedorController::class, 'activar'])->name('activar.tendero');
 
 
 

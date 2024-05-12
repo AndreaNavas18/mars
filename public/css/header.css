@@ -48,13 +48,13 @@ amarrillo rgb(255,220,0)
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 2px 5px 0px 5px;
+        margin: 5px 5px 0px 5px;
         
     }
 
     .menuTT {
-        width: 32px;
-        height: 32px;
+        width: 29px;
+        height: 29px;
     }
     
     .avatarHH {
@@ -81,8 +81,8 @@ amarrillo rgb(255,220,0)
     .menuDesplegable {
         position: absolute;
         top: 0px;
-        right: 0px; 
-        padding: 10px;
+        right: 50px; 
+        padding: 2px 10px 10px 10px;
         display: none;
     }
     
@@ -135,8 +135,8 @@ amarrillo rgb(255,220,0)
     }
     .soloHeaderImgAdmin {
         width: 100%;
-        height: 4%;
-        background-color: #0000a0;
+        height: 6%;
+        background-color: #81267f;
     }
 
     .soloHeaderAdmin {

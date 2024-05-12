@@ -3,7 +3,7 @@
     $layouts = [
         'vista.admin' => 'layouts.appA',
         'vista.tendero' => 'layouts.appT',
-        'vista.vendedor' => 'layouts.appT',
+        'vista.vendedor' => 'layouts.appA',
     ];
 @endphp
 

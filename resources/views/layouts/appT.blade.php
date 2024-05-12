@@ -18,7 +18,9 @@
             <div class="soloHeader">
                 <div class="iconosHH">
                     <img src="{{ asset('images/new/menu1.png') }}" class="menuTT" alt="Menu" id="menuHamburguesa">
-                    {{-- <img src="{{ asset('images/new/ajuste1.png') }}" class="menuTT" alt="Menu" id="menuAjustes"> --}}
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('images/new/inicio.png') }}" class="menuTT" alt="Menu" id="menuAjustes">
+                    </a> 
                 </div>
                 <div class="avatarHH">
                     <img src="{{ asset('images/new/vendedor2.png') }}" class="avatarTT" alt="Avatar">

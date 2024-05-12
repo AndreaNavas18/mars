@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Tendero;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 
 class HomeController extends Controller
@@ -27,7 +28,8 @@ class HomeController extends Controller
     public function index()
     {
         $tenderos = DB::table('tenderos')->get();
+        $users = DB::table('users')->get();
 
-        return view('home', compact('tenderos'));
+        return view('home', compact('tenderos', 'users'));
     }
 }
