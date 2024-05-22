@@ -10,7 +10,7 @@ cafecito mars vecino #ffc5477d
 */
 @font-face {
     font-family: 'Graphie';
-    src: url('../../../public/fonts/GraphieLight.ttf') format('truetype');
+    src: url('../../fonts/GraphieLight.ttf') format('truetype');
 }
 
 /*Estilos moviles*/
