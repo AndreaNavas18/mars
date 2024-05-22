@@ -17,7 +17,7 @@ amarrillo rgb(255,220,0)
 
 @font-face {
     font-family: 'Graphie';
-    src: url('../../../public/fonts/GraphieLight.ttf') format('truetype');
+    src: url('../../fonts/GraphieLight.ttf') format('truetype');
 }
 
 @media (max-width: 575.98px)and (orientation:portrait) {

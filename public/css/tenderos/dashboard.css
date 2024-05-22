@@ -11,7 +11,7 @@ cafecito mars vecino #6f3214
 
 @font-face {
     font-family: 'Graphie';
-    src: url('../../../public/fonts/GraphieLight.ttf') format('truetype');
+    src: url('../../fonts/GraphieLight.ttf') format('truetype');
 }
 
 
