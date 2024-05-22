@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('tokens', function (Blueprint $table) {
-            //
+        Schema::create('tokens', function (Blueprint $table) {
+            $table->id();
+            $table->string('token', 255)->unique();
+            $table->string('status', 100);
+            $table->foreignId('tendero_id')->constrained('tenderos');
             $table->timestamps();
         });
     }
@@ -22,9 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('tokens', function (Blueprint $table) {
-            //
-            $table->dropTimestamps();
-        });
+        Schema::dropIfExists('tokens');
     }
 };
