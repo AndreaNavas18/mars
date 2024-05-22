@@ -13,7 +13,7 @@
 <body>
     <div> 
         <div class="divPTT">
-            <h1 class="punTT">$$$$$$$</h1>
+            <h1 class="punTT">{{ auth()->user()->tendero->puntos }}</h1>
             <h2 class="tituTTT">Puntos acumulados</h2>
         </div>
         <div class="opcTT">
