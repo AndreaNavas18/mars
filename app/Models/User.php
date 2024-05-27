@@ -25,7 +25,6 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
-        'tendero_id',
     ];
 
     /**
@@ -49,6 +48,6 @@ class User extends Authenticatable
 
     public function tendero()
     {
-        return $this->belongsTo(Tendero::class, 'tendero_id');
+        return $this->hasOne(Tendero::class, 'user_id');
     }
 }

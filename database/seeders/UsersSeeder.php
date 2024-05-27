@@ -12,7 +12,7 @@ class UsersSeeder extends Seeder
         $userVendedor = User::where('username', 'vendedor1')->first();
         if(!$userVendedor){
             $userVendedor = User::create([
-                'name' => 'jonathan',
+                'name' => 'vendedor',
                 'username' => 'vendedor1',
                 'email' => 'j@j.com',
                 'password' => Hash::make('123456'),
@@ -22,7 +22,7 @@ class UsersSeeder extends Seeder
         $userAdmin = User::where('username', 'admin1')->first();
         if(!$userAdmin){
             $userAdmin = User::create([
-                'name' => 'isabella',
+                'name' => 'administrador',
                 'username' => 'admin1',
                 'email' => 'i@i.com',
                 'password' => Hash::make('123456'),

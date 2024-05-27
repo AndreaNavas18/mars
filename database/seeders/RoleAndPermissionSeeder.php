@@ -58,20 +58,14 @@ class RoleAndPermissionSeeder extends Seeder
         }
 
         //Asignar roles a los usuarios
-        $userAdmin = User::where('username', '222222')->first();
+        $userAdmin = User::where('username', 'admin1')->first();
         if($userAdmin){
             $userAdmin->assignRole($roleAdmin);
         }
 
-        $userVendedor = User::where('username', '111111')->first();
+        $userVendedor = User::where('username', 'vendedor1')->first();
         if($userVendedor){
             $userVendedor->assignRole($roleVendedor);
         }
-
-        $userT = User::where('username', '123456')->first();
-        if($userT){
-            $userT->assignRole($roleTendero);
-        }
-
     }
 }

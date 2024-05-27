@@ -15,11 +15,13 @@ class Tendero extends Model
     'apellido', 
     'direccion', 
     'telefono', 
-    'puntos'
+    'puntos',
+    'cedula',
+    'user_id'
     ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+   public function user()
+   {
+       return $this->belongsTo(User::class);
+   }
 }

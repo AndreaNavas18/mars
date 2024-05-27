@@ -10,6 +10,8 @@ use App\Models\Observation;
 use App\Models\Tendero;
 use App\Models\Token;
 use App\Models\User;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class VendedorController extends BaseController
 {
@@ -66,69 +68,105 @@ class VendedorController extends BaseController
         return view('modules.vendedor.activacion');
     }
 
+   
     // public function activar(Request $request){
-    //     $tendero = Tendero::where('cedula', $request->input('cedula'))->first();
-
-    //     if (!$tendero) {
+    //     $user = User::where('username', $request->input('username'))->first();
+    //     $tendero = Tendero::where('id', $user->tendero_id)->first();
+    
+    //     if (!$user) {
     //         return redirect()->back()->with('error', 'Tendero no encontrado');
     //     }
-
+    
+    //     // Verificar cómo se proporcionó el token: desde la cámara o desde la galería
     //     $token = $request->input('token');
-    //     if (!$token) {
-    //         return redirect()->back()->with('error', 'Debe escanear un código QR');
+    //     if (!$token && $request->hasFile('qr_image')) {
+    //         // Si no se proporcionó un token, pero se cargó una imagen desde la galería
+    //         $file = $request->file('qr_image');
+    //         $image = imagecreatefromstring(file_get_contents($file));
+    //         $imageData = getimage($image, 0, 0, imagesx($image), imagesy($image));
+    //         $code = jsQR($imageData->data, $imageData->width, $imageData->height);
+    
+    //         if (!$code) {
+    //             return redirect()->back()->with('error', 'No se detectó ningún código QR en la imagen');
+    //         }
+    
+    //         $token = $code->data;
+    //     } elseif (!$token) {
+    //         // Si no se proporcionó un token y no se cargó una imagen desde la galería
+    //         return redirect()->back()->with('error', 'Debe escanear un código QR o seleccionar una imagen desde la galería');
     //     }
-
+    
+    //     // Verificar si el token es válido
     //     $tokenExists = Token::where('token', $token)->exists();
     //     if (!$tokenExists) {
     //         return redirect()->back()->with('error', 'Token no válido');
     //     }
-
-    //     $token->update([
+    
+    //     // Actualizar el estado del token y asociarlo con el tendero
+    //     Token::where('token', $token)->update([
     //         'status' => 'activo',
     //         'tendero_id' => $tendero->id
     //     ]);
-
+    
     //     return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
     // }
-    public function activar(Request $request){
-        $user = User::where('username', $request->input('username'))->first();
-        $tendero = Tendero::where('id', $user->tendero_id)->first();
-    
-        if (!$user) {
-            return redirect()->back()->with('error', 'Tendero no encontrado');
-        }
-    
-        // Verificar cómo se proporcionó el token: desde la cámara o desde la galería
-        $token = $request->input('token');
-        if (!$token && $request->hasFile('qr_image')) {
-            // Si no se proporcionó un token, pero se cargó una imagen desde la galería
-            $file = $request->file('qr_image');
-            $image = imagecreatefromstring(file_get_contents($file));
-            $imageData = getimage($image, 0, 0, imagesx($image), imagesy($image));
-            $code = jsQR($imageData->data, $imageData->width, $imageData->height);
-    
-            if (!$code) {
-                return redirect()->back()->with('error', 'No se detectó ningún código QR en la imagen');
+
+    public function activar(Request $request)
+    {
+        try {
+            $tendero = Tendero::where('cedula', $request->input('cedula'))->first();
+
+            if (!$tendero) {
+                return redirect()->back()->with('error', 'Tendero no encontrado');
             }
-    
-            $token = $code->data;
-        } elseif (!$token) {
-            // Si no se proporcionó un token y no se cargó una imagen desde la galería
-            return redirect()->back()->with('error', 'Debe escanear un código QR o seleccionar una imagen desde la galería');
+
+            $token = $request->input('token');
+
+            if (!$token) {
+                return redirect()->back()->with('error', 'Debe escanear un código QR o seleccionar una imagen desde la galería');
+            }
+
+            $tokenExists = Token::where('token', $token)->exists();
+
+            if (!$tokenExists) {
+                return redirect()->back()->with('error', 'Token no válido');
+            }
+
+            // Actualizar el estado del token y asociarlo con el tendero
+            Token::where('token', $token)->update([
+                'status' => 'activo',
+                'tendero_id' => $tendero->id
+            ]);
+
+            $existingUser = User::where('username', $tendero->cedula)->first();
+            if ($existingUser) {
+                return redirect()->back()->with('error', 'El usuario ya existe');
+            }
+
+            $user = User::create([
+                'name' => $tendero->nombre . ' ' . $tendero->apellido,
+                'username' => $tendero->cedula,
+                'password' => bcrypt($tendero->cedula)
+            ]);
+
+            $roleTendero = Role::firstOrCreate(['name' => 'tendero']);
+            $permissionTendero = Permission::firstOrCreate(['name' => 'vista.tendero']);
+
+            if (!$roleTendero->hasPermissionTo($permissionTendero)) {
+                $roleTendero->givePermissionTo($permissionTendero);
+            }
+
+            $user->assignRole($roleTendero);
+
+            $tendero->user_id = $user->id;
+            $tendero->save();
+
+            return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
+        }catch(QueryException $e){
+            Log::error($e->getMessage());
+            return redirect()->route('home')->with('error', 'Error al activar tendero');
         }
-    
-        // Verificar si el token es válido
-        $tokenExists = Token::where('token', $token)->exists();
-        if (!$tokenExists) {
-            return redirect()->back()->with('error', 'Token no válido');
-        }
-    
-        // Actualizar el estado del token y asociarlo con el tendero
-        Token::where('token', $token)->update([
-            'status' => 'activo',
-            'tendero_id' => $tendero->id
-        ]);
-    
-        return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
+        
     }
+
 }
