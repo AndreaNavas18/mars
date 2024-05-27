@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('tokens')) {
         Schema::create('tokens', function (Blueprint $table) {
             $table->id();
             $table->string('token', 255)->unique();
@@ -18,6 +19,7 @@ return new class extends Migration
             $table->foreignId('tendero_id')->constrained('tenderos');
             $table->timestamps();
         });
+        }
     }
 
     /**
