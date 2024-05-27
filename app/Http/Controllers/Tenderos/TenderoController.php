@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Tenderos;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Models\Observation;
@@ -104,5 +105,23 @@ class TenderoController extends BaseController
             Log::error($e->getMessage());
             return redirect()->route('tendero.index');
         }
+    }
+
+    public function importTenderos(Request $request){
+
+         // Valida la solicitud
+         $request->validate([
+            'file' => 'required|mimes:xlsx,xls', // Asegúrate de que solo se permitan archivos de Excel
+        ]);
+
+        // Obtiene el archivo cargado
+        $file = $request->file('file');
+
+        // Importa los datos del archivo Excel
+        Excel::import(new TenderoImport, $file);
+
+        // Redirige de vuelta con un mensaje de éxito
+        return redirect()->back()->with('success', 'Tenderos importados exitosamente.');
+
     }
 }

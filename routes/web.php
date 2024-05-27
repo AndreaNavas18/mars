@@ -69,6 +69,9 @@ Route::get('/ver-observaciones', [TenderoController::class, 'historialObs'])->na
 
 Route::get('/listado-observaciones/{id}', [TenderoController::class, 'listObs'])->name('listado.observations');
 
+Route::post('/importar-tenderos', [ TenderoController::class, 'importTenderos' ])->name('import.tenderos');
+
+
 /**************************************
  * 
  * Rutas para el modulo de vendedores

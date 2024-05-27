@@ -29,6 +29,26 @@
             <div class="administrar" id="menuAdmin">
                 <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
             </div>
+            <div class="import" id="menuImport">
+                {{-- <a href="{{ url('importar-tenderos')}}" id="botonImport" class="botonImport">Importar tenderos</a> --}}
+                <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tenderos') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12  mb-4">
+                          <input type="file" name="tenderodocumento">
+                        </div>
+                        <div class="col-md-3 col-sm-12 mb-4 mt-2">
+                            <button class="btn btn-primary btn-sm"
+                                type="submit"
+                                name="action"
+                                value="importar">
+                                <i class="fas fa-arrow-up-from-bracket"></i> Importar
+                            </button>
+                        </div>
+                    
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
