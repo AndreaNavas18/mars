@@ -11,7 +11,8 @@
 
     <title>Ingreso</title>
 </head>
-<body style="margin: 0px">
+    
+    <body style="margin: 0px;background-color: #ffc547;">
     <div class="fondoImg">
         <div class="fondoEnc">
             <div class="bienvenn">

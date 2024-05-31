@@ -13,6 +13,167 @@ cafecito mars vecino #ffc5477d
     src: url('../../fonts/GraphieLight.ttf') format('truetype');
 }
 
+.fondoImg {
+    width: 100%;
+    @media (max-width: 575.98px) {
+        height: 100vh;
+        background-image: url('../../images/new/fon1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.fondoEnc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    /* background-color: #0000007b; */
+    font-family: 'Graphie', sans-serif;
+}
+
+.bienvenn {
+    display: flex;
+    align-items: center;
+    @media (max-width: 575.98px) {
+        flex-direction: column;
+        margin-top: 30%;
+    }
+}
+
+.vecinoTT {
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+
+    @media (max-width: 575.98px) {
+        height: 200px;
+    }
+    
+    
+}
+
+.nuevoTT {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'Graphie', sans-serif;
+    margin-top: 0px;
+    font-weight: bold;
+    @media (max-width: 575.98px) {
+        color: white;
+    }
+}
+.nuevo2TT {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Graphie', sans-serif;
+    font-weight: bold;
+    @media (max-width: 575.98px) {
+        color: white;
+    }
+}
+
+.marss {
+    color: #81267f;
+}
+
+.divIngresoTT {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Graphie', sans-serif;
+}
+
+.inputIngresoTT {
+    width: 250px;
+    height: 55px;   
+    margin: 0 auto;
+    padding-left: 50px;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 2px solid #ffffff;
+    @media (max-width: 575.98px) {
+        color: white;
+    }
+}
+
+.labelTT {
+    font-size: 20px;
+    color: black;
+    @media (max-width: 575.98px) {
+        color: white;
+    }
+}
+
+.nuevo3TT {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Graphie', sans-serif;
+    @media (max-width: 575.98px) {
+        color: #ffc547;
+    }
+}
+
+.btnIngresoTT {
+    width: 180px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 25px;
+    border: 1px solid black;
+    @media (max-width: 575.98px) {
+        color: #ffc547;
+        border: 1px solid #ffc547;
+    }
+}
+
+.btnIngresoTT:active {
+    color: #000000;
+    transition: 0.3s ease;
+    @media (max-width: 575.98px) {
+        background-color: #ffc547;
+    }
+}
+
+.iconocedulaTT {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: -245px;
+    margin-top: 1px;
+    @media (max-width: 575.98px) {
+        top: 50%;
+        width: 35px;
+        height: 35px;
+        left: 12px;
+        margin-left: 0px;
+        transform: translateY(-50%);
+    }
+}
+
+.inicioTTT {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
 /*Estilos moviles*/
 /* vertical */
 @media (max-width: 575.98px)and (orientation:portrait) {
@@ -238,15 +399,7 @@ cafecito mars vecino #ffc5477d
         text-decoration: none;
     }
 
-    .fondoImg {
-        width: 100%;
-        height: 100vh;
-        background-image: url('../../images/new/fon1.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        
-        /* background-color: #81267f; */
-    }
+    
 
     .fondoImg2 {
         width: 100%;
@@ -256,53 +409,7 @@ cafecito mars vecino #ffc5477d
         background-repeat: no-repeat;
         background-position:30%;
     }
-    .fondoEnc {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2px;
-        width: 100%;
-        height: 100%;
-        /* background-color: #0000007b; */
-        font-family: 'Graphie', sans-serif;
-    }
-
-    .bienvenn {
-        display: flex;
-        flex-direction: column;
-        margin-top: 40%;
-    }
-
-    .vecinoTT {
-        width: auto;
-        height: 200px;
-        margin: 0 auto;
-        
-    }
-
-    .nuevoTT {
-        color: white;
-        font-size: 40px;
-        margin-bottom: 0px;
-        text-align: center;
-        font-family: 'Graphie', sans-serif;
-        margin-top: 0px;
-        font-weight: bold;
-
-    }
-    .nuevo2TT {
-        color: white;
-        font-size: 36px;
-        margin-bottom: 20px;
-        text-align: center;
-        margin-top: 0px;
-        font-family: 'Graphie', sans-serif;
-        font-weight: bold;
-    }
-
-    .marss {
-        color: #81267f;
-    }
+    
 
     .btnTT {
         background-color: transparent;
@@ -325,77 +432,6 @@ cafecito mars vecino #ffc5477d
         transition: 0.3s ease;
     }
 
-    .divIngresoTT {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        font-family: 'Graphie', sans-serif;
-    }
-
-    .inputIngresoTT {
-        width: 250px;
-        height: 55px;   
-        margin: 0 auto;
-        padding-left: 50px;
-        font-size: 20px;
-        background-color: transparent;
-        border-top: transparent;
-        border-right: transparent;
-        border-left: transparent;
-        border-bottom: 2px solid #ffffff;
-        color: white;
-    }
-
-    .labelTT {
-        color: white;
-        font-size: 20px;
-    }
-    
-    .nuevo3TT {
-        color: #ffc547;
-        font-size: 30px;
-        margin-bottom: 20px;
-        text-align: center;
-        margin-top: 0px;
-        font-family: 'Graphie', sans-serif;
-
-    }
-
-    .btnIngresoTT {
-        width: 180px;
-        height: 45px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        border-radius: 10px;
-        background-color: transparent;
-        color: #ffc547;
-        font-weight: bold;
-        font-size: 25px;
-        border: 1px solid #ffc547;
-    }
-
-    .btnIngresoTT:active {
-        background-color: #ffc547;
-        color: #000000;
-        transition: 0.3s ease;
-    }
-
-    .iconocedulaTT {
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        top: 50%;
-        left: 12px;
-        transform: translateY(-50%);
-        margin-top: 1px;
-    }
-
-    .inicioTTT {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
     
     
 } 
