@@ -15,7 +15,7 @@ cafecito mars vecino #ffc5477d
 
 .fondoImg {
     width: 100%;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         height: 100vh;
         background-image: url('../../images/new/fon1.jpg');
         background-size: cover;
@@ -37,7 +37,7 @@ cafecito mars vecino #ffc5477d
 .bienvenn {
     display: flex;
     align-items: center;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         flex-direction: column;
         margin-top: 30%;
     }
@@ -48,7 +48,7 @@ cafecito mars vecino #ffc5477d
     height: 400px;
     margin: 0 auto;
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         height: 200px;
     }
     
@@ -57,25 +57,25 @@ cafecito mars vecino #ffc5477d
 
 .nuevoTT {
     font-size: 40px;
-    color: black;
+    color: white;
     margin-bottom: 0px;
     text-align: center;
     font-family: 'Graphie', sans-serif;
     margin-top: 0px;
     font-weight: bold;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         color: white;
     }
 }
 .nuevo2TT {
     font-size: 36px;
-    color: black;
+    color: white;
     margin-bottom: 20px;
     text-align: center;
     margin-top: 0px;
     font-family: 'Graphie', sans-serif;
     font-weight: bold;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         color: white;
     }
 }
@@ -103,15 +103,15 @@ cafecito mars vecino #ffc5477d
     border-right: transparent;
     border-left: transparent;
     border-bottom: 2px solid #ffffff;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         color: white;
     }
 }
 
 .labelTT {
     font-size: 20px;
-    color: black;
-    @media (max-width: 575.98px) {
+    color: #81267f;
+    @media (max-width: 840px) {
         color: white;
     }
 }
@@ -122,7 +122,8 @@ cafecito mars vecino #ffc5477d
     text-align: center;
     margin-top: 0px;
     font-family: 'Graphie', sans-serif;
-    @media (max-width: 575.98px) {
+    color: #81267f;
+    @media (max-width: 840px) {
         color: #ffc547;
     }
 }
@@ -137,8 +138,9 @@ cafecito mars vecino #ffc5477d
     background-color: transparent;
     font-weight: bold;
     font-size: 25px;
-    border: 1px solid black;
-    @media (max-width: 575.98px) {
+    color: #81267f;
+    border: 1px solid #81267f;
+    @media (max-width: 840px) {
         color: #ffc547;
         border: 1px solid #ffc547;
     }
@@ -147,7 +149,7 @@ cafecito mars vecino #ffc5477d
 .btnIngresoTT:active {
     color: #000000;
     transition: 0.3s ease;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         background-color: #ffc547;
     }
 }
@@ -158,7 +160,7 @@ cafecito mars vecino #ffc5477d
     height: 40px;
     margin-left: -245px;
     margin-top: 1px;
-    @media (max-width: 575.98px) {
+    @media (max-width: 840px) {
         top: 50%;
         width: 35px;
         height: 35px;
@@ -176,7 +178,7 @@ cafecito mars vecino #ffc5477d
 
 /*Estilos moviles*/
 /* vertical */
-@media (max-width: 575.98px)and (orientation:portrait) {
+@media (max-width: 840px){
     .fondo {
         display: flex;
         background-color: white;
