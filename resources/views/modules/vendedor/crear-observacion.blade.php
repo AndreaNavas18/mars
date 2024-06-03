@@ -22,7 +22,7 @@
             <div class="formCrear">
                 <label for="nombre">Tendero</label>
                 <input type="hidden" name="tendero_id" value="{{ $tendero->id }}">
-                <h3 style="color: #81267f">{{ ucwords($tendero->nombre) }} {{ ucwords($tendero->apellido) }}</h3>
+                <h3 style="color: #81267f">{{ ucwords($tendero->nombre) }}</h3>
                 <label for="observacion">Observación</label>
                 <textarea name="observacion" id="observacion" cols="20" rows="8"></textarea>
                 <button type="submit">Crear observación</button>

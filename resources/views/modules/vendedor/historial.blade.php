@@ -25,7 +25,7 @@
             <tbody>
                 @foreach ($tenderos as $tendero)
                 <tr>
-                    <td>{{ $tendero->nombre }} {{ $tendero->apellido }}</td>
+                    <td>{{ $tendero->nombre }}</td>
                     <td>
                         <a href="{{ route('listado.observations', $tendero->id) }}" class="btnTen">Ver Observaciónes</a>
                     </td>

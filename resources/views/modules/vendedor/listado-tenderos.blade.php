@@ -26,7 +26,7 @@
             <tbody>
                 @foreach ($tenderos as $tendero)
                 <tr>
-                    <td>{{ $tendero->nombre }} {{ $tendero->apellido }}</td>
+                    <td>{{ $tendero->nombre }}</td>
                     <td>{{ $tendero->puntos }}</td>
                     <td style="display: flex">
                         <a href="{{ route('create.observations', $tendero->id) }}" class="btnTen">Crear Observación</a>

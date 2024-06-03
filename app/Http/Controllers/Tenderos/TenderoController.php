@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Log;
 use App\Models\Observation;
 use App\Models\Tendero;
 use App\Models\User;
+use App\Models\Cumplimiento;
 
 class TenderoController extends BaseController
 {
@@ -42,11 +43,32 @@ class TenderoController extends BaseController
         try {
             $tendero = new Tendero();
             $tendero->nombre = $request->nombre;
-            $tendero->apellido = $request->apellido;
-            $tendero->direccion = $request->direccion;
-            $tendero->telefono = $request->telefono;
             $tendero->puntos = 0;
+            $tendero->cedula = $request->cedula;
+            $tendero->producto = $request->producto;
+            $tendero->canal = $request->canal;
+            $tendero->subcanal = $request->subcanal;
+            $tendero->region_nielsen = $request->region_nielsen;
+            $tendero->codigo_pdv = $request->codigo_pdv;
+            $tendero->drop_size = $request->drop_size;
+            $tendero->frecuencia = $request->frecuencia;
+            $tendero->prob_compra = $request->prob_compra;
+            $tendero->cuota_mes = $request->cuota_mes;
 
+            $tendero->save();
+
+            //Creacion del cumplimiento por tendero
+            $cumplimiento = new Cumplimiento();
+            $cumplimiento->tendero_id = $tendero->id;
+            $cumplimiento->mes_1 = 0;
+            $cumplimiento->mes_2 = 0;
+            $cumplimiento->mes_3 = 0;
+            $cumplimiento->mes_4 = 0;
+            $cumplimiento->mes_5 = 0;
+            $cumplimiento->mes_6 = 0;
+
+            $cumplimiento->save();
+                    
             return redirect()->route('home')->with('success', 'Tendero creado con éxito');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
@@ -65,10 +87,17 @@ class TenderoController extends BaseController
         try {
             $tendero = Tendero::findOrFail($id);
             $tendero->nombre = $request->nombre;
-            $tendero->apellido = $request->apellido;
-            $tendero->direccion = $request->direccion;
-            $tendero->telefono = $request->telefono;
+            $tendero->cedula = $request->cedula;
             $tendero->puntos = $request->puntos;
+            $tendero->producto = $request->producto;
+            $tendero->canal = $request->canal;
+            $tendero->subcanal = $request->subcanal;
+            $tendero->region_nielsen = $request->region_nielsen;
+            $tendero->codigo_pdv = $request->codigo_pdv;
+            $tendero->drop_size = $request->drop_size;
+            $tendero->frecuencia = $request->frecuencia;
+            $tendero->prob_compra = $request->prob_compra;
+            $tendero->cuota_mes = $request->cuota_mes;
             $tendero->save();
             
             return redirect()->route('admin.tenderos')->with('success', 'Datos del tendero actualizados exitosamente');

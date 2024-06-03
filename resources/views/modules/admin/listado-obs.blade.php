@@ -5,7 +5,7 @@
     <title>Observaciones</title>
 
     <div class="divFormu">
-        <h1>Observaciones de {{ ucwords($tendero->nombre) }} {{ ucwords($tendero->apellido) }}</h1>
+        <h1>Observaciones de {{ ucwords($tendero->nombre) }}</h1>
         @foreach($observations as $key => $observation)
             <div class="formCrear">
                 <label for="observacion">Observación {{ $key + 1 }}</label>

@@ -12,7 +12,6 @@ class TenderoImport implements ToModel, WithHeadingRow
     {
         return new Tendero([
             'nombre' => $row['nombre'],
-            'apellido' => $row['apellido'],
             'direccion' => $row['direccion'],
             'telefono' => $row['telefono'],
             'puntos' => $row['puntos'],

@@ -144,7 +144,7 @@ class VendedorController extends BaseController
             }
 
             $user = User::create([
-                'name' => $tendero->nombre . ' ' . $tendero->apellido,
+                'name' => $tendero->nombre,
                 'username' => $tendero->cedula,
                 'password' => bcrypt($tendero->cedula)
             ]);

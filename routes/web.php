@@ -91,21 +91,6 @@ Route::get('/activar-tendero', [VendedorController::class, 'activarVista'])->nam
 
 Route::post('/activar-tendero', [VendedorController::class, 'activar'])->name('activar.tendero');
 
-
-
-
-Route::get('/hola', function () {
-    return view('hola');
-});
-
-Route::get('/holatu', function () {
-    return view('holatu');
-});
-
-Route::get('/holayo', function () {
-    return view('holayo');
-});
-
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

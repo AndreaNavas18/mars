@@ -12,12 +12,20 @@ class Tendero extends Model
     protected $table = 'tenderos';
     protected $fillable = 
     ['nombre', 
-    'apellido', 
     'direccion', 
     'telefono', 
     'puntos',
     'cedula',
-    'user_id'
+    'user_id',
+    'producto',
+    'canal',
+    'subcanal',
+    'region_nielsen',
+    'codigo_pdv',
+    'drop_size',
+    'frecuencia',
+    'prob_compra',
+    'cuota_mes'
     ];
 
    public function user()

@@ -26,7 +26,7 @@
             <tbody>
                 @foreach ($tenderos as $tendero)
                 <tr>
-                    <td>{{ $tendero->nombre }} {{ $tendero->apellido }}</td>
+                    <td>{{ $tendero->nombre }}</td>
                     <td>{{ $tendero->puntos }}</td>
                     <td>
                         <a href="{{ route('edit.tendero', $tendero->id) }}" class="btnTen">Editar</a>
