@@ -25,13 +25,13 @@ class TokenController extends Controller
         $tokenDB = Token::where('token', $token)->first();
 
         if ($tokenDB) {
-            $tokenDB->estado = 'activo';
-            $tokenDB->save();
             
-            $tendero = User::where('username', $cedula)->first();
+            $user = User::where('username', $cedula)->first();
+            $tendero = Tendero::where('user_id', $user->id)->first();
             
             if ($tendero) {
-                $tokenDB->tendero_id = $tendero->tendero_id;
+                $tokenDB->estado = 'activo';
+                $tokenDB->tendero_id = $tendero->id;
                 $tokenDB->save();
             
                 
