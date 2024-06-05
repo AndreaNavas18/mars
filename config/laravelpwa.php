@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'Mi mars vecino',
+    'name' => 'Mimarsvecino',
     'manifest' => [
-        'name' => env('APP_NAME', 'Mi mars vecino'),
-        'short_name' => 'PWA',
+        'name' => env('APP_NAME', 'Mimarsvecino'),
+        'short_name' => 'marsvecino',
         'start_url' => '/',
         'background_color' => '#ffffff',
         'theme_color' => '#000000',

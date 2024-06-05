@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/header.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ asset('js/menuT.js') }}" defer></script>
+    <script src="{{ secure_asset('js/menuT.js') }}" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -17,9 +17,9 @@
         <div class="soloHeaderImgAdmin">
             <div class="soloHeaderAdmin">
                 <div class="iconosHH">
-                    <img src="{{ asset('images/new/menu1.png') }}" class="menuTTAdmin" alt="Menu" id="menuHamburguesa">
+                    <img src="{{ secure_asset('images/new/menu1.png') }}" class="menuTTAdmin" alt="Menu" id="menuHamburguesa">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('images/new/inicio.png') }}" class="menuTT" alt="Menu" id="menuAjustes">
+                        <img src="{{ secure_asset('images/new/inicio.png') }}" class="menuTT" alt="Menu" id="menuAjustes">
                     </a> 
                 </div>
             </div>
