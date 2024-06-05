@@ -12,9 +12,8 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     {{-- <title>Header</title> --}}
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <script src="{{ asset('serviceworker.js') }}" defer></script>
-
-    @laravelPWA
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
 </head>
 <body>
     @can('vista.tendero')
@@ -37,3 +36,14 @@
 
 </body>
 </html>
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+</script>
