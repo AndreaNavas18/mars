@@ -1,7 +1,7 @@
 @extends('layouts.appA')
 
 @section('content')
-    <link rel="stylesheet" href="{{ secure_asset('css/global.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <title>Listado tenderos</title>
 
     <div class="adminTendTT">

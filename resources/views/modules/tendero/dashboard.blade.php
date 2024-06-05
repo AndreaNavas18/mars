@@ -1,10 +1,10 @@
 @extends('layouts.appT')
 
 @section('content')
-        <link rel="stylesheet" href="{{ secure_asset('css/tenderos/dashboard.css') }}">
-        <script src="{{ secure_asset('js/load.js') }}" defer></script>
+        <link rel="stylesheet" href="{{ asset('css/tenderos/dashboard.css') }}">
+        <script src="{{ asset('js/load.js') }}" defer></script>
         <div id="loading-container">
-            <img src="{{ secure_asset('images/new/cargandopng.gif') }}" class="loading" alt="Cargando">
+            <img src="{{ asset('images/new/cargandopng.gif') }}" class="loading" alt="Cargando">
         </div>
         <div class="contentTT">
             <div class="divPTT">
@@ -18,7 +18,7 @@
                         <a href="{{ url('premios')}}" class="linksTT">
                             <div class="card1TT">
                                 <div class="c1TT">
-                                    <img src="{{ secure_asset('images/new/premioo1.png') }}" class="iTT" alt="Premios">
+                                    <img src="{{ asset('images/new/premioo1.png') }}" class="iTT" alt="Premios">
                                     <h2 class="tit1TT">Lista de premios</h2>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                         <a href="{{ url('redimir')}}" class="linksTT">
                         <div class="card2TT">
                             <div class="c1TT">
-                                <img src="{{ secure_asset('images/new/redimir.png') }}" class="iTT" alt="Redimir">
+                                <img src="{{ asset('images/new/redimir.png') }}" class="iTT" alt="Redimir">
                                 <h2 class="tit1TT">¿Cómo redimirlos?</h2>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                         <a href="{{ url('recursos')}}" class="linksTT">
                         <div class="card3TT">
                             <div class="c1TT">
-                                <img src="{{ secure_asset('images/new/recurso.png') }}" class="iTT" alt="Recursos">
+                                <img src="{{ asset('images/new/recurso.png') }}" class="iTT" alt="Recursos">
                                 <h2 class="tit1TT">Recursos</h2>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <a href="{{ url('marcas')}}" class="linksTT">
                         <div class="card4TT">
                             <div class="c1TT">
-                                <img src="{{ secure_asset('images/new/marcas1.png') }}" class="iTT" alt="Marcas">
+                                <img src="{{ asset('images/new/marcas1.png') }}" class="iTT" alt="Marcas">
                                 <h2 class="tit1TT">Marcas participantes</h2>
                             </div>
                         </div>
