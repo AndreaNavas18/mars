@@ -32,4 +32,9 @@ class HomeController extends Controller
 
         return view('home', compact('tenderos', 'users'));
     }
+
+    public function offline()
+    {
+        return view('vendor.laravelpwa.offline');
+    }
 }

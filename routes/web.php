@@ -100,8 +100,10 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
-
-
+/**
+ * Rutas para la PWA
+ */
+Route::get('/offline', [HomeController::class, 'offline'])->name('offline');
 
 
 

@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     {{-- <title>Header</title> --}}
+    @laravelPWA
 </head>
 <body>
     @can('vista.tendero')
