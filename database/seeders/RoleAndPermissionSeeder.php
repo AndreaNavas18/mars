@@ -67,5 +67,15 @@ class RoleAndPermissionSeeder extends Seeder
         if($userVendedor){
             $userVendedor->assignRole($roleVendedor);
         }
+
+        $userTendero = User::where('username', 'tendero1')->first();
+        if($userTendero){
+            $userTendero->assignRole($roleTendero);
+        }
+
+        $userTendero2 = User::where('username', 'tendero2')->first();
+        if($userTendero2){
+            $userTendero2->assignRole($roleTendero);
+        }
     }
 }
