@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('token', 255)->unique();
             $table->string('status', 100)->default('inactivo')->nullable();
-            $table->foreignId('tendero_id')->constrained('tenderos')->nullable();
+            $table->bigInteger('tendero_id')->nullable();
             $table->timestamps();
         });
         }
