@@ -13,7 +13,9 @@ self.addEventListener('install', function(event) {
           '/images/icons//marsvecino_192x192.png',
           '/images/icons//marsvecino_384x384.png',
           '/images/icons//marsvecino_512x512.png',
-        ]);
+        ]).catch(function(error) {
+          console.error('Error en la cacheada:', error);
+        });
       })
     );
   });
