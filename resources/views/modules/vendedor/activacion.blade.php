@@ -6,6 +6,15 @@
     <div class="row justify-content-center" style="margin-top: 10px">
         <div class="col-md-8">
             <div class="card">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @elseif (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="card-header">{{ __('Activar Tendero') }}</div>
 
                 <div class="card-body">

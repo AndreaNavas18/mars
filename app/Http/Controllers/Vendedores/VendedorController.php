@@ -111,66 +111,136 @@ class VendedorController extends BaseController
     //     return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
     // }
 
+    // public function activar(Request $request)
+    // {
+    //     try {
+    //         $tendero = Tendero::where('cedula', $request->input('cedula'))->first();
+
+    //         if (!$tendero) {
+    //             return redirect()->back()->with('error', 'Tendero no encontrado');
+    //         }
+
+    //         $token = $request->input('token');
+
+    //         if (!$token) {
+    //             return redirect()->back()->with('error', 'Debe escanear un código QR o seleccionar una imagen desde la galería');
+    //         }
+
+    //         $tokenExists = Token::where('token', $token)->first();
+
+    //         if (!$tokenExists) {
+    //             return redirect()->back()->with('error', 'Token no válido');
+    //         }
+
+    //         if($tokenExists->status == 'activo'){
+    //             return redirect()->back()->with('error', 'Token ya activado');
+    //         }
+
+    //         // Actualizar el estado del token y asociarlo con el tendero
+    //         Token::where('token', $token)->update([
+    //             'status' => 'activo',
+    //             'tendero_id' => $tendero->id
+    //         ]);
+
+    //         $existingUser = User::where('username', $tendero->cedula)->first();
+    //         if ($existingUser) {
+    //             return redirect()->back()->with('error', 'El usuario ya existe');
+    //         }
+
+    //         $user = User::create([
+    //             'name' => $tendero->nombre,
+    //             'username' => $tendero->cedula,
+    //             'password' => bcrypt($tendero->cedula)
+    //         ]);
+
+    //         $roleTendero = Role::firstOrCreate(['name' => 'tendero']);
+    //         $permissionTendero = Permission::firstOrCreate(['name' => 'vista.tendero']);
+
+    //         if (!$roleTendero->hasPermissionTo($permissionTendero)) {
+    //             $roleTendero->givePermissionTo($permissionTendero);
+    //         }
+
+    //         $user->assignRole($roleTendero);
+
+    //         $tendero->user_id = $user->id;
+    //         $tendero->save();
+
+    //         return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
+    //     }catch(QueryException $e){
+    //         Log::error($e->getMessage());
+    //         return redirect()->route('home')->with('error', 'Error al activar tendero');
+    //     }
+        
+    // }
+
     public function activar(Request $request)
-    {
-        try {
-            $tendero = Tendero::where('cedula', $request->input('cedula'))->first();
+{
+    try {
+        Log::info('Inicio del método activar');
+        $tendero = Tendero::where('cedula', $request->input('cedula'))->first();
 
-            if (!$tendero) {
-                return redirect()->back()->with('error', 'Tendero no encontrado');
-            }
+        if (!$tendero) {
+            Log::info('Tendero no encontrado');
+            return redirect()->back()->with('error', 'Tendero no encontrado');
+        }
 
-            $token = $request->input('token');
+        $token = $request->input('token');
 
-            if (!$token) {
-                return redirect()->back()->with('error', 'Debe escanear un código QR o seleccionar una imagen desde la galería');
-            }
+        if (!$token) {
+            Log::info('Token no proporcionado');
+            return redirect()->back()->with('error', 'Debe escanear un código QR o seleccionar una imagen desde la galería');
+        }
 
-            $tokenExists = Token::where('token', $token)->exists();
+        $tokenExists = Token::where('token', $token)->first();
 
-            if (!$tokenExists) {
-                return redirect()->back()->with('error', 'Token no válido');
-            }
+        if (!$tokenExists) {
+            Log::info('Token no válido');
+            return redirect()->back()->with('error', 'Token no válido');
+        }
 
-            if($tokenExists->status == 'activo'){
-                return redirect()->back()->with('error', 'Token ya activado');
-            }
+        if ($tokenExists->status == 'activo') {
+            Log::info('Token ya activado');
+            return redirect()->back()->with('error', 'Token ya activado');
+        }
 
-            // Actualizar el estado del token y asociarlo con el tendero
-            Token::where('token', $token)->update([
-                'status' => 'activo',
-                'tendero_id' => $tendero->id
-            ]);
+        $tokenExists->update([
+            'status' => 'activo',
+            'tendero_id' => $tendero->id
+        ]);
 
-            $existingUser = User::where('username', $tendero->cedula)->first();
-            if ($existingUser) {
-                return redirect()->back()->with('error', 'El usuario ya existe');
-            }
-
+        $user = User::where('username', $tendero->cedula)->first();
+        if (!$user) {
+            Log::info('El usuario ya existe');
             $user = User::create([
                 'name' => $tendero->nombre,
                 'username' => $tendero->cedula,
                 'password' => bcrypt($tendero->cedula)
             ]);
+        }
 
-            $roleTendero = Role::firstOrCreate(['name' => 'tendero']);
-            $permissionTendero = Permission::firstOrCreate(['name' => 'vista.tendero']);
+        $roleTendero = Role::firstOrCreate(['name' => 'tendero']);
+        $permissionTendero = Permission::firstOrCreate(['name' => 'vista.tendero']);
 
-            if (!$roleTendero->hasPermissionTo($permissionTendero)) {
-                $roleTendero->givePermissionTo($permissionTendero);
-            }
-
+        if (!$user->hasRole($roleTendero)) {
             $user->assignRole($roleTendero);
+        }
 
+        if (!$roleTendero->hasPermissionTo($permissionTendero)) {
+            $roleTendero->givePermissionTo($permissionTendero);
+        }
+
+        if ($tendero->user_id !== $user->id) {
             $tendero->user_id = $user->id;
             $tendero->save();
-
-            return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
-        }catch(QueryException $e){
-            Log::error($e->getMessage());
-            return redirect()->route('home')->with('error', 'Error al activar tendero');
         }
-        
+
+        Log::info('Tendero activado exitosamente');
+        return redirect()->route('home')->with('success', 'Tendero activado exitosamente');
+    } catch (QueryException $e) {
+        Log::error($e->getMessage());
+        return redirect()->route('home')->with('error', 'Error al activar tendero');
     }
+}
+
 
 }
