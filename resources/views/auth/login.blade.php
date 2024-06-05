@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ secure_asset('css/tenderos/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/tenderos/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -19,7 +19,7 @@
                 <div class="inicioTTT">
                     <h1 class="nuevoTT animate__animated animate__backInDown">Bienvenido</h1>
                     <h2 class="nuevo2TT animate__animated animate__backInDown">a Mi <span class="marss">Vecino</span> Mars</h2>
-                    <img src="{{ secure_asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
+                    <img src="{{ asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
                 </div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -31,7 +31,7 @@
                         </label>
                             <div class="divinput">
                                 <input id="username" name="username" type="text" class="inputIngresoTT @error('username') is-invalid @enderror" value="{{ old('username') }}" required autocomplete="username" autofocus>
-                                <img src="{{ secure_asset('images/new/icon2.png') }}" class="iconocedulaTT" alt="#">
+                                <img src="{{ asset('images/new/icon2.png') }}" class="iconocedulaTT" alt="#">
                                 @if (session('error'))
                                 <div class="">
                                     {{ session('error') }}

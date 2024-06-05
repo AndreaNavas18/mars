@@ -15,7 +15,7 @@
                     <h3>PRIMER MES</h3>
                     <div class="rowTTP">
                         {{-- <h4>Merchandising sencillo</h4> --}}
-                        <img src="{{ secure_asset('images/new/cap.png') }}" class="premio1" alt="Premios">
+                        <img src="{{ asset('images/new/cap.png') }}" class="premio1" alt="Premios">
                     </div>
                 </div>
                 <div class="divPremioTTP">
@@ -25,7 +25,7 @@
                             {{-- <h4>Entradas a cine</h4>
                             <p>Incuye crispetas y gaseosa</p> --}}
                         </div>
-                        <img src="{{ secure_asset('images/new/cine.png') }}" class="premio1" alt="Premios">
+                        <img src="{{ asset('images/new/cine.png') }}" class="premio1" alt="Premios">
                     </div>
 
                 </div>
@@ -33,7 +33,7 @@
                     <h3>TERCER MES</h3>
                     <div class="rowTTP">
                         {{-- <h4>Bono sodexo</h4> --}}
-                    <img src="{{ secure_asset('images/new/sodexo.png') }}" class="premio1" alt="Premios">
+                    <img src="{{ asset('images/new/sodexo.png') }}" class="premio1" alt="Premios">
                     </div>
 
                 </div>
@@ -44,7 +44,7 @@
                             <h4>Bono de regalo</h4>
                             <p>de diferentes almacenes de cadena</p>
                         </div> --}}
-                    <img src="{{ secure_asset('images/new/bono-01.png') }}" class="premio11" alt="Premios">
+                    <img src="{{ asset('images/new/bono-01.png') }}" class="premio11" alt="Premios">
                    </div>
 
                 </div>
@@ -55,7 +55,7 @@
                             <h4>Bono tecnología</h4>
                             <p>de diferentes almacenes de cadena</p>
                         </div> --}}
-                        <img src="{{ secure_asset('images/new/bono-02.png') }}" class="premio11" alt="Premios">
+                        <img src="{{ asset('images/new/bono-02.png') }}" class="premio11" alt="Premios">
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@
                             <h4>Bono electrohogar</h4>
                             <p>de diferentes almacenes de cadena</p>
                         </div> --}}
-                        <img src="{{ secure_asset('images/new/bono-03.png') }}" class="premio11" alt="Premios">
+                        <img src="{{ asset('images/new/bono-03.png') }}" class="premio11" alt="Premios">
                     </div>
 
                 </div>
