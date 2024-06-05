@@ -90,6 +90,9 @@ class LoginController extends Controller
 {
     // Verificar si el usuario existe
     $user = User::where('username', $request->username)->first();
+    if (!$user) {
+        return redirect()->back()->with('error', 'Credenciales inválidas');
+    }
     $role = $user->getRole();
     if ($role === 'tendero') {
         $tendero = $user->tendero;
@@ -101,11 +104,9 @@ class LoginController extends Controller
             return redirect()->back()->with('error', 'No tiene activo el token');
         }
     
-    } elseif ($user) {
+    } else {
         auth()->login($user);
         return redirect()->route('home');
-    } else {
-        return redirect()->back()->with('error', 'Credenciales inválidas');
     }
 }
 
