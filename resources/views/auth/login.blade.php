@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <script src="{{ secure_asset('serviceworker.js') }}" defer></script>
 
     <title>Ingreso</title>
 </head>
@@ -23,7 +21,7 @@
                     <h2 class="nuevo2TT animate__animated animate__backInDown">a Mi <span class="marss">Vecino</span> Mars</h2>
                     <img src="{{ secure_asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
                 </div>
-                <form method="POST" action="{{ route('login', [], true) }}">
+                <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <input type="hidden" name="token" value="{{ request()->query('token') }}">
                     <div class="divIngresoTT">
