@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <script src="{{ secure_asset('serviceworker.js') }}" defer></script>
 
     <title>Ingreso</title>
 </head>
