@@ -13,8 +13,6 @@
     {{-- <title>Header</title> --}}
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <script src="{{ asset('serviceworker.js') }}" defer></script>
-    
-    <link rel="manifest" href="/manifest.json">
 
     @laravelPWA
 </head>
