@@ -32,11 +32,11 @@
                             <div class="divinput">
                                 <input id="username" name="username" type="text" class="inputIngresoTT @error('username') is-invalid @enderror" value="{{ old('username') }}" required autocomplete="username" autofocus>
                                 <img src="{{ asset('images/new/icon2.png') }}" class="iconocedulaTT" alt="#">
-                                    @error('username')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
+                                @if (session('error'))
+                                <div class="">
+                                    {{ session('error') }}
+                                </div>
+                                @endif
                             </div>
                             {{-- <div class="divinput2">
                                 <input id="password" name="password" type="password" placeholder="Razón social" class="inputIngreso2 @error('password') is-invalid @enderror" required autocomplete="current-password" >

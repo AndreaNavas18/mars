@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Token;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller
 {
@@ -87,42 +88,25 @@ class LoginController extends Controller
 
     public function login(Request $request)
 {
-    // Verificar si se proporcionó un token en la URL
-    $token = $request->input('token');
-
     // Verificar si el usuario existe
     $user = User::where('username', $request->username)->first();
-
-    // Verificar si se proporcionó un token y el usuario existe
-    if ($token && $user) {
-        // Procesar el token
-        $tokenModel = Token::where('token', $token)->first();
-
-        if ($tokenModel) {
-            if($tokenModel->status === 'inactivo'){
-                if (!$tokenModel->tendero_id) {
-                    $tokenModel->tendero_id = $user->tendero_id;
-                    $tokenModel->status = 'activo';
-                    $tokenModel->save();
-                    auth()->login($user);
-                    return redirect()->route('home');
-                }
-
-            } elseif ($tokenModel && $tokenModel->status === 'activo' && $tokenModel->tendero_id === $user->tendero_id) {
-                auth()->login($user);
-                return redirect()->route('home');
-            }
-//FALTA VERIFICAR SI EL USUARIO ENTRA SIN TOKEN QUE HAGO?
+    $role = $user->getRole();
+    if ($role === 'tendero') {
+        $tendero = $user->tendero;
+        $tokenModel = Token::where('tendero_id', $tendero->id)->first();
+        if ($user && isset($tokenModel) && $tokenModel->status === 'activo') {
+            auth()->login($user);
+            return redirect()->route('home');    
+        } elseif (!isset($tokenModel) || $tokenModel->status === 'inactivo') {
+            return redirect()->back()->with('error', 'No tiene activo el token');
         }
-
-    }
-
-    if ($user && !$token) {
+    
+    } elseif ($user) {
         auth()->login($user);
         return redirect()->route('home');
+    } else {
+        return redirect()->back()->with('error', 'Credenciales inválidas');
     }
-
-    return redirect()->back()->with('error', 'Credenciales inválidas');
 }
 
     public function showLoginForm(Request $request)

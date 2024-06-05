@@ -50,4 +50,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Tendero::class, 'user_id');
     }
+
+    // obtener el role del usuario
+    public function getRole()
+    {
+        return $this->roles()->first()->name;
+    }
 }
