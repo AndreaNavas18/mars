@@ -115,7 +115,9 @@ Route::get('/offline', [HomeController::class, 'offline'])->name('offline');
 // Route::post('login', [LoginController::class, 'login']);
 
 // // Logout Routes...
-Route::post('logout', [LoginController::class, 'login'])->name('logout');
+Route::post('logout', function () {
+    return redirect()->route('login');
+})->name('logout');
 
 // // Registration Routes...
 // Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
