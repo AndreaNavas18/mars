@@ -15,8 +15,8 @@ return new class extends Migration
         Schema::create('tokens', function (Blueprint $table) {
             $table->id();
             $table->string('token', 255)->unique();
-            $table->string('status', 100);
-            $table->foreignId('tendero_id')->constrained('tenderos');
+            $table->string('status', 100)->default('inactivo')->nullable();
+            $table->foreignId('tendero_id')->constrained('tenderos')->nullable();
             $table->timestamps();
         });
         }
