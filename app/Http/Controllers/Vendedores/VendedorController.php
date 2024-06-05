@@ -132,6 +132,10 @@ class VendedorController extends BaseController
                 return redirect()->back()->with('error', 'Token no válido');
             }
 
+            if($tokenExists->status == 'activo'){
+                return redirect()->back()->with('error', 'Token ya activado');
+            }
+
             // Actualizar el estado del token y asociarlo con el tendero
             Token::where('token', $token)->update([
                 'status' => 'activo',
