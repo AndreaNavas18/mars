@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
     {{-- <title>Header</title> --}}
 </head>
 <body>
@@ -34,7 +32,7 @@
         <ul class="list">
             @guest
             <li>
-                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                <a href="{{ secure_url('login') }}">{{ __('Login') }}</a>
             </li>
             @else
             <li>
@@ -47,6 +45,5 @@
             @endguest
         </ul>
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

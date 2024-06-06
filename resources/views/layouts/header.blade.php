@@ -12,8 +12,6 @@
 
     <!-- Scripts -->
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
     <title>MI MARS VECINO</title>
 </head>
 <body>
@@ -33,7 +31,7 @@
                     </li>
                     @else
                     <li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        <form id="logout-form" action="{{ secure_url('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="btnH">Logout
                             </button>
@@ -49,6 +47,5 @@
         </main>
         
       </div>
-      <script src="{{ asset('js/app.js') }}"></script>
     </body>
     </html>

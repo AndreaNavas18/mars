@@ -12,11 +12,7 @@
 
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- <title>Header</title> --}}
     
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
@@ -41,8 +37,8 @@
       @include('layouts.appA')
     </div>
     @endcan
-    
-    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
   </html>
   <script>

@@ -92,9 +92,12 @@ class LoginController extends Controller
     $user = User::where('username', $request->username)->first();
     if (!$user) {
         return redirect()->back()->with('error', 'Credenciales inválidas');
+        Log::info('Credenciales inválidas');
     }
+    Log::info('Credenciales válidas');
     $role = $user->getRole();
     if ($role === 'tendero') {
+        Log::info('Es tendero');
         $tendero = $user->tendero;
         $tokenModel = Token::where('tendero_id', $tendero->id)->first();
         if ($user && isset($tokenModel) && $tokenModel->status === 'activo') {
@@ -106,6 +109,7 @@ class LoginController extends Controller
     
     } else {
         auth()->login($user);
+        Log::info('No es tendero');
         return redirect()->route('home');
     }
 }
