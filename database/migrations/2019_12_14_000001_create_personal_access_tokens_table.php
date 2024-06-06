@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->id();
-            $table->morphs('tokenable');
+            $table->bigInteger('tokenable_id');
+            $table->string('tokenable_type', 191); // Limitar a 191 caracteres
+            $table->index(['tokenable_id', 'tokenable_type']);
             $table->string('name',191);
             $table->string('token', 64)->unique();
             $table->text('abilities')->nullable();
