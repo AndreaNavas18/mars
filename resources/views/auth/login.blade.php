@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="{{ asset('css/tenderos/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#000000">
-
+    
     <title>Ingreso</title>
 </head>
-    
-    <body style="margin: 0px;background-color: #ffc547;">
+
+<body style="margin: 0px;background-color: #ffc547;">
     <div class="fondoImg">
         <div class="fondoEnc">
             <div class="bienvenn">
@@ -43,30 +50,31 @@
                             {{-- <div class="divinput2">
                                 <input id="password" name="password" type="password" placeholder="Razón social" class="inputIngreso2 @error('password') is-invalid @enderror" required autocomplete="current-password" >
                                 <img src="{{ asset('images/new/tienda.png') }}" class="iconotienda" alt="#">
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
-                                    @enderror
-                            </div> --}}
-                        <button type="submit" class="btnIngresoTT animate__animated animate__pulse">Ingresar</button>
-                    </div>
-                </form>
+                                        @enderror
+                                    </div> --}}
+                                    <button type="submit" class="btnIngresoTT animate__animated animate__pulse">Ingresar</button>
+                                </div>
+                            </form>
             </div>
-
+            
         </div>
     </div>
     
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
 <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
+        window.addEventListener('load', function() {
         navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
-          console.log('ServiceWorker registration failed: ', err);
+            console.log('ServiceWorker registration failed: ', err);
         });
-      });
-    }
+    });
+}
 </script>

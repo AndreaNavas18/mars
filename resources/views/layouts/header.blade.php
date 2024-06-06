@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
     <title>MI MARS VECINO</title>
 </head>
 <body>
-      <div class="header" 
-        style="background-color: 
+    <div class="header" 
+    style="background-color: 
         @can('vista.tendero') #ffc547
         @elsecan('vista.vendedor') #ffc547
         @elsecan('vista.admin') #ffffff 
@@ -41,11 +43,12 @@
                 </ul>
             </div>
         </nav>
-
+        
         <main>
             @yield('content')
         </main>
-
+        
       </div>
-</body>
-</html>
+      <script src="{{ asset('js/app.js') }}"></script>
+    </body>
+    </html>
