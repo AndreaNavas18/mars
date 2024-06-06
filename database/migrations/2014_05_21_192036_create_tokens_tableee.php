@@ -14,8 +14,8 @@ return new class extends Migration
         if (!Schema::hasTable('tokens')) {
         Schema::create('tokens', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('token', 255)->unique();
-            $table->string('status', 100)->default('inactivo')->nullable();
+            $table->string('token')->unique();
+            $table->string('status')->default('inactivo')->nullable();
             $table->bigInteger('tendero_id')->nullable();
             $table->timestamps();
         });
