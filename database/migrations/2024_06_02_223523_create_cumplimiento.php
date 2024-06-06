@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('cumplimiento', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('tendero_id');
-            $table->integer('mes_1');
-            $table->integer('mes_2');
-            $table->integer('mes_3');
-            $table->integer('mes_4');
-            $table->integer('mes_5');
-            $table->integer('mes_6');
+            $table->bigInteger('tendero_id');
+            $table->bigInteger('mes_1');
+            $table->bigInteger('mes_2');
+            $table->bigInteger('mes_3');
+            $table->bigInteger('mes_4');
+            $table->bigInteger('mes_5');
+            $table->bigInteger('mes_6');
             $table->timestamps();
         });
     }

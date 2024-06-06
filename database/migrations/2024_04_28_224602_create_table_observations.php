@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->nullable();
             $table->bigInteger('tendero_id')->nullable();
-            $table->string('observacion');
+            $table->string('observacion',100);
             $table->timestamps();
         });
     }
