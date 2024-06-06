@@ -14,9 +14,17 @@ return new class extends Migration
         Schema::create('tenderos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre')->nullable();
-            $table->string('apellido')->nullable();
-            $table->string('direccion')->nullable();
-            $table->string('telefono')->nullable();
+            $table->string('cedula')->nullable();
+            $table->bigInteger('user_id')->nullable();
+            $table->string('producto')->nullable();
+            $table->string('canal')->nullable();
+            $table->string('subcanal')->nullable();
+            $table->string('region_nielsen')->nullable();
+            $table->string('codigo_pdv')->nullable();
+            $table->integer('drop_size')->nullable();
+            $table->integer('frecuencia')->nullable();
+            $table->float('prob_compra')->nullable();
+            $table->integer('cuota_mes')->nullable();
             $table->string('puntos')->nullable();
             $table->timestamps();
         });
