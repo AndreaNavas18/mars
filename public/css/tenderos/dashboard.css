@@ -337,26 +337,27 @@ cafecito mars vecino #6f3214
     
     
        
-    @media (max-width: 575.98px)and (orientation:portrait) {
+@media (max-width: 575.98px)and (orientation:portrait) {
+    body{background: white;}
     
 } 
 /* horizontal */
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
-    body{background: #81267f;}
+    body{background: white;}
 }
 
 /*Estilos tabletas*/
 /*Vertical*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
-    body{background: #81267f;}
+    body{background: white;}
 }
 
 /*Horizontal*/
 @media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
-    body{background: #81267f;}
+    body{background: white;}
 }
 
 /*Estilos desktop*/
 @media (min-width: 1199.98px)  {
-    body{background: #81267f;}
+    body{background: white;}
 }

@@ -20,16 +20,16 @@
                 </div>
             @endif
             <h2 class="title2Admin">Qué desea hacer hoy?</h2>
-            <div class="obss" id="menuObs">
+            <div class="obss btnInicial" id="menuObs">
                 <a href="{{ route('obs.tenderos')}}" id="botonObs" class="botonObs">Ver observaciones</a>
             </div>
-            <div class="creacionn" id="menuCrear">
+            <div class="creacionn btnInicial" id="menuCrear">
                 <a href="{{ route('create.tenderos')}}" id="botonCrear" class="botonCrear">Crear tendero</a>
             </div>
-            <div class="administrar" id="menuAdmin">
+            <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
             </div>
-            <div class="import" id="menuImport">
+            <div class="import btnInicial" id="menuImport">
                 {{-- <a href="{{ url('importar-tenderos')}}" id="botonImport" class="botonImport">Importar tenderos</a> --}}
                 <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tenderos') }}" enctype="multipart/form-data">
                     @csrf

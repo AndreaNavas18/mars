@@ -15,10 +15,10 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="card-header">{{ __('Activar Tendero') }}</div>
+                <div class="cardTitle">{{ __('Activar Tendero') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('activar.tendero') }}" enctype="multipart/form-data">
+                    <form class="formActivacion" method="POST" action="{{ route('activar.tendero') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -47,23 +47,22 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="col-md-2">
-                                <label for="qr_image" class="btn" style="background-color: #81267f; color:white; margin-top:10px">Seleccionar imagen de galería</label>
-                                <input type="file" id="qr_image" name="qr_image" style="display:none" accept="image/*" onchange="handleImageUpload(event)">
-                            </div>
-                            <div class="col-md-2">
-                                <button type="button" class="btn" style="background-color: #81267f; color:white; margin-top:10px" onclick="openScanner()">Escanear con cámara</button>
-                            </div>
                         </div>
-
-                        <div class="form-group row mb-0" style="margin-top: 10px">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn" style="background-color: #81267f; color:white">
-                                    {{ __('Activar Tendero') }}
-                                </button>
-                            </div>
+                    <div class="divBtnQR">
+                        <div class="divBtn">
+                            <label for="qr_image" class="btnQR" >Seleccionar imagen de galería</label>
+                            <input type="file" id="qr_image" name="qr_image" style="display:none" accept="image/*" onchange="handleImageUpload(event)">
                         </div>
-                    </form>
+                        <div class="divBtn">
+                            <button type="button" class="btnQR" onclick="openScanner()">Escanear con cámara</button>
+                        </div>
+                    </div>
+                    <div class="divBtnActivar">
+                        <button type="submit" class="btnActivar">
+                            {{ __('Activar Tendero') }}
+                        </button>
+                    </div>
+                        </form>
 
                     <div id="video-container" style="display: none; margin-top: 20px;">
                         <video id="video" width="320" height="240" style="border: 1px solid black"></video>

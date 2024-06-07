@@ -31,7 +31,7 @@
                     </li>
                     @else
                     <li>
-                        <form id="logout-form" action="{{ secure_url('logout') }}" method="POST">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="btnH">Logout
                             </button>

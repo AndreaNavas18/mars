@@ -169,30 +169,122 @@ amarrillo rgb(255,220,0)
 
 }
 
+.cardTitle{
+    font-size: 20px;
+    font-weight: 700;
+    color: #81267f;
+    text-align: center;
+    margin: 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.formActivacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #81267f;
+    box-shadow: 0px 0px 5px 0px #81267f;
+    width: 100%;
+}
+
+.divBtn {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.divBtnQR {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btnQR {
+    background-color: #81267f;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Graphie', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px 8px 3px 8px;
+    margin: 0 auto;
+    align-content: center;
+    height: 50px;
+}
+
+.divBtnActivar {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btnActivar {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Graphie', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px 8px 3px 8px;
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+}
+
+.btnActivar:hover {
+    background-color: #81267f;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s ease;
+}
+
 @media (max-width: 575.98px)and (orientation:portrait) {
-
-
-
-
+    body{background: white;}
 
 }
 /* horizontal */
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
-    body{background: black;}
+    body{background: white;}
 }
 
 /*Estilos tabletas*/
 /*Vertical*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
-    body{background: orange;}
+    body{background: white;}
 }
 
 /*Horizontal*/
 @media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
-    body{background: blue;}
+    body{background: white;}
 }
 
 /*Estilos desktop*/
 @media (min-width: 1199.98px)  {
-    body{background: red;}
+    body{background: white;}
 }

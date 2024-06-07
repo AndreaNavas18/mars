@@ -20,330 +20,329 @@ amarrillo rgb(255,220,0)
     src: url('../fonts/GraphieLight.ttf') format('truetype');
 }
 
+
+.fondoAdmin {
+    background-color: rgb(225, 225, 225);
+    font-family: 'Graphie', sans-serif;
+}
+
+.primDivAdmin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconoAdmin {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.title1Admin {
+    font-size: 1.5rem;
+    color: black;
+}
+.segDivAdmin {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    gap: 20px;
+}
+.title2Admin {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.botonImport {
+    background-color: #81267f;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.botonAdmin {
+    background-color: #81267f;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.botonCrear {
+    background-color: #81267f;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.botonObs {
+    background-color: #81267f;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.administrar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.obss {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.creacionn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.import{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btnInicial {
+    width: 80%;
+    align-self: center;
+}
+
+.contenidoAdmin {
+    overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+    max-height: 0;
+    transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
+    visibility: hidden; 
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffc5471c;
+    border: 1px solid #ffc547;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.administrar .contenidoAdmin.open {
+    max-height: 800px; /* Altura máxima del menú desplegable */
+    transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
+    visibility: visible;
+    overflow-y: scroll;
+    
+}
+
+.contenidoObs {
+    overflow: hidden; 
+    max-height: 0;
+    transition: max-height 0.5s ease, visibility 0s 0.5s;
+    visibility: hidden; 
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+.obss .contenidoObs.open {
+    max-height: 800px;
+    transition: max-height 0.5s ease, visibility 0s;
+    visibility: visible;
+    overflow-y: scroll;
+    
+}
+
+
+.contenidoCrear {
+    overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+    max-height: 0;
+    transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
+    visibility: hidden; 
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+.creacionn .contenidoCrear.open {
+    max-height: 800px; /* Altura máxima del menú desplegable */
+    transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
+    visibility: visible;
+    overflow-y: scroll;
+    
+}
+
+.adminTendTT {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.adminTendTT h1 {
+    font-size: 1.5rem;
+    color: black;
+    margin: 10px 0px 10px 5px;
+}
+
+.tablaTendero {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tablaTendero td, th {
+    border: 1px solid #000;
+    padding: 8px 3px 8px 3px;
+    text-align: center;
+}
+
+.tablaTendero th {
+    background-color: #81267f;
+    color: white;
+}
+
+.btnTen {
+    background-color: #81267f;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btnTen:active {
+    background-color: #ffffff;
+    transform: translateY(2px);
+    border: 1px solid #81267f;
+    color: #81267f;
+
+}
+
+.titleH {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    list-style: none;
+}
+
+.btnH {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.navH {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.divFormu h1 {
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.formCrear {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Graphie', sans-serif;
+    margin-top: 20px;
+}
+
+.formCrear label {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.formCrear input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 0px #81267f;
+}
+
+.formCrear button {
+    background-color: #81267f;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.formCrear button:active {
+    background-color: #ffffff;
+    transform: translateY(2px);
+    border: 1px solid #81267f;
+    color: #81267f;
+}
+
+.formCrear select {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 0px #81267f;
+}
 @media (max-width: 575.98px)and (orientation:portrait) {
-    body {
-        min-height: 100vh;
-    }
-
-    .fondoAdmin {
-        background-color: rgb(225, 225, 225);
-        font-family: 'Graphie', sans-serif;
-        
-    }
-
-    .primDivAdmin {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .iconoAdmin {
-        width: 80px;
-        height: 80px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .title1Admin {
-        font-size: 1.5rem;
-        color: black;
-    }
-    .segDivAdmin {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 20px;
-        gap: 20px;
-    }
-    .title2Admin {
-        font-size: 20px;
-        color: black;
-        text-align: center;
-    }
-
-    .botonImport {
-        background-color: #81267f;
-        color: #ffffff;
-        font-size: 1.2rem;
-        padding: 20px 10px 20px 10px;
-        border-radius: 10px;
-        margin: 10px;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .botonAdmin {
-        background-color: #81267f;
-        color: #ffffff;
-        font-size: 1.2rem;
-        padding: 20px 10px 20px 10px;
-        border-radius: 10px;
-        margin: 10px;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .botonCrear {
-        background-color: #81267f;
-        color: white;
-        font-size: 1.2rem;
-        padding: 20px 10px 20px 10px;
-        border-radius: 10px;
-        margin: 10px;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .botonObs {
-        background-color: #81267f;
-        color: white;
-        font-size: 1.2rem;
-        padding: 20px 10px 20px 10px;
-        border-radius: 10px;
-        margin: 10px;
-        text-align: center;
-        text-decoration: none;
-    }
-    
-    .administrar{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .obss {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .creacionn {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .import{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .contenidoAdmin {
-        overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
-        max-height: 0;
-        transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
-        visibility: hidden; 
-        gap: 10px;
-        width: 100%;
-        margin: 0 auto;
-        background-color: #ffc5471c;
-        border: 1px solid #ffc547;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-
-    .administrar .contenidoAdmin.open {
-        max-height: 800px; /* Altura máxima del menú desplegable */
-        transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
-        visibility: visible;
-        overflow-y: scroll;
-        
-    }
-
-    .contenidoObs {
-        overflow: hidden; 
-        max-height: 0;
-        transition: max-height 0.5s ease, visibility 0s 0.5s;
-        visibility: hidden; 
-        gap: 10px;
-        width: 80%;
-        margin: 0 auto;
-       
-    }
-
-    .obss .contenidoObs.open {
-        max-height: 800px;
-        transition: max-height 0.5s ease, visibility 0s;
-        visibility: visible;
-        overflow-y: scroll;
-        
-    }
-
-
-    .contenidoCrear {
-        overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
-        max-height: 0;
-        transition: max-height 0.5s ease, visibility 0s 0.5s; /* Agrega transición para max-height y delay para visibility */
-        visibility: hidden; 
-        gap: 10px;
-        width: 80%;
-        margin: 0 auto;
-       
-    }
-
-    .creacionn .contenidoCrear.open {
-        max-height: 800px; /* Altura máxima del menú desplegable */
-        transition: max-height 0.5s ease, visibility 0s; /* Agrega transición para max-height y visibility */
-        visibility: visible;
-        overflow-y: scroll;
-        
-    }
-
-    .adminTendTT {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 10px;
-    }
-
-    .adminTendTT h1 {
-        font-size: 1.5rem;
-        color: black;
-        margin: 10px 0px 10px 5px;
-    }
-
-    .tablaTendero {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
-
-    .tablaTendero td, th {
-        border: 1px solid #000;
-        padding: 8px 3px 8px 3px;
-        text-align: center;
-    }
-
-    .tablaTendero th {
-        background-color: #81267f;
-        color: white;
-    }
-
-    .btnTen {
-        background-color: #81267f;
-        color: white;
-        padding: 6px 10px;
-        border: none;
-        border-radius: 4px;
-        text-decoration: none;
-    }
-
-    .btnTen:active {
-        background-color: #ffffff;
-        transform: translateY(2px);
-        border: 1px solid #81267f;
-        color: #81267f;
-    
-    }
-
-    .titleH {
-        font-size: 1.5rem;
-        color: black;
-        margin-bottom: 10px;
-    }
-
-    .header {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .list {
-        list-style: none;
-    }
-
-    .btnH {
-        background-color: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        padding: 8px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 12px;
-    }
-
-    .navH {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 10px;
-    }
-
-    .divFormu h1 {
-        font-size: 1.5rem;
-        color: black;
-        text-align: center;
-        margin-top: 20px;
-        font-weight: 700;
-    }
-
-    .formCrear {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 80%;
-        margin: 0 auto;
-        font-family: 'Graphie', sans-serif;
-        margin-top: 20px;
-    }
-
-    .formCrear label {
-        font-size: 1.2rem;
-        color: black;
-    }
-
-    .formCrear input {
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid black;
-        box-shadow: 0px 0px 5px 0px #81267f;
-    }
-
-    .formCrear button {
-        background-color: #81267f;
-        color: white;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        font-size: 18px;
-        margin-top: 15px;
-    }
-
-    .formCrear button:active {
-        background-color: #ffffff;
-        transform: translateY(2px);
-        border: 1px solid #81267f;
-        color: #81267f;
-    }
-
-    .formCrear select {
-        background-color: white;
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid black;
-        box-shadow: 0px 0px 5px 0px #81267f;
-    }
-
+    body{background: white;}
     
 } 
 /* horizontal */
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
-    body{background: black;}
+    body{background: white;}
 }
 
 /*Estilos tabletas*/
 /*Vertical*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
-    body{background: orange;}
+    body{background: white;}
 }
 
 /*Horizontal*/
 @media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
-    body{background: blue;}
+    body{background: white;}
 }
 
 /*Estilos desktop*/
 @media (min-width: 1199.98px)  {
-    body{background: red;}
+    body{background: white;}
 }

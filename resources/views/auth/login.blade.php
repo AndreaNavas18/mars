@@ -26,7 +26,7 @@
                     <h2 class="nuevo2TT animate__animated animate__backInDown">a Mi <span class="marss">Vecino</span> Mars</h2>
                     <img src="{{ asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
                 </div>
-                <form method="POST" action="{{ secure_url('login') }}">
+                <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <input type="hidden" name="token" value="{{ request()->query('token') }}">
                     <div class="divIngresoTT">
