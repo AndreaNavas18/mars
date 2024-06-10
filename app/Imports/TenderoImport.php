@@ -5,19 +5,26 @@ namespace App\Imports;
 use App\Models\Tendero;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Cumplimiento;
 
 class TenderoImport implements ToModel, WithHeadingRow
 {
     public function model(array $row)
     {
         return new Tendero([
-            'nombre' => $row['nombre'],
-            'direccion' => $row['direccion'],
-            'telefono' => $row['telefono'],
-            'puntos' => $row['puntos'],
-            'cedula' => $row['cedula'],
-            // Asegúrate de que la columna 'user_id' esté presente en el archivo Excel si deseas establecer el id del usuario
-            'user_id' => $row['user_id'],
+            'producto' => $row['producto'],
+            'canal' => $row['canal'],
+            'subcanal' => $row['subcanal'],
+            'region_nielsen' => $row['region_nielsen'],
+            'codigo_pdv' => $row['codigo_pdv'],
+            'cedula' => $row['cedula_pdv'],
+            'nombre' => $row['nombre_pdv'],
+            'drop_size' => $row['drop_size'],
+            'frecuencia' => $row['frecuencia_compra'],
+            'prob_compra' => $row['prob_compra'],
+            'cuota_mes' => $row['cuota'],
+            'puntos' => $row['cumplimiento'],
+            
         ]);
     }
 }

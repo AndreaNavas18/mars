@@ -11,6 +11,7 @@ use App\Models\Observation;
 use App\Models\Tendero;
 use App\Models\User;
 use App\Models\Cumplimiento;
+use App\Imports\TenderoImport;
 
 class TenderoController extends BaseController
 {
@@ -138,19 +139,18 @@ class TenderoController extends BaseController
 
     public function importTenderos(Request $request){
 
-         // Valida la solicitud
-         $request->validate([
-            'file' => 'required|mimes:xlsx,xls', // Asegúrate de que solo se permitan archivos de Excel
-        ]);
+        if($request->hasFile('tenderodocumento')){
 
-        // Obtiene el archivo cargado
-        $file = $request->file('file');
+            $file = $request->file('tenderodocumento');
+            Excel::import(new TenderoImport, $file);
+            Log::info("funcione, importe los tenderos");
 
-        // Importa los datos del archivo Excel
-        Excel::import(new TenderoImport, $file);
-
-        // Redirige de vuelta con un mensaje de éxito
-        return redirect()->back()->with('success', 'Tenderos importados exitosamente.');
+            return redirect()->back()->with('success', 'Listado de tenderos importados exitosamente');
+        }else {
+            Alert::error('Error', 'Error al importar archivo.');
+            Log::info("no funcioneeee, con los tenderos");
+            return redirect()->back()->with('error', 'No se importaron correctamente los tenderos');
+        }
 
     }
 }

@@ -27,11 +27,11 @@
                 <ul class="list">
                     @guest
                     <li>
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a href="{{ generate_url('login') }}">{{ __('Login') }}</a>
                     </li>
                     @else
                     <li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        <form id="logout-form" action="{{ generate_url('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="btnH">Logout
                             </button>
