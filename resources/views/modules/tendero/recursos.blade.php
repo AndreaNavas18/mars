@@ -20,7 +20,15 @@
             <h2 class="titu2TTT">Recursos</h2>
         </div>
     </div>
-    
+    <ul>
+        <li class="videoPromo">
+            <h2>Video Promocional</h2>
+            <video width="320" height="240" controls>
+                <source src="{{ asset('images/new/videoPromocional.mp4') }}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </li>
+    </ul>
 </body>
 </html>
 @endsection
