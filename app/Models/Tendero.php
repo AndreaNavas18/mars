@@ -21,7 +21,6 @@ class Tendero extends Model
     'canal',
     'subcanal',
     'region_nielsen',
-    'codigo_pdv',
     'drop_size',
     'frecuencia',
     'prob_compra',

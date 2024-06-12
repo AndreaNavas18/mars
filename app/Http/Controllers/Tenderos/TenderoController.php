@@ -52,10 +52,9 @@ class TenderoController extends BaseController
             $tendero->canal = $request->canal;
             $tendero->subcanal = $request->subcanal;
             $tendero->region_nielsen = $request->region_nielsen;
-            $tendero->codigo_pdv = $request->codigo_pdv;
             $tendero->drop_size = $request->drop_size;
             $tendero->frecuencia = $request->frecuencia;
-            $tendero->prob_compra = $request->prob_compra;
+            $tendero->prob_compra = $request->prob_compra / 100;
             $tendero->cuota_mes = $request->cuota_mes;
 
             $tendero->save();
@@ -96,10 +95,9 @@ class TenderoController extends BaseController
             $tendero->canal = $request->canal;
             $tendero->subcanal = $request->subcanal;
             $tendero->region_nielsen = $request->region_nielsen;
-            $tendero->codigo_pdv = $request->codigo_pdv;
             $tendero->drop_size = $request->drop_size;
             $tendero->frecuencia = $request->frecuencia;
-            $tendero->prob_compra = $request->prob_compra;
+            $tendero->prob_compra = $request->prob_compra / 100;
             $tendero->cuota_mes = $request->cuota_mes;
             $tendero->save();
             

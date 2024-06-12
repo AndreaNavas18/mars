@@ -22,10 +22,8 @@
                 <input type="text" name="nombre" id="nombre" value="{{ $tendero->nombre }}">
                 <label for="puntos">Puntos</label>
                 <input type="text" name="puntos" id="puntos" value="{{ $tendero->puntos }}">
-                <label for="cedula">Cedula PDV</label>
+                <label for="cedula">Código PDV (NIT)</label>
                 <input type="number" name="cedula" id="cedula" value="{{ $tendero->cedula }}" >
-                <label for="codigo_pdv">Código PDV</label>
-                <input type="text" name="codigo_pdv" id="codigo_pdv" value="{{ $tendero->codigo_pdv }}" >
                 <label for="producto">Producto</label>
                 <select name="producto" id="producto">
                     <option value="wet" {{ $tendero->producto == 'wet' ? 'selected' : '' }}>WET</option>
