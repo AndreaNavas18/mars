@@ -14,6 +14,14 @@
             {{ session('error') }}
         </div>
         @endif
+
+         <!-- Formulario de búsqueda -->
+         <form action="{{ route('search.admin.tenderos') }}" method="GET" class="search-form">
+            @csrf
+            <input type="text" name="search" placeholder="Busca nombre-cédula-región Nielsen">
+            <button type="submit">Buscar</button>
+        </form>
+
         <h1>Administracion de tendero</h1>
         <table class="tablaTendero">
             <thead>

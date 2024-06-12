@@ -183,4 +183,16 @@ class TenderoController extends BaseController
         }
 
     }
+
+    public function searchTenderos(Request $request) {
+        $searchTerm = $request->input('search');
+
+        $tenderos = DB::table('tenderos')
+                    ->where('nombre', 'like', "%$searchTerm%")
+                    ->orWhere('cedula', 'like', "%$searchTerm%")
+                    ->orWhere('region_nielsen', 'like', "%$searchTerm%")
+                    ->paginate(10);
+
+        return view('modules.admin.administrar', ['tenderos' => $tenderos]);
+    }
 }

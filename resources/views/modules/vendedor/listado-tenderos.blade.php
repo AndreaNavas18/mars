@@ -22,7 +22,7 @@
             <button type="submit">Buscar</button>
         </form>
 
-        <h1>Listado de tendero</h1>
+        <h1>Listado de tenderos</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>
