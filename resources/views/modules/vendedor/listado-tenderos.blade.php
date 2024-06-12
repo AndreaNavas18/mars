@@ -34,7 +34,7 @@
                 @foreach ($tenderos as $tendero)
                 <tr>
                     <td>{{ $tendero->nombre }}</td>
-                    <td style="display: flex">
+                    <td style="display: flex;justify-content:center;align-items:center">
                         <a href="{{ route('create.observations', $tendero->id) }}" class="btnTen">Crear Observación</a>
                     </td>
                 </tr>

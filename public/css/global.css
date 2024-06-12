@@ -435,6 +435,7 @@ amarrillo rgb(255,220,0)
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .search-form input[type="text"] {
