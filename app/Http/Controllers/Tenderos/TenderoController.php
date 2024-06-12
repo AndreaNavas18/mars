@@ -12,6 +12,8 @@ use App\Models\Tendero;
 use App\Models\User;
 use App\Models\Cumplimiento;
 use App\Imports\TenderoImport;
+use App\Imports\TokenImport;
+use App\Imports\EmpleadoImport;
 
 class TenderoController extends BaseController
 {
@@ -159,7 +161,7 @@ class TenderoController extends BaseController
         if($request->hasFile('tokendocumento')){
 
             $file = $request->file('tokendocumento');
-            Excel::import(new TenderoImport, $file);
+            Excel::import(new TokenImport, $file);
 
             return redirect()->back()->with('success', 'Listado de tokens importados exitosamente');
         }else {
@@ -174,7 +176,7 @@ class TenderoController extends BaseController
         if($request->hasFile('empleadodocumento')){
 
             $file = $request->file('empleadodocumento');
-            Excel::import(new TenderoImport, $file);
+            Excel::import(new EmpleadoImport, $file);
 
             return redirect()->back()->with('success', 'Listado de empleados importados exitosamente');
         }else {

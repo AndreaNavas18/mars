@@ -11,8 +11,7 @@ class TokenImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Token([
-            'producto' => $row['producto'],
-            
+            'token' => $row['token'],
         ]);
     }
 }

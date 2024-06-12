@@ -11,7 +11,7 @@ class TenderoImport implements ToModel, WithHeadingRow
 {
     public function model(array $row)
     {
-        return new Tendero([
+        $tendero = new Tendero([
             'producto' => $row['producto'],
             'canal' => $row['canal'],
             'subcanal' => $row['subcanal'],
@@ -23,8 +23,16 @@ class TenderoImport implements ToModel, WithHeadingRow
             'frecuencia' => $row['frecuencia_compra'],
             'prob_compra' => $row['prob_compra'],
             'cuota_mes' => $row['cuota'],
-            'puntos' => $row['cumplimiento'],
-            
         ]);
+
+        $tendero->save();
+
+        $cumplimiento = new Cumplimiento([
+            'tendero_id' => $tendero->id,
+        ]);
+
+        $cumplimiento->save();
+
+        return $tendero;
     }
 }

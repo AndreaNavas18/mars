@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('cumplimiento', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('tendero_id');
-            $table->bigInteger('mes_1');
-            $table->bigInteger('mes_2');
-            $table->bigInteger('mes_3');
-            $table->bigInteger('mes_4');
-            $table->bigInteger('mes_5');
-            $table->bigInteger('mes_6');
+            $table->bigInteger('mes_1')->nullable();
+            $table->bigInteger('mes_2')->nullable();
+            $table->bigInteger('mes_3')->nullable();
+            $table->bigInteger('mes_4')->nullable();
+            $table->bigInteger('mes_5')->nullable();
+            $table->bigInteger('mes_6')->nullable();
             $table->timestamps();
         });
     }
