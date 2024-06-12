@@ -274,6 +274,10 @@ amarrillo rgb(255,220,0)
     color: white;
 }
 
+.tablaTendero td {
+    font-size: 13px;
+}
+
 .btnTen {
     background-color: #81267f;
     color: white;
@@ -425,6 +429,42 @@ amarrillo rgb(255,220,0)
 
 .custom-pagination a:hover {
     background-color: #ffc547;
+}
+
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #81267f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: white;
+    color: #81267f;
+    border: 1px solid #81267f;
+}
+
+.search-form button:active {
+    background-color: #ffc547;
+    color: white;
 }
 
 @media (max-width: 575.98px)and (orientation:portrait) {

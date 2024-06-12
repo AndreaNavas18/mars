@@ -32,6 +32,7 @@ Route::get('/', function () {
 Route::get('/token/{token}', function ($token) {
     return redirect()->route('login', ['token' => $token]);
 });
+
 /**************************************
  * 
  * Rutas para el modulo de tenderos
@@ -40,15 +41,19 @@ Route::get('/token/{token}', function ($token) {
 Route::get('/marcas', function () {
     return view('modules.tendero.marcas');
 });
+
 Route::get('/premios', function () {
     return view('modules.tendero.premios');
 });
+
 Route::get('/recursos', function () {
     return view('modules.tendero.recursos');
 });
+
 Route::get('/redimir', function () {
     return view('modules.tendero.redimir');
 });
+
 
 /**************************************
  * 
@@ -76,13 +81,12 @@ Route::post('/importar-tokens', [ TenderoController::class, 'importTokens' ])->n
 Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados' ])->name('import.empleados');
 
 
-
 /**************************************
  * 
  * Rutas para el modulo de vendedores
  */
 
- Route::get('/crear-observaciones/{id} ', [VendedorController::class, 'create'])->name('create.observations');
+Route::get('/crear-observaciones/{id} ', [VendedorController::class, 'create'])->name('create.observations');
 
 Route::post('/crear-observaciones/{id}', [VendedorController::class, 'store'])->name('store.observations');
 
@@ -96,6 +100,15 @@ Route::get('/activar-tendero', [VendedorController::class, 'activarVista'])->nam
 
 Route::post('/activar-tendero', [VendedorController::class, 'activar'])->name('activar.tendero');
 
+Route::get('/search-tenderos', [VendedorController::class, 'searchTenderos'])->name('search.tenderos');
+
+
+
+/**************************************
+ * 
+ * Rutas para generales
+ */
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -103,6 +116,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Route::get('/login/token/{token}', [LoginController::class, 'showLoginFormWithToken'])->name('login.token');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+
 Route::post('/login', [LoginController::class, 'login']);
 
 /**
