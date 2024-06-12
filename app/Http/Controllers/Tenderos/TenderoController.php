@@ -24,7 +24,7 @@ class TenderoController extends BaseController
     }
 
     public function adminTenderos() {
-        $tenderos = DB::table('tenderos')->get();
+        $tenderos = DB::table('tenderos')->paginate(10);
 
         return view('modules.admin.administrar', ['tenderos' => $tenderos]);
     }
