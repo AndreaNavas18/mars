@@ -153,4 +153,34 @@ class TenderoController extends BaseController
         }
 
     }
+
+    public function importTokens(Request $request){
+
+        if($request->hasFile('tokendocumento')){
+
+            $file = $request->file('tokendocumento');
+            Excel::import(new TenderoImport, $file);
+
+            return redirect()->back()->with('success', 'Listado de tokens importados exitosamente');
+        }else {
+            Alert::error('Error', 'Error al importar archivo.');
+            return redirect()->back()->with('error', 'No se importaron correctamente los tokens');
+        }
+
+    }
+
+    public function importEmpleados(Request $request){
+
+        if($request->hasFile('empleadodocumento')){
+
+            $file = $request->file('empleadodocumento');
+            Excel::import(new TenderoImport, $file);
+
+            return redirect()->back()->with('success', 'Listado de empleados importados exitosamente');
+        }else {
+            Alert::error('Error', 'Error al importar archivo.');
+            return redirect()->back()->with('error', 'No se importaron correctamente los empleados');
+        }
+
+    }
 }

@@ -56,6 +56,21 @@ amarrillo rgb(255,220,0)
     text-align: center;
 }
 
+.titImport {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.btnII {
+    background-color: white;
+    color: #81267f;
+    /* padding: 6px 10px; */
+    border-radius: 4px;
+    text-decoration: none;
+}
+
 .botonImport {
     background-color: #81267f;
     color: #ffffff;
@@ -65,6 +80,37 @@ amarrillo rgb(255,220,0)
     margin: 10px;
     text-align: center;
     text-decoration: none;
+    font-family: 'Graphie', sans-serif;
+}
+
+/* input[type="file"] {
+    display: none;
+} */
+
+.uppp {
+    background-color: #81267f;
+    color: white;
+    max-width: 200px;
+}
+
+.btnImm {
+    color: #81267f;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.btnImm i {
+    margin-right: 5px;
+}
+
+.btnImm:active {
+    background-color: #ffc547;
+    transform: translateY(2px);
+    color: white;
+    font-weight: bold;
 }
 
 .botonAdmin {

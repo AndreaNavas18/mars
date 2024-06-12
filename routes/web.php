@@ -71,6 +71,11 @@ Route::get('/listado-observaciones/{id}', [TenderoController::class, 'listObs'])
 
 Route::post('/importar-tenderos', [ TenderoController::class, 'importTenderos' ])->name('import.tenderos');
 
+Route::post('/importar-tokens', [ TenderoController::class, 'importTokens' ])->name('import.tokens');
+
+Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados' ])->name('import.empleados');
+
+
 
 /**************************************
  * 
