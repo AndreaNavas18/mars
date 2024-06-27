@@ -26,6 +26,9 @@
             <div class="creacionn btnInicial" id="menuCrear">
                 <a href="{{ route('create.tenderos')}}" id="botonCrear" class="botonCrear">Crear tendero</a>
             </div>
+            <div class="creacionnV btnInicial" id="menuCrearV">
+                <a href="{{ route('create.vendedores')}}" id="botonCrearV" class="botonCrearV">Crear vendedor</a>
+            </div>
             <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
             </div>

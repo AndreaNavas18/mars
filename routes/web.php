@@ -64,6 +64,10 @@ Route::get('/crear-tenderos', [TenderoController::class, 'create'])->name('creat
 
 Route::post('/crear-tenderos', [TenderoController::class, 'store'])->name('store.tenderos');
 
+Route::get('/crear-vendedores', [TenderoController::class, 'createVendedor'])->name('create.vendedores');
+
+Route::post('/crear-vendedores', [TenderoController::class, 'storeVendedor'])->name('store.vendedores');
+
 Route::get('/administrar-tenderos', [TenderoController::class, 'adminTenderos'])->name('admin.tenderos');
 
 Route::get('/editar-tendero/{id}', [TenderoController::class, 'edit'])->name('edit.tendero');

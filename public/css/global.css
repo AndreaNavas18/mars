@@ -131,7 +131,7 @@ amarrillo rgb(255,220,0)
     text-decoration: none;
 }
 
-.botonCrear {
+.botonCrear, .botonCrearV {
     background-color: #81267f;
     color: white;
     font-size: 1.2rem;
@@ -165,7 +165,7 @@ amarrillo rgb(255,220,0)
     gap: 10px;
 }
 
-.creacionn {
+.creacionn, .creacionnV {
     display: flex;
     flex-direction: column;
     gap: 10px;

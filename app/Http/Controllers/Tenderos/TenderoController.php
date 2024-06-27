@@ -14,6 +14,7 @@ use App\Models\Cumplimiento;
 use App\Imports\TenderoImport;
 use App\Imports\TokenImport;
 use App\Imports\EmpleadoImport;
+use App\Models\Vendedor;
 
 class TenderoController extends BaseController
 {
@@ -194,5 +195,36 @@ class TenderoController extends BaseController
                     ->paginate(10);
 
         return view('modules.admin.administrar', ['tenderos' => $tenderos]);
+    }
+
+    public function createVendedor()
+    {
+        return view('modules.admin.crear-vendedores');
+    }
+
+    public function storeVendedor(Request $request){
+        try {
+            $vendedor = new Vendedor();
+            $vendedor->nombre = $request->nombre;
+            $vendedor->cedula = $request->cedula;
+            $vendedor->email = $request->email;
+            $vendedor->save();
+
+            $user = new User();
+            $user->name = $request->nombre;
+            $user->username = $request->cedula;
+            $user->email = $request->email;
+            $user->password = bcrypt($request->cedula);
+            $user->save();
+            
+            $vendedor->user_id = $user->id;
+            $vendedor->save();
+
+            return redirect()->route('home')->with('success', 'Vendedor creado con éxito');
+        } catch (QueryException $e) {
+            Log::error($e->getMessage());
+            return redirect()->route('modules.admin.crear-vendedores')->with('error', 'Error al crear vendedor');
+        }
+
     }
 }
