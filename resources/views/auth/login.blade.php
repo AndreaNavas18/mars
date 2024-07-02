@@ -43,18 +43,18 @@
                                 </div>
                                 @endif
                             </div>
-                            {{-- <div class="divinput2">
-                                <input id="password" name="password" type="password" placeholder="Razón social" class="inputIngreso2 @error('password') is-invalid @enderror" required autocomplete="current-password" >
-                                <img src="{{ asset('images/new/tienda.png') }}" class="iconotienda" alt="#">
+                            <div class="divinput2" id="passwordDiv" style="display: none">
+                                <input id="password" name="password" type="password" placeholder="********" class="inputIngreso2 @error('password') is-invalid @enderror" autocomplete="current-password" >
+                                <img src="{{ asset('images/new/llave.png') }}" class="iconotienda" alt="#">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div> --}}
-                                    <button type="submit" class="btnIngresoTT animate__animated animate__pulse">Ingresar</button>
-                                </div>
-                            </form>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <button type="submit" class="btnIngresoTT animate__animated animate__pulse">Ingresar</button>
+                    </div>
+                </form>
             </div>
             
         </div>
@@ -73,4 +73,36 @@
         });
     });
 }
+</script>
+{{-- <script>
+    document.getElementById('username').addEventListener('blur', function() {
+        var username = this.value;
+        axios.post('{{ route('check-user-role') }}', { username: username })
+            .then(function(response) {
+                if (response.data.role !== 'tendero') {
+                    document.getElementById('passwordDiv').style.display = 'block';
+                } else {
+                    document.getElementById('passwordDiv').style.display = 'none';
+                }
+            });
+    });
+</script> --}}
+
+<script>
+    document.getElementById('username').addEventListener('blur', function() {
+        var username = this.value;
+        if (username) { // Verifica si el campo no está vacío
+            axios.post('{{ route('check-user-role') }}', { username: username })
+                .then(function(response) {
+                    if (response.data.role !== 'tendero') {
+                        document.getElementById('passwordDiv').style.display = 'block';
+                    } else {
+                        document.getElementById('passwordDiv').style.display = 'none';
+                    }
+                })
+                .catch(function(error) {
+                    console.error('Hubo un error al verificar el rol del usuario:', error);
+                });
+        }
+    });
 </script>

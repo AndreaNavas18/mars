@@ -32,65 +32,67 @@
             <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
             </div>
-            <div class="import btnInicial" id="menuImport">
-                <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tenderos') }}" enctype="multipart/form-data">
-                    @csrf
-                    <p class="titImport">Importar tendero(s)</p>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-12  mb-4">
-                            <input type="file" name="tenderodocumento" class="uppp">
+            <div style="display: none">
+                <div class="import btnInicial" id="menuImport">
+                    <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tenderos') }}" enctype="multipart/form-data">
+                        @csrf
+                        <p class="titImport">Importar tendero(s)</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12  mb-4">
+                                <input type="file" name="tenderodocumento" class="uppp">
+                            </div>
+                            <div class="col-md-3 col-sm-12 mb-4 mt-2">
+                                <button class="btnImm"
+                                    type="submit"
+                                    name="action"
+                                    value="importar">
+                                    <i class="fas fa-arrow-up-from-bracket"></i> Importar
+                                </button>
+                            </div>
+                        
                         </div>
-                        <div class="col-md-3 col-sm-12 mb-4 mt-2">
-                            <button class="btnImm"
-                                type="submit"
-                                name="action"
-                                value="importar">
-                                <i class="fas fa-arrow-up-from-bracket"></i> Importar
-                            </button>
+                    </form>
+                </div>
+                <div class="import btnInicial" id="menuImport">
+                    <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tokens') }}" enctype="multipart/form-data">
+                        @csrf
+                        <p class="titImport">Importar token(s)</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12  mb-4">
+                                <input type="file" name="tokendocumento" class="uppp">
+                            </div>
+                            <div class="col-md-3 col-sm-12 mb-4 mt-2">
+                                <button class="btnImm"
+                                    type="submit"
+                                    name="action"
+                                    value="importar">
+                                    <i class="fas fa-arrow-up-from-bracket"></i> Importar
+                                </button>
+                            </div>
+                        
                         </div>
-                    
-                    </div>
-                </form>
-            </div>
-            <div class="import btnInicial" id="menuImport">
-                <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tokens') }}" enctype="multipart/form-data">
-                    @csrf
-                    <p class="titImport">Importar token(s)</p>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-12  mb-4">
-                            <input type="file" name="tokendocumento" class="uppp">
+                    </form>
+                </div>
+                <div class="import btnInicial" id="menuImport">
+                    <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.empleados') }}" enctype="multipart/form-data">
+                        @csrf
+                        <p class="titImport">Importar empleado(s)</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12  mb-4">
+                                <input type="file" name="empleadodocumento" class="uppp">
+                            </div>
+                            <div class="col-md-3 col-sm-12 mb-4 mt-2">
+                                <button class="btnImm"
+                                    type="submit"
+                                    name="action"
+                                    value="importar">
+                                    <i class="fas fa-arrow-up-from-bracket"></i> Importar
+                                </button>
+                            </div>
+                        
                         </div>
-                        <div class="col-md-3 col-sm-12 mb-4 mt-2">
-                            <button class="btnImm"
-                                type="submit"
-                                name="action"
-                                value="importar">
-                                <i class="fas fa-arrow-up-from-bracket"></i> Importar
-                            </button>
-                        </div>
-                    
-                    </div>
-                </form>
-            </div>
-            <div class="import btnInicial" id="menuImport">
-                <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.empleados') }}" enctype="multipart/form-data">
-                    @csrf
-                    <p class="titImport">Importar empleado(s)</p>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-12  mb-4">
-                            <input type="file" name="empleadodocumento" class="uppp">
-                        </div>
-                        <div class="col-md-3 col-sm-12 mb-4 mt-2">
-                            <button class="btnImm"
-                                type="submit"
-                                name="action"
-                                value="importar">
-                                <i class="fas fa-arrow-up-from-bracket"></i> Importar
-                            </button>
-                        </div>
-                    
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

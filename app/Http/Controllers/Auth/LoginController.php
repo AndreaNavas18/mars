@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Token;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -108,9 +109,23 @@ class LoginController extends Controller
         }
     
     } else {
-        auth()->login($user);
-        Log::info('No es tendero');
-        return redirect()->route('home');
+        if (Hash::check($request->password, $user->password)) {
+            auth()->login($user);
+            Log::info('No es tendero');
+            return redirect()->route('home');
+        } else {
+            return redirect()->back()->with('error', 'Contraseña incorrecta');
+        }
+    }
+}
+
+public function checkUserRole(Request $request)
+{
+    $user = User::where('username', $request->username)->first();
+    if ($user) {
+        return response()->json(['role' => $user->getRole()]);
+    } else {
+        return response()->json(['role' => null]);
     }
 }
 

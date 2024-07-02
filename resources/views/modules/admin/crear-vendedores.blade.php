@@ -3,7 +3,7 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <title>Creacion de vendedor</title>
-    <div class="divFormu">
+    <div class="divFormu" style="margin-bottom: 30px">
         <h1>Creacion de vendedor</h1>
         @if (session('success'))
             <div class="alert alert-success">

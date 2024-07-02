@@ -22,7 +22,8 @@ class Tendero extends Model
     'drop_size',
     'frecuencia',
     'prob_compra',
-    'cuota_mes'
+    'cuota_mes',
+    'puntos',
     ];
 
    public function user()

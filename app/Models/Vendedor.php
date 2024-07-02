@@ -11,7 +11,9 @@ class Vendedor extends Model
     use HasFactory;
     protected $table = 'vendedores';
     protected $fillable = 
-    ['nombre', 
+    ['nombre',
+    'cedula',
+    'email',
     'user_id',
     ];
 

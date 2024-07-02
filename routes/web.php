@@ -126,6 +126,8 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::post('/login', [LoginController::class, 'login']);
 
+Route::post('/check-user-role', [LoginController::class, 'checkUserRole'])->name('check-user-role');
+
 /**
  * Rutas para la PWA
  */

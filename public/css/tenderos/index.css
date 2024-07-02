@@ -91,7 +91,7 @@ cafecito mars vecino #ffc5477d
     font-family: 'Graphie', sans-serif;
 }
 
-.inputIngresoTT {
+.inputIngresoTT, .inputIngreso2 {
     width: 250px;
     height: 55px;   
     margin: 0 auto;
@@ -170,11 +170,41 @@ cafecito mars vecino #ffc5477d
     }
 }
 
+.iconotienda {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: -245px;
+    margin-top: 1px;
+    @media (max-width: 840px) {
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        margin-top: 8px;
+    }
+}
+
 .inicioTTT {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
+
+/* .inputIngreso2 {
+    width: 250px;
+    height: 55px;   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding-left: 45px;
+    font-size: 20px;
+    box-shadow: 0 0 5px #ffc5477d;
+    border: 2px solid #ffc547;
+}
+ */
 
 /*Estilos moviles*/
 /* vertical */
@@ -319,27 +349,7 @@ cafecito mars vecino #ffc5477d
         position: relative;
         margin: 0 auto;
     }
-    .inputIngreso2 {
-        width: 250px;
-        height: 55px;   
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        border-radius: 5px;
-        padding-left: 45px;
-        font-size: 20px;
-        box-shadow: 0 0 5px #ffc5477d;
-        border: 2px solid #ffc547;
-    }
-    .iconotienda {
-        position: absolute;
-        width: 28px;
-        height: 28px;
-        top: 50%;
-        left: 12px;
-        transform: translateY(-50%);
-        margin-top: 8px;
-    }
+   
     
     .divFooter {
         display: flex;

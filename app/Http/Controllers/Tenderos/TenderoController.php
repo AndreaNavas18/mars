@@ -71,6 +71,11 @@ class TenderoController extends BaseController
             $cumplimiento->mes_6 = 0;
 
             $cumplimiento->save();
+
+            //Guardamos el tendero con su respectivo rol
+
+
+
                     
             return redirect()->route('home')->with('success', 'Tendero creado con éxito');
         } catch (QueryException $e) {
@@ -219,6 +224,9 @@ class TenderoController extends BaseController
             
             $vendedor->user_id = $user->id;
             $vendedor->save();
+
+            //Asignamos el rol de vendedor
+            $user->assignRole('vendedor');
 
             return redirect()->route('home')->with('success', 'Vendedor creado con éxito');
         } catch (QueryException $e) {

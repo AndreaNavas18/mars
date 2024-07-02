@@ -13,7 +13,7 @@
     {{-- <title>Header</title> --}}
 </head>
 <body>
-    <div class="headerCompletoAdmin">
+    <div class="headerCompletoAdmin" >
         <div class="soloHeaderImgAdmin">
             <div class="soloHeaderAdmin">
                 <div class="iconosHH">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <main class="mainHHAdmin">
+        <main class="mainHHAdmin" >
             @yield('content')
         </main>
     </div>
