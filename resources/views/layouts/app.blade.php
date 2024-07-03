@@ -16,7 +16,8 @@
     {{-- <title>Header</title> --}}
     
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <link rel="manifest" href="/manifest.json">
+    {{-- <link rel="manifest" href="/manifest.json"> --}}
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <meta name="theme-color" content="#000000">
   </head>
   <body>

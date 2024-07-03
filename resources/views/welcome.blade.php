@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/tenderos/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="manifest" href="/manifest.json">
+    {{-- <link rel="manifest" href="/manifest.json"> --}}
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
+
     <meta name="theme-color" content="#000000">
 
     <title>Inicio</title>
