@@ -96,7 +96,7 @@
         if (username) { // Verifica si el campo no está vacío
             axios.post('{{ route('check-user-role') }}', { username: username })
                 .then(function(response) {
-                    if (response.data.role !== 'tendero') {
+                    if (response.data.role == 'vendedor' || response.data.role == 'admin') {
                         document.getElementById('passwordDiv').style.display = 'block';
                         document.getElementById('btnIngresar').disabled = false;
                     } else {
