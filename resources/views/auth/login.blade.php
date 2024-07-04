@@ -54,7 +54,7 @@
                                 </span>
                                 @enderror
                             </div>
-                            <button type="submit" class="btnIngresoTT animate__animated animate__pulse">Ingresar</button>
+                            <button type="submit" class="btnIngresoTT animate__animated animate__pulse" id="btnIngresar" disabled>Ingresar</button>
                     </div>
                 </form>
             </div>
@@ -98,8 +98,10 @@
                 .then(function(response) {
                     if (response.data.role !== 'tendero') {
                         document.getElementById('passwordDiv').style.display = 'block';
+                        document.getElementById('btnIngresar').disabled = false;
                     } else {
                         document.getElementById('passwordDiv').style.display = 'none';
+                        document.getElementById('btnIngresar').disabled = false;
                     }
                 })
                 .catch(function(error) {
