@@ -17,6 +17,7 @@
         @endif
         <form method="POST"
             action="{{ route('store.observations', $tendero->id) }}"
+            enctype="multipart/form-data"
         >
             @csrf
             <div class="formCrear">
@@ -25,6 +26,8 @@
                 <h3 style="color: #81267f">{{ ucwords($tendero->nombre) }}</h3>
                 <label for="observacion">Observación</label>
                 <textarea name="observacion" id="observacion" cols="20" rows="8"></textarea>
+                <label for="file">Adjuntar Archivo</label>
+                <input type="file" name="file" id="file">
                 <button type="submit">Crear observación</button>
             </div>
         </form>

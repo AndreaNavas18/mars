@@ -10,6 +10,7 @@ use App\Models\Observation;
 use App\Models\Tendero;
 use App\Models\Token;
 use App\Models\User;
+use App\Models\ObservacionesFiles;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
@@ -37,6 +38,21 @@ class VendedorController extends BaseController
             $observation->user_id = auth()->user()->id;
             $observation->save();
 
+            if($request->hasFile('file')) {
+                $file = $request->file('file');
+                $path = $file->store('observaciones', 'public');
+
+                $observacionFile = new ObservacionesFiles();
+                $observacionFile->slug = 'archivo'. rand(0, 9999) .'-'.$file->getClientOriginalName();
+                $observacionFile->path = $path;
+                $observacionFile->name = $file->getClientOriginalName();
+                $observacionFile->observacion_id = $observation->id;
+                $observacionFile->save();
+                \Log::info('Archivo guardado con éxito');
+            }else{
+                \Log::info('No se ha seleccionado un archivo');
+            }
+
             return redirect()->route('home')->with('success', 'Observación creada con éxito');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
@@ -50,16 +66,21 @@ class VendedorController extends BaseController
         $tenderoIds = $observations->pluck('tendero_id')->unique()->toArray();
 
         $tenderos = DB::table('tenderos')->whereIn('id', $tenderoIds)->get();
+        $observacionFiles = ObservacionesFiles::all();
     
 
-        return view('modules.vendedor.historial', compact('tenderos', 'observations'));
+        return view('modules.vendedor.historial', compact('tenderos', 'observations', 'observacionFiles'));
     }
 
     public function listObs($id)
     {
         $tendero = DB::table('tenderos')->where('id', $id)->first();
         $observations = DB::table('observations')->where('tendero_id', $id)->get();
-        return view('modules.vendedor.listado-observaciones', compact('tendero', 'observations'));
+        $observacionFiles = DB::table('observaciones_files')
+        ->whereIn('observacion_id', $observations->pluck('id'))
+        ->get()
+        ->groupBy('observacion_id');
+        return view('modules.vendedor.listado-observaciones', compact('tendero', 'observations', 'observacionFiles'));
     }
 
     public function activarVista(){
