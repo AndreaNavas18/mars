@@ -116,11 +116,18 @@ class TenderoController extends BaseController
 
     public function historialObs()
     {
-        $observations = DB::table('observations')->get();
-        $tenderoIds = $observations->pluck('tendero_id')->unique()->toArray();
-
-        $tenderos = DB::table('tenderos')->whereIn('id', $tenderoIds)->get();
+        $user = auth()->user();
+        if( $user->hasRole('admin') ){
+            $observations = DB::table('observations')->get();
+            $tenderoIds = $observations->pluck('tendero_id')->unique()->toArray();
     
+            $tenderos = DB::table('tenderos')->whereIn('id', $tenderoIds)->get();
+         }else{
+            $observations = DB::table('observations')->where('user_id', $user->id)->get();
+            $tenderoIds = $observations->pluck('tendero_id')->unique()->toArray();
+    
+            $tenderos = DB::table('tenderos')->whereIn('id', $tenderoIds)->get();
+         }
 
         return view('modules.admin.observaciones', compact('tenderos', 'observations'));
     }
@@ -207,6 +214,21 @@ class TenderoController extends BaseController
         return view('modules.admin.crear-vendedores');
     }
 
+
+    public function generarUsuario($nombre, $apellido){
+
+        $baseUsername = strtolower(substr($nombre, 0, 1) . $apellido);
+        $username = $baseUsername;
+        $counter = 1;
+    
+        while (User::where('username', $username)->exists()) {
+            $username = $baseUsername . $counter;
+            $counter++;
+        }
+    
+        return $username;
+    }
+
     public function storeVendedor(Request $request){
         try {
             if($request->tipouusuario == 'vendedor'){
@@ -214,14 +236,15 @@ class TenderoController extends BaseController
                 $vendedor->nombre = $request->nombre;
                 $vendedor->apellido = $request->apellido;
                 $vendedor->cedula = $request->cedula;
-                $vendedor->usuario = $request->usuario;
                 $vendedor->email = $request->email;
                 $vendedor->telefono = $request->telefono;
                 $vendedor->save();
+
+                $usuarioGenerado = $this->generarUsuario($request->nombre, $request->apellido);
     
                 $user = new User();
                 $user->name = $request->nombre . ' ' . $request->apellido;
-                $user->username = $request->usuario;
+                $user->username = $usuarioGenerado;
                 $user->email = $request->email;
                 $user->password = bcrypt($request->cedula);
                 $user->save();

@@ -126,6 +126,9 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::post('/login', [LoginController::class, 'login']);
 
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+
 Route::post('/check-user-role', [LoginController::class, 'checkUserRole'])->name('check-user-role');
 
 /**

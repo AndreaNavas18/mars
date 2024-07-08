@@ -48,44 +48,13 @@ class LoginController extends Controller
         return 'username';
     }
 
-    // public function login(Request $request)
-    // {
-    //     $token = $request->input('token');
-
-    //     if ($token) {
-    //         // Procesa el token y realiza las acciones necesarias
-    //         $tokenModel = Token::where('token', $token)->first();
-
-    //         if ($tokenModel && $tokenModel->status === 'inactivo') {
-    //             $user = User::where('username', $request->username)->first();
-
-    //             if ($user && !$tokenModel->tendero_id) {
-    //                 $tokenModel->tendero_id = $user->tendero_id;
-    //                 $tokenModel->status = 'activo';
-    //                 $tokenModel->save();
-    //             }
-    //         }else if($tokenModel && $tokenModel->status === 'activo' && $tokenModel->tendero_id === auth()->user()->tendero_id){
-    //             auth()->login($usuario);
-    //             return redirect()->route('home');
-    //         }
-
-    //         $usuario = User::where('username', $request->username)->first();
-
-    //         if ($usuario) {
-    //             auth()->login($usuario);
-    //             return redirect()->route('home');
-    //         }else {
-    //             // Manejar el caso donde el usuario no existe
-    //             return redirect()->back()->with('error', 'El usuario no existe');
-    //         }
-    //     } else {
-    //         // Realiza el proceso de autenticación normal
-    //         return $this->showLoginForm($request);
-    //     }
-
-
-         
-    // }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
+    }
 
     public function login(Request $request)
 {
