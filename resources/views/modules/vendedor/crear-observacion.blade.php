@@ -25,7 +25,7 @@
                 <input type="hidden" name="tendero_id" value="{{ $tendero->id }}">
                 <h3 style="color: #81267f">{{ ucwords($tendero->nombre) }}</h3>
                 <label for="observacion">Observación</label>
-                <textarea name="observacion" id="observacion" cols="20" rows="8"></textarea>
+                <textarea name="observacion" id="observacion" cols="20" rows="8" required></textarea>
                 <label for="file">Adjuntar Archivo</label>
                 <input type="file" name="file" id="file">
                 <button type="submit">Crear observación</button>
