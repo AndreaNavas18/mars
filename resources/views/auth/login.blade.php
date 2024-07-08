@@ -34,7 +34,7 @@
                     <div class="divIngresoTT">
                         <h1 class="nuevo3TT">Iniciar Sesión</h1>
                         <label for="username">
-                            <h3 class="labelTT">Ingrese su cédula</h3>
+                            <h3 class="labelTT">Ingrese su usuario</h3>
                         </label>
                             <div class="divinput">
                                 <input id="username" name="username" type="text" class="inputIngresoTT @error('username') is-invalid @enderror" value="{{ old('username') }}" required autocomplete="username" autofocus>
@@ -97,7 +97,8 @@
             axios.post('{{ route('check-user-role') }}', { username: username })
                 .then(function(response) {
                     if (response.data.role == 'vendedor' || response.data.role == 'admin') {
-                        document.getElementById('passwordDiv').style.display = 'block';
+                        document.getElementById('passwordDiv').style.display = 'flex';
+                        document.getElementById('passwordDiv').style.flexDirection: 'column',
                         document.getElementById('btnIngresar').disabled = false;
                     } else {
                         document.getElementById('passwordDiv').style.display = 'none';
