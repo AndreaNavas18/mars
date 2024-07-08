@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->roles()->first()->name;
     }
+
+    public function observations()
+    {
+        return $this->hasMany(Observation::class, 'user_id');
+    }
 }

@@ -117,19 +117,18 @@ class TenderoController extends BaseController
     public function historialObs()
     {
         $user = auth()->user();
+
         if( $user->hasRole('admin') ){
-            $observations = DB::table('observations')->get();
-            $tenderoIds = $observations->pluck('tendero_id')->unique()->toArray();
-    
-            $tenderos = DB::table('tenderos')->whereIn('id', $tenderoIds)->get();
+              $tenderos = Tendero::with(['observations.user'])->get();
          }else{
-            $observations = DB::table('observations')->where('user_id', $user->id)->get();
-            $tenderoIds = $observations->pluck('tendero_id')->unique()->toArray();
-    
-            $tenderos = DB::table('tenderos')->whereIn('id', $tenderoIds)->get();
+            $observations = Observation::where('user_id', $user->id)->get();
+            $tenderoIds = $observations->pluck('tendero_id')->unique();
+            $tenderos = Tendero::whereIn('id', $tenderoIds)->with(['observations' => function ($query) use ($user) {
+                $query->where('user_id', $user->id)->with('user');
+            }])->get();
          }
 
-        return view('modules.admin.observaciones', compact('tenderos', 'observations'));
+        return view('modules.admin.observaciones', compact('tenderos'));
     }
 
     public function listObs($id)

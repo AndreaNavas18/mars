@@ -20,7 +20,7 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Visualizar</th>
-                    @if(auth()->user()->role == 'admin')
+                    @if(auth()->user()->hasRole('admin'))
                     <th>Creada por</th>
                     @endif
                 </tr>
@@ -32,10 +32,12 @@
                     <td>
                         <a href="{{ route('listado.observations', $tendero->id) }}" class="btnTen">Ver Observaciónes</a>
                     </td>
-                    @if(auth()->user()->role == 'admin')
-                        @foreach($observations as $observation)
-                            <td>{{ $observation->user->name }}</td>
-                        @endforeach
+                    @if(auth()->user()->hasRole('admin'))
+                        <td>
+                            @foreach($tendero->observations as $observation)
+                                {{ $observation->user->name }} <br>
+                            @endforeach
+                        </td>
                     @endif
                 </tr>
                 @endforeach

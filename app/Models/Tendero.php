@@ -30,4 +30,9 @@ class Tendero extends Model
    {
        return $this->belongsTo(User::class);
    }
+
+   public function observations()
+   {
+       return $this->hasMany(Observation::class);
+   }
 }
