@@ -11,17 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cumplimiento', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('tendero_id');
-            $table->bigInteger('mes_1')->nullable()->default(0);
-            $table->bigInteger('mes_2')->nullable()->default(0);
-            $table->bigInteger('mes_3')->nullable()->default(0);
-            $table->bigInteger('mes_4')->nullable()->default(0);
-            $table->bigInteger('mes_5')->nullable()->default(0);
-            $table->bigInteger('mes_6')->nullable()->default(0);
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('cumplimiento')) {
+            Schema::create('cumplimiento', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->bigInteger('tendero_id');
+                $table->bigInteger('mes_1')->nullable()->default(0);
+                $table->bigInteger('mes_2')->nullable()->default(0);
+                $table->bigInteger('mes_3')->nullable()->default(0);
+                $table->bigInteger('mes_4')->nullable()->default(0);
+                $table->bigInteger('mes_5')->nullable()->default(0);
+                $table->bigInteger('mes_6')->nullable()->default(0);
+                $table->timestamps();
+            });
+        }
     }
 
     /**
