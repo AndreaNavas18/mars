@@ -11,11 +11,11 @@
         
         <div class="segDivAdmin">
             @if (session('success'))
-                <div class="alert alert-success">
+                <div class="alert alert-success" style="background-color:#00800038;color:green;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                     {{ session('success') }}
                 </div>
                 @elseif (session('error'))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" style="background-color:#ff000024;color:red;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                     {{ session('error') }}
                 </div>
             @endif
@@ -27,7 +27,7 @@
                 <a href="{{ route('create.tenderos')}}" id="botonCrear" class="botonCrear">Crear tendero</a>
             </div>
             <div class="creacionnV btnInicial" id="menuCrearV">
-                <a href="{{ route('create.vendedores')}}" id="botonCrearV" class="botonCrearV">Crear vendedor</a>
+                <a href="{{ route('create.vendedores')}}" id="botonCrearV" class="botonCrearV">Crear usuario</a>
             </div>
             <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>

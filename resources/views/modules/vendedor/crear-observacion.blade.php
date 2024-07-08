@@ -7,11 +7,11 @@
     <div class="divFormu">
         <h1>Creación de observación</h1>
         @if (session('success'))
-            <div class="alert alert-success">
+                <div class="alert alert-success" style="background-color:#00800038;color:green;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                 {{ session('success') }}
             </div>
             @elseif (session('error'))
-            <div class="alert alert-danger">
+                <div class="alert alert-danger" style="background-color:#ff000024;color:red;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                 {{ session('error') }}
             </div>
         @endif

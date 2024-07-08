@@ -209,26 +209,43 @@ class TenderoController extends BaseController
 
     public function storeVendedor(Request $request){
         try {
-            $vendedor = new Vendedor();
-            $vendedor->nombre = $request->nombre;
-            $vendedor->cedula = $request->cedula;
-            $vendedor->email = $request->email;
-            $vendedor->save();
+            if($request->tipouusuario == 'vendedor'){
+                $vendedor = new Vendedor();
+                $vendedor->nombre = $request->nombre;
+                $vendedor->apellido = $request->apellido;
+                $vendedor->cedula = $request->cedula;
+                $vendedor->usuario = $request->usuario;
+                $vendedor->email = $request->email;
+                $vendedor->telefono = $request->telefono;
+                $vendedor->save();
+    
+                $user = new User();
+                $user->name = $request->nombre . ' ' . $request->apellido;
+                $user->username = $request->usuario;
+                $user->email = $request->email;
+                $user->password = bcrypt($request->cedula);
+                $user->save();
+                
+                $vendedor->user_id = $user->id;
+                $vendedor->save();
+    
+                //Asignamos el rol de vendedor
+                $user->assignRole('vendedor');
+    
+                return redirect()->route('home')->with('success', 'Vendedor creado con éxito');
 
-            $user = new User();
-            $user->name = $request->nombre;
-            $user->username = $request->cedula;
-            $user->email = $request->email;
-            $user->password = bcrypt($request->cedula);
-            $user->save();
-            
-            $vendedor->user_id = $user->id;
-            $vendedor->save();
+            }else if($request->tipouusuario == 'admin'){
+                $administrador = new User();
+                $administrador->name = $request->nombre . ' ' . $request->apellido;
+                $administrador->username = $request->usuario;
+                $administrador->email = $request->email;
+                $administrador->password = bcrypt($request->cedula);
+                $administrador->save();
 
-            //Asignamos el rol de vendedor
-            $user->assignRole('vendedor');
+                $administrador->assignRole('admin');
 
-            return redirect()->route('home')->with('success', 'Vendedor creado con éxito');
+                return redirect()->route('home')->with('success', 'Administrador creado con éxito');
+            }
         } catch (QueryException $e) {
             Log::error($e->getMessage());
             return redirect()->route('modules.admin.crear-vendedores')->with('error', 'Error al crear vendedor');

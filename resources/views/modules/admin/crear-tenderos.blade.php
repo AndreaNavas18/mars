@@ -6,11 +6,11 @@
     <div class="divFormu" style="margin-bottom: 30px">
         <h1>Creacion de tendero</h1>
         @if (session('success'))
-            <div class="alert alert-success">
+                <div class="alert alert-success" style="background-color:#00800038;color:green;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                 {{ session('success') }}
             </div>
             @elseif (session('error'))
-            <div class="alert alert-danger">
+                <div class="alert alert-danger" style="background-color:#ff000024;color:red;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                 {{ session('error') }}
             </div>
         @endif
@@ -49,7 +49,7 @@
                     <input type="number" name="prob_compra" id="prob_compra" class="form-control" style="width: 85%">
                     <span style="width:15%">%</span>
                 </div>
-                <label for="cuota_mes">Cuota mes</label>
+                <label for="cuota_mes">Cuota periodo</label>
                 <input type="text" name="cuota_mes" id="cuota_mes" >
                 
                 <button type="submit">Crear tendero</button>

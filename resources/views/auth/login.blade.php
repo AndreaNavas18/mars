@@ -97,8 +97,7 @@
             axios.post('{{ route('check-user-role') }}', { username: username })
                 .then(function(response) {
                     if (response.data.role == 'vendedor' || response.data.role == 'admin') {
-                        document.getElementById('passwordDiv').style.display = 'flex';
-                        document.getElementById('passwordDiv').style.flexDirection: 'column',
+                        document.getElementById('passwordDiv').style.display = 'block';
                         document.getElementById('btnIngresar').disabled = false;
                     } else {
                         document.getElementById('passwordDiv').style.display = 'none';

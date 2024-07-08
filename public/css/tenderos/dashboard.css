@@ -293,7 +293,7 @@ cafecito mars vecino #6f3214
     
     .rowTTP {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 10px;
@@ -302,31 +302,35 @@ cafecito mars vecino #6f3214
 
     .rowTTP h4 {
         color: #2b2b2b;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         margin-bottom: 0px;
         text-align: center;
     }
 
-    .rowTTP p {
-        color: #2b2b2b;
-        font-size: 15px;
-        font-weight: 600;
-        margin-bottom: 0px;
-        text-align: center;
-    }
-
-
-    .premio1 {
+    .premio1, .premio5 {
         width: 150px;
         height: auto;
         display: flex;
         align-items: center;
     }
+    
+    .premio2{
+        width: 250px;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
 
+    .premio3 {
+        width: 120px;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
     
     .premio11 {
-        width: 200px;
+        width: 120px;
         height: auto;
         display: flex;
         align-items: center;

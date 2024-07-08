@@ -27,7 +27,7 @@
                         <div class="card2TT">
                             <div class="c1TT">
                                 <img src="{{ asset('images/new/redimir.png') }}" class="iTT" alt="Redimir">
-                                <h2 class="tit1TT">¿Cómo redimirlos?</h2>
+                                <h2 class="tit1TT">Redimir bonos</h2>
                             </div>
                         </div>
                         </a>
