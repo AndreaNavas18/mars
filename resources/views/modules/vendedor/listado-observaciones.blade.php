@@ -9,7 +9,7 @@
         @foreach($observations as $key => $observation)
             <div class="formCrear">
                 <div>
-                    <label for="observacion">Observación {{ $key + 1 }}</label>
+                    <label for="observacion">Observación {{ $key + 1 }} - Creada por {{ $observation->user->name }} </label>
                     <textarea name="observacion" id="observacion" cols="2" rows="2" class="form-control" readonly>{{ $observation->observacion }}</textarea>
                 </div>
                 @if(isset($observacionFiles[$observation->id]))

@@ -74,10 +74,9 @@ class VendedorController extends BaseController
 
     public function listObs($id)
     {
-        $tendero = DB::table('tenderos')->where('id', $id)->first();
-        $observations = DB::table('observations')->where('tendero_id', $id)->get();
-        $observacionFiles = DB::table('observaciones_files')
-        ->whereIn('observacion_id', $observations->pluck('id'))
+        $tendero = Tendero::where('id', $id)->first();
+        $observations = Observation::where('tendero_id', $id)->get();
+        $observacionFiles = ObservacionesFiles::whereIn('observacion_id', $observations->pluck('id'))
         ->get()
         ->groupBy('observacion_id');
         return view('modules.vendedor.listado-observaciones', compact('tendero', 'observations', 'observacionFiles'));
