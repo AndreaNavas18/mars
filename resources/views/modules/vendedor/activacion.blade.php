@@ -34,6 +34,20 @@
                                 @enderror
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="telefono" class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="telefono" type="number" class="form-control @error('telefono') is-invalid @enderror" name="telefono" autofocus>
+
+                                @error('telefono')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="token" class="col-md-4 col-form-label text-md-right">{{ __('Token QR') }}</label>

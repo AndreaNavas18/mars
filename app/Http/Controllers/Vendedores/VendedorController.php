@@ -128,6 +128,9 @@ class VendedorController extends BaseController
                 'tendero_id' => $tendero->id
             ]);
 
+            $tendero->telefono = $request->input('telefono');
+            $tendero->save();
+
             $user = User::where('username', $tendero->cedula)->first();
             if (!$user) {
                 Log::info('El usuario ya existe');
@@ -137,7 +140,6 @@ class VendedorController extends BaseController
                     'password' => bcrypt($tendero->cedula)
                 ]);
             }
-
             $roleTendero = Role::firstOrCreate(['name' => 'tendero']);
             $permissionTendero = Permission::firstOrCreate(['name' => 'vista.tendero']);
 
