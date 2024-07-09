@@ -32,6 +32,9 @@
             <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
             </div>
+            <div class="administrarV btnInicial" id="menuAdminV">
+                <a href="{{ url('administrar-vendedores')}}" id="botonAdminV" class="botonAdminV">Administrar vendedores</a>
+            </div>
             <div style="display: none">
                 <div class="import btnInicial" id="menuImport">
                     <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tenderos') }}" enctype="multipart/form-data">

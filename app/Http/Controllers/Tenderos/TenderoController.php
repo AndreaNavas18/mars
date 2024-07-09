@@ -30,6 +30,12 @@ class TenderoController extends BaseController
         return view('modules.admin.administrar', ['tenderos' => $tenderos]);
     }
 
+    public function adminVendedores() {
+        $vendedores = DB::table('vendedores')->paginate(10);
+
+        return view('modules\admin\administrar-vendedores', ['vendedores' => $vendedores]);
+    }
+
     public function observaciones() {
         $tenderos = DB::table('tenderos')->get();
         $users = DB::table('users')->get();
@@ -72,15 +78,33 @@ class TenderoController extends BaseController
 
             $cumplimiento->save();
 
-            //Guardamos el tendero con su respectivo rol
-
-
-
-                    
             return redirect()->route('home')->with('success', 'Tendero creado con éxito');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
             return redirect()->route('create.tenderos');
+        }
+    }
+    public function editVendedor($id)
+    {
+        $vendedor = DB::table('vendedores')->where('id', $id)->first();
+        return view('modules.admin.editar-vendedor', ['vendedor' => $vendedor]);
+    }
+
+    public function updateVendedor(Request $request, $id)
+    {
+        try {
+            $vendedor = Vendedor::findOrFail($id);
+            $vendedor->nombre = $request->nombre;
+            $vendedor->apellido = $request->apellido;
+            $vendedor->cedula = $request->cedula;
+            $vendedor->email = $request->email;
+            $vendedor->telefono = $request->telefono;
+            $vendedor->save();
+            
+            return redirect()->route('admin.vendedores')->with('success', 'Datos del vendedor actualizados exitosamente');
+        } catch (QueryException $e) {
+            Log::error($e->getMessage());
+            return redirect()->route('edit.vendedor', $id);
         }
     }
 
@@ -110,7 +134,22 @@ class TenderoController extends BaseController
             return redirect()->route('admin.tenderos')->with('success', 'Datos del tendero actualizados exitosamente');
         } catch (QueryException $e) {
             Log::error($e->getMessage());
-            return redirect()->route('tendero.edit', $id);
+            return redirect()->route('edit.tendero', $id);
+        }
+    }
+
+    public function destroyVendedor($id)
+    {
+        try {
+            $vendedor = Vendedor::findOrFail($id);
+            $userid = $vendedor->user_id;
+
+            DB::table('vendedores')->where('id', $id)->delete();
+            DB::table('users')->where('id', $userid)->delete();
+            return redirect()->route('admin.vendedores')->with('success', 'Vendedor eliminado correctamente.');
+        } catch (QueryException $e) {
+            Log::error($e->getMessage());
+            return redirect()->route('admin.vendedores')->with('error', 'Hubo un error al eliminar el vendedor.');
         }
     }
 
@@ -206,6 +245,18 @@ class TenderoController extends BaseController
                     ->paginate(10);
 
         return view('modules.admin.administrar', ['tenderos' => $tenderos]);
+    }
+
+    public function searchVendedores(Request $request) {
+        $searchTerm = $request->input('search');
+
+        $vendedores = DB::table('vendedores')
+                    ->where('nombre', 'like', "%$searchTerm%")
+                    ->orWhere('apellido', 'like', "%$searchTerm%")
+                    ->orWhere('cedula', 'like', "%$searchTerm%")
+                    ->paginate(10);
+
+        return view('modules.admin.administrar-vendedores', ['vendedores' => $vendedores]);
     }
 
     public function createVendedor()

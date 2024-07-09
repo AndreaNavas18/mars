@@ -86,6 +86,15 @@ Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados'
 
 Route::get('/search-admin-tenderos', [TenderoController::class, 'searchTenderos'])->name('search.admin.tenderos');
 
+Route::get('/administrar-vendedores', [TenderoController::class, 'adminVendedores'])->name('admin.vendedores');
+
+Route::get('/editar-vendedor/{id}', [TenderoController::class, 'editVendedor'])->name('edit.vendedor');
+
+Route::put('/editar-vendedor/{id}', [TenderoController::class, 'updateVendedor'])->name('update.vendedor');
+
+Route::get('/search-admin-vendedores', [TenderoController::class, 'searchVendedores'])->name('search.admin.vendedores');
+
+Route::delete('/vendedor/eliminar/{id}', [ TenderoController::class, 'destroyVendedor' ])->name('destroy.vendedor');
 
 
 /**************************************

@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <main class="mainHHAdmin" >
+        <main class="mainHHAdmin" style="margin-bottom: 20px">
             @yield('content')
         </main>
         {{-- <div style="position:absolute;bottom:0;width:100%"> --}}
