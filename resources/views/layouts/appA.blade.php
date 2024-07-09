@@ -27,7 +27,8 @@
         <main class="mainHHAdmin" >
             @yield('content')
         </main>
-        <div style="position:absolute;bottom:0;width:100%">
+        {{-- <div style="position:absolute;bottom:0;width:100%"> --}}
+        <div style="margin-top: auto;width:100%">
             @include('modules.footer')
         </div>
     </div>

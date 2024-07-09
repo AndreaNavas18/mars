@@ -11,16 +11,24 @@
     <title>Tendero</title>
 </head>
 <body>
-    <div> 
+    <div style="margin-bottom: 50px"> 
         <div class="divPTT">
             <h1 class="punTT">${{ number_format(auth()->user()->tendero->cuota_mes, 0, ',', '.') }}</h1>
             <h2 class="tituTTT">META PERIODO 1</h2>
         </div>
         <div class="opcTT">
-            <h2 class="titu2TTT">Redimir</h2>
+            <h2 class="titu2TTT">Redimir bonos</h2>
         </div>
+        <ul>
+            <li class="videoPromo">
+                <h2>Video Promocional</h2>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('images/new/videoPromocional.mp4') }}" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </li>
+        </ul>
     </div>
-    
 </body>
 </html>
 @endsection
