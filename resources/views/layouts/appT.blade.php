@@ -32,6 +32,9 @@
         <main class="mainHH">
             @yield('content')
         </main>
+        <div style="position:absolute;bottom:0;width:100%">
+            @include('modules.footer')
+        </div>
     </div>
     <div class="menuDesplegable" id="menuDesplegable">
         <ul class="list">

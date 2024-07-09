@@ -32,7 +32,7 @@
                         </div>
                         </a>
                     </div>
-                    <div class="TT2">
+                    <div class="TT2" style="display: none">
                         <a href="{{ url('recursos')}}" class="linksTT">
                         <div class="card3TT">
                             <div class="c1TT">

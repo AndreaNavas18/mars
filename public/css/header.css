@@ -20,6 +20,7 @@ amarrillo rgb(255,220,0)
     flex-direction: column;
     width: 100%;
     background-color: #81267f;
+    flex: 1;
 }
 .soloHeaderImg {
     width: 100%;
@@ -130,6 +131,7 @@ amarrillo rgb(255,220,0)
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    flex: 1;
 }
 .soloHeaderImgAdmin {
     width: 100%;
