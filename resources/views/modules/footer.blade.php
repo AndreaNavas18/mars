@@ -5,8 +5,9 @@
         <h3 class="textFoo">
             Linea de soporte
         </h3>
-        <img src="{{ asset('images/new/linea-directa.png') }}" class="iconoFooter" alt="Whatsapp">
-        <a href="https://wa.link/j4exmk" target="_blank" class="textFoo"><img src="{{asset('images/whatsapp.png')}}" alt=""></a>
+        <a href="https://wa.link/j4exmk" target="_blank">
+            <img class="iconoFooter" src="{{asset('images/new/wp.png')}}" alt="">
+        </a>
     </div>
     <div class="marcasFoo">
         <div class="cardFoo">
