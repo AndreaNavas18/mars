@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div>
+        @include('layouts.encabezado')
         <main class="mainHHAdmin" style="margin-bottom: 20px">
             @yield('content')
         </main>

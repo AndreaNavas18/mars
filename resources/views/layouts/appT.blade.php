@@ -29,6 +29,7 @@
                 </div>
             </div>
         </div>
+        @include('layouts.encabezado')
         <main class="mainHH">
             @yield('content')
         </main>

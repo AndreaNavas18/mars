@@ -23,6 +23,10 @@ class VendedorController extends BaseController
         return view('modules.vendedor.listado-tenderos', ['tenderos' => $tenderos]);
     }
 
+    public function recursos(){
+        return view('modules.vendedor.recursos');
+    }
+
     public function create($id)
     {
         $tendero = DB::table('tenderos')->where('id', $id)->first();

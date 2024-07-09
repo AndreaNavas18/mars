@@ -118,6 +118,8 @@ Route::post('/activar-tendero', [VendedorController::class, 'activar'])->name('a
 
 Route::get('/search-tenderos', [VendedorController::class, 'searchTenderos'])->name('search.tenderos');
 
+Route::get('/recursos-vendedor', [VendedorController::class, 'recursos'])->name('recursos.vendedor');
+
 
 
 /**************************************

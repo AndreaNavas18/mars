@@ -29,6 +29,9 @@
             <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ route('activar.vista.tendero') }}" id="botonAdmin" class="botonAdmin">Activar tendero</a>
             </div>
+            <div class="administrar btnInicial" id="menuAdmin">
+                <a href="{{ route('recursos.vendedor') }}" id="botonAdmin" class="botonAdmin">Recursos</a>
+            </div>
         </div>
     </div>
 
