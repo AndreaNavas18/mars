@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="{{ asset('css/GLOBAL.css') }}">
+<link rel="stylesheet" href="{{ asset('css/global.css') }}">
 
 <div class="enc">
-    <h1 class="titEnc">MARS</h1>
+    <img src="{{ asset('images/new/marslogo.svg') }}" class="logoEnc" alt="Mars">
     <h3 class="eslEnc">¡Con Mars siempre cumples, siempre ganas!</h3>
 </div>

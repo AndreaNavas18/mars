@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <title>Recursos</title>
+    <title>Recursos informativos</title>
 
     <div class="adminTendTT">
         <ul>

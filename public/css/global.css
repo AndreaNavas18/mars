@@ -21,24 +21,26 @@ amarrillo rgb(255,220,0)
 }
 
 .enc {
-    background-color: #81267f;
+    background-color: #ffc547;
+    /* #d174cf8c */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.titEnc {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+.logoEnc {
+    width: 70px;
+    height: 50px;
+
 }
 
 .eslEnc {
-    color: white;
+    color: #0000a0;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .fondoAdmin {
