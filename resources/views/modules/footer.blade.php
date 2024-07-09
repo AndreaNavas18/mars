@@ -6,7 +6,7 @@
             Linea de soporte
         </h3>
         <img src="{{ asset('images/new/linea-directa.png') }}" class="iconoFooter" alt="Whatsapp">
-        <a href="https://wa.link/j4exmk" target="_blank" class="textFoo">302 589 9441</a>
+        <a href="https://wa.link/j4exmk" target="_blank" class="textFoo"><img src="{{asset('images/whatsapp.png')}}" alt=""></a>
     </div>
     <div class="marcasFoo">
         <div class="cardFoo">
