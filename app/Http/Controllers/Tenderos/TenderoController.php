@@ -33,7 +33,7 @@ class TenderoController extends BaseController
     public function adminVendedores() {
         $vendedores = DB::table('vendedores')->paginate(10);
 
-        return view('modules\admin\administrar-vendedores', ['vendedores' => $vendedores]);
+        return view('modules.admin.administrar-vendedores', ['vendedores' => $vendedores]);
     }
 
     public function observaciones() {
