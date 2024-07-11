@@ -2,9 +2,9 @@
 
 <div class="footerFondo">
     <div class="soporte">
-        <a href="https://wa.link/j4exmk" target="_blank">
+        {{-- <a href="https://wa.link/j4exmk" target="_blank">
             <img class="iconoFooter" src="{{asset('images/new/wp.png')}}" alt="">
-        </a>
+        </a> --}}
     </div>
     <div class="terminn" >
         <a href="#" class="textFoo">

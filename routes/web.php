@@ -54,6 +54,10 @@ Route::get('/redimir', function () {
     return view('modules.tendero.redimir');
 });
 
+Route::get('/saliendo', function () {
+    return view('modules.before-logout');
+})->name('saliendo');
+
 
 /**************************************
  * 

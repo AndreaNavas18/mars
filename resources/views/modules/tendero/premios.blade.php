@@ -14,10 +14,10 @@
                 <div class="term1">
                     <div class="fill"></div>
                     <h1 style="margin-top: 30px">1</h1>
-                    <h1>Mes</h1>
+                    <h1>Etapa</h1>
                 </div>
                 <div class="prePri">
-                    <h3>PERIODO 1</h3>
+                    <h3>Etapa 1</h3>
                     <div class="rowTTP">
                         <img src="{{ asset('images/new/prueba.jpg') }}" class="premio1" alt="Premios">
                         {{-- <h4>Kit de iniciación</h4> --}}
@@ -28,10 +28,10 @@
                 <div class="term2">
                     <div class="fill"></div>
                     <h1 style="margin-top: 30px">2</h1>
-                    <h1>Mes</h1>
+                    <h1>Etapa</h1>
                 </div>
                 <div class="prePri">
-                    <h3>PERIODO 2</h3>
+                    <h3>Etapa 2</h3>
                     <div class="rowTTP">
                         <img src="{{ asset('images/new/prueba2.jpg') }}" class="premio1" alt="Premios">
                         {{-- <h4>Entradas a cine</h4> --}}
@@ -42,10 +42,10 @@
                 <div class="term3">
                     <div class="fill"></div>
                     <h1 style="margin-top: 30px">3</h1>
-                    <h1>Mes</h1>
+                    <h1>Etapa</h1>
                 </div>
                 <div class="prePri">
-                    <h3>PERIODO 3</h3>
+                    <h3>Etapa 3</h3>
                     <div class="rowTTP">
                         <img src="{{ asset('images/new/prueba3.jpg') }}" class="premio1" alt="Premios">
                         {{-- <h4>Premio sorpresa</h4> --}}
@@ -56,10 +56,10 @@
                 <div class="term4">
                     <div class="fill"></div>
                     <h1 style="margin-top: 30px">4</h1>
-                    <h1>Mes</h1>
+                    <h1>Etapa</h1>
                 </div>
                 <div class="prePri">
-                    <h3>PERIODO 4</h3>
+                    <h3>Etapa 4</h3>
                     <div class="rowTTP">
                         <img src="{{ asset('images/new/prueba4.jpg') }}" class="premio1" alt="Premios">
                         {{-- <h4>Premio sorpresa</h4> --}}
@@ -70,10 +70,10 @@
                 <div class="term5">
                     <div class="fill"></div>
                     <h1 style="margin-top: 85px">5</h1>
-                    <h1>Mes</h1>
+                    <h1>Etapa</h1>
                 </div>
-                <div class="prePri">
-                    <h3>PERIODO 5</h3>
+                <div class="prePri2">
+                    <h3>Etapa 5</h3>
                     <div class="rowTTP">
                         <img src="{{ asset('images/new/prueba5.jpg') }}" class="premio1" alt="Premios">
                         {{-- <h4>Premio sorpresa</h4> --}}

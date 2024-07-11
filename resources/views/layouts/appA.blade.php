@@ -37,6 +37,11 @@
             @include('modules.footer')
         </div>
     </div>
+    <div class="whatsapp-widget">
+        <a href="https://wa.link/j4exmk" target="_blank">
+            <img class="iconoFooter" src="{{asset('images/new/wp2.png')}}" alt="WhatsApp">
+        </a>
+    </div>
     <div class="menuDesplegable" id="menuDesplegable">
         <ul class="list">
             @guest

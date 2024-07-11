@@ -354,6 +354,8 @@ cafecito mars vecino #6f3214
     .pp1 {
         display: flex;
         flex-direction: row;
+        font-family: 'Bahnschrift', sans-serif;
+
     }
 
     .term1 {
@@ -367,6 +369,8 @@ cafecito mars vecino #6f3214
         margin-left: 8px;
         position: relative;
         overflow: hidden;
+        font-family: 'Bahnschrift', sans-serif;
+
     }
 
     .term1 h1, .term2 h1, .term3 h1, .term4 h1, .term5 h1{
@@ -375,7 +379,9 @@ cafecito mars vecino #6f3214
         text-align: center; 
         margin: 0;
         color: #81267f;
-        font-size: 15px;
+        font-size: 12px;
+        font-family: 'Bahnschrift', sans-serif;
+
     }
     
 
@@ -404,6 +410,25 @@ cafecito mars vecino #6f3214
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #0000a0;
+    }
+
+    .prePri2 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+    
+    .prePri h3 {
+        color: #0000a0;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+
     }
    
     .term2, .term3, .term4 {

@@ -276,6 +276,33 @@ amarrillo rgb(255,220,0)
     transition: 0.3s ease;
 }
 
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-widget2 {
+    position: fixed;
+    bottom: 95px;
+    right: 10px;
+    z-index: 1000;
+
+}
+
+.whatsapp-widget img, .whatsapp-widget2 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5%;
+    drop-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.whatsapp-widget img:hover, .whatsapp-widget2 img:hover{
+    transform: scale(1.1);
+}
+
 @media (max-width: 575.98px)and (orientation:portrait) {
     body{background: white;}
 

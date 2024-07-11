@@ -30,13 +30,18 @@
                 </div>
             </div>
         </div>
-        <main class="mainHH">
+        <main class="mainHH" style="padding-bottom: 30px">
             @yield('content')
         </main>
         {{-- <div style="position:absolute;bottom:0;width:100%"> --}}
         <div style="margin-top: auto;width:100%">
             @include('modules.footer')
         </div>
+    </div>
+    <div class="whatsapp-widget2">
+        <a href="https://wa.link/j4exmk" target="_blank">
+            <img class="iconoFooter" src="{{asset('images/new/wp2.png')}}" alt="WhatsApp">
+        </a>
     </div>
     <div class="menuDesplegable" id="menuDesplegable">
         <ul class="list">
