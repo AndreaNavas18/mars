@@ -10,8 +10,8 @@ cafecito mars vecino #6f3214
 */
 
 @font-face {
-    font-family: 'Graphie';
-    src: url('../../fonts/GraphieLight.ttf') format('truetype');
+    src: url('../../fonts/bahschrift.ttf') format('truetype');
+    font-family: 'Bahnschrift';
 }
 
 
@@ -43,7 +43,7 @@ cafecito mars vecino #6f3214
         display: flex;
         flex-direction: column;
         background-color: #ffc547;
-        font-family: 'Graphie', sans-serif;
+        font-family: 'Bahnschrift', sans-serif;
 
     }
     .primerDiv {
@@ -296,12 +296,10 @@ cafecito mars vecino #6f3214
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        margin-bottom: 10px;
     }
 
     .rowTTP h4 {
-        color: #2b2b2b;
+        color: #81267f;
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 0px;
@@ -309,7 +307,7 @@ cafecito mars vecino #6f3214
     }
 
     .premio1 {
-        width: 170px;
+        width: 300px;
         height: auto;
         display: flex;
         align-items: center;
@@ -351,7 +349,86 @@ cafecito mars vecino #6f3214
         margin-top: 20px;
     }
 
+    /* Nuevos estilos para los premios */
+
+    .pp1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .term1 {
+        background-color: white;
+        border-top: 3px solid #81267f;
+        border-left: 3px solid #81267f;
+        border-right: 3px solid #81267f;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 10%;
+        margin-left: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .term1 h1, .term2 h1, .term3 h1, .term4 h1, .term5 h1{
+        position: relative;
+        z-index: 1; 
+        text-align: center; 
+        margin: 0;
+        color: #81267f;
+        font-size: 15px;
+    }
+    
+
+    .term1 .fill, .term2 .fill, .term3 .fill, .term4 .fill, .term5 .fill{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #ffc547; /* Puedes cambiar este color según tu necesidad */
+        /* animation: fillAnimation 5s forwards; */
+    }
+
+    @keyframes fillAnimation {
+        from {
+            height: 0;
+        }
+        to {
+            height: 100%;
+        }
+    }
+
+    .prePri {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
    
+    .term2, .term3, .term4 {
+        background-color: white;
+        border-left: 3px solid #81267f;
+        border-right: 3px solid #81267f;
+        width: 10%;
+        margin-left: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .term5 {
+        background-color: white;
+        border-left: 3px solid #81267f;
+        border-right: 3px solid #81267f;
+        border-bottom: 3px solid #81267f;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 10%;
+        margin-left: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+    
     
     
        

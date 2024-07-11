@@ -2,11 +2,13 @@
 
 <div class="footerFondo">
     <div class="soporte">
-        <h3 class="textFoo">
-            Linea de soporte
-        </h3>
         <a href="https://wa.link/j4exmk" target="_blank">
             <img class="iconoFooter" src="{{asset('images/new/wp.png')}}" alt="">
+        </a>
+    </div>
+    <div class="terminn" >
+        <a href="#" class="textFoo">
+            Términos y condiciones
         </a>
     </div>
     <div class="marcasFoo">

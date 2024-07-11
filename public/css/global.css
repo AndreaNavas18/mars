@@ -16,8 +16,8 @@ amarrillo rgb(255,220,0)
 }
 
 @font-face {
-    font-family: 'Graphie';
-    src: url('../fonts/GraphieLight.ttf') format('truetype');
+    src: url('../fonts/bahschrift.ttf') format('truetype');
+    font-family: 'Bahnschrift';
 }
 
 .enc {
@@ -41,11 +41,12 @@ amarrillo rgb(255,220,0)
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 .fondoAdmin {
     background-color: rgb(225, 225, 225);
-    font-family: 'Graphie', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 .primDivAdmin {
@@ -102,7 +103,7 @@ amarrillo rgb(255,220,0)
     margin: 10px;
     text-align: center;
     text-decoration: none;
-    font-family: 'Graphie', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 /* input[type="file"] {
@@ -390,7 +391,7 @@ amarrillo rgb(255,220,0)
     gap: 10px;
     width: 80%;
     margin: 0 auto;
-    font-family: 'Graphie', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
     margin-top: 20px;
 }
 

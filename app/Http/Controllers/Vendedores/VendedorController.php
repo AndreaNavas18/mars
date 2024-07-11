@@ -57,6 +57,11 @@ class VendedorController extends BaseController
                 \Log::info('No se ha seleccionado un archivo');
             }
 
+            if($request->has('causa')){
+                $observation->causa = $request->causa;
+                $observation->save();
+            }
+
             return redirect()->route('home')->with('success', 'Observación creada con éxito');
         } catch (QueryException $e) {
             Log::error($e->getMessage());

@@ -22,9 +22,13 @@
                         <img src="{{ asset('images/new/inicio.png') }}" class="menuTT" alt="Menu" id="menuAjustes">
                     </a> 
                 </div>
+                @include('layouts.encabezado')
+                <div class="avatarHH">
+                    <img src="{{ asset('images/new/vendedor2.jpg') }}" class="avatarTT" alt="Avatar">
+                    {{-- <h3 class="nombreHH">Hola, tu</h3> --}}
+                </div>
             </div>
         </div>
-        @include('layouts.encabezado')
         <main class="mainHHAdmin" style="margin-bottom: 20px">
             @yield('content')
         </main>

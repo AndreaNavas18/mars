@@ -24,7 +24,7 @@
                 </div>
                 @include('layouts.encabezado')
                 <div class="avatarHH">
-                    <img src="{{ asset('images/new/vendedor2.png') }}" class="avatarTT" alt="Avatar">
+                    <img src="{{ asset('images/new/vendedor2.jpg') }}" class="avatarTT" alt="Avatar">
                     <h3 class="nombreHH">{{ ucfirst(auth()->user()->name) }}</h3>
                     {{-- <h3 class="nombreHH">Hola, tu</h3> --}}
                 </div>

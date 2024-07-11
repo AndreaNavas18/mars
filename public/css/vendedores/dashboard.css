@@ -10,8 +10,8 @@ cafecito mars vecino #6f3214
 */
 
 @font-face {
-    font-family: 'Graphie';
-    src: url('../../fonts/GraphieLight.ttf') format('truetype');
+    src: url('../../fonts/bahschrift.ttf') format('truetype');
+    font-family: 'Bahnschrift';
 }
 
 
@@ -41,7 +41,7 @@ cafecito mars vecino #6f3214
     display: flex;
     flex-direction: column;
     background-color: #ffc547;
-    font-family: 'Graphie', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 
 }
 .primerDiv {

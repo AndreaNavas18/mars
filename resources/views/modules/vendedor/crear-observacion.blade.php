@@ -28,6 +28,13 @@
                 <textarea name="observacion" id="observacion" cols="20" rows="8" required></textarea>
                 <label for="file">Adjuntar Archivo</label>
                 <input type="file" name="file" id="file">
+                <div style="display: flex;flex-direction:row;gap:10px">
+                    <label for="tipo">¿La observación es por motivo de pérdida, robo o daño?</label>
+                    <checkbox style="margin-top:10px">
+                        <input type="checkbox" name="causa" value="1">
+                    </checkbox>
+                </div>
+
                 <button type="submit">Crear observación</button>
             </div>
         </form>

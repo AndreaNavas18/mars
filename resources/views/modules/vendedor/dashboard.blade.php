@@ -6,7 +6,7 @@
 
     <div class="fondoAdmin">
         <div class="header2Admin">
-            <h1 class="titleAdmin">Bienvenido Vendedor</h1>
+            <h1 class="titleAdmin">Bienvenido {{ ucfirst(auth()->user()->name) }}</h1>
         </div>
         
         <div class="segDivAdmin">
@@ -19,7 +19,7 @@
                     {{ session('error') }}
                 </div>
             @endif
-            <h2 class="title2Admin">Qué desea hacer hoy?</h2>
+            <h2 class="title2Admin">¿Qué desea hacer hoy?</h2>
             <div class="obss btnInicial" id="menuObs">
                 <a href="{{ route('listado.tenderos')}}" id="botonObs" class="botonObs">Crear observacion</a>
             </div>
@@ -30,7 +30,7 @@
                 <a href="{{ route('activar.vista.tendero') }}" id="botonAdmin" class="botonAdmin">Activar tendero</a>
             </div>
             <div class="administrar btnInicial" id="menuAdmin">
-                <a href="{{ route('recursos.vendedor') }}" id="botonAdmin" class="botonAdmin">Recursos informativos</a>
+                <a href="{{ route('recursos.vendedor') }}" id="botonAdmin" class="botonAdmin">¿Cómo participar?</a>
             </div>
         </div>
     </div>
