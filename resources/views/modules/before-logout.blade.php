@@ -23,7 +23,7 @@
 </head>
 <body>
     <div class="before">
-        <img src="{{ asset('images/new/vendedor2y.png') }}" class="animate__animated animate__bounceInLeft" alt="Avatar">
+        <img src="{{ asset('images/new/marsCo.png') }}" class="animate__animated animate__bounceInLeft" alt="Avatar">
         <h1 class="animate__animated animate__bounceInRight">¡Con <span style="font-size: 33px;color:#0000a0;font-weight:bold">MARS</span> siempre cumples, siempre ganas!</h1>
     </div>
 </body>

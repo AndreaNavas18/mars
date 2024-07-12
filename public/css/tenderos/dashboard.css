@@ -144,7 +144,7 @@ cafecito mars vecino #6f3214
         text-shadow: 2px 2px 4px #ffc5477b;
     }
     .tituTTT {
-        color: #2b2b2b;
+        color: #0000a0;
         font-weight: 800;
         text-shadow: 2px 2px 4px #0000007b;
 
@@ -155,7 +155,7 @@ cafecito mars vecino #6f3214
         margin-top: 10px;
     }
     .titu2TTT {
-        color: rgb(43, 43, 43);
+        color: #0000a0;
         font-weight: 700;
         text-align: center;
         margin: 0 auto;
@@ -347,6 +347,7 @@ cafecito mars vecino #6f3214
         align-items: center;
         gap: 10px;
         margin-top: 20px;
+        color: #0000a0;
     }
 
     /* Nuevos estilos para los premios */
@@ -378,7 +379,7 @@ cafecito mars vecino #6f3214
         z-index: 1; 
         text-align: center; 
         margin: 0;
-        color: #81267f;
+        color: #0000a0;
         font-size: 12px;
         font-family: 'Bahnschrift', sans-serif;
 
@@ -421,6 +422,7 @@ cafecito mars vecino #6f3214
         justify-content: center;
         align-items: center;
         padding-bottom: 5px;
+        color: #0000a0;
     }
     
     .prePri h3 {
