@@ -9,9 +9,14 @@ morado mars vecino rgb(129 38 127) #81267f
 cafecito mars vecino #ffc5477d
 */
 @font-face {
-    src: url('../../fonts/bahschrift.ttf') format('truetype');
-    font-family: 'Bahnschrift';
+    src: url('../../fonts/HelveticaBold.ttf') format('truetype');
+    font-family: 'HelveticaBold';
 }
+
+body{
+    font-family: 'HelveticaBold', sans-serif;
+}
+
 
 .fondoImg {
     width: 100%;
@@ -31,15 +36,16 @@ cafecito mars vecino #ffc5477d
     width: 100%;
     height: 100%;
     /* background-color: #0000007b; */
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
 }
 
 .bienvenn {
     display: flex;
     align-items: center;
+    margin-top: 5%;
     @media (max-width: 840px) {
         flex-direction: column;
-        margin-top: 30%;
+        margin-top: 40%;
     }
 }
 
@@ -58,11 +64,10 @@ cafecito mars vecino #ffc5477d
 .nuevoTT {
     font-size: 40px;
     color: white;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     text-align: center;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
     margin-top: 0px;
-    font-weight: bold;
     @media (max-width: 840px) {
         color: white;
     }
@@ -73,8 +78,7 @@ cafecito mars vecino #ffc5477d
     margin-bottom: 20px;
     text-align: center;
     margin-top: 0px;
-    font-family: 'Bahnschrift', sans-serif;
-    font-weight: bold;
+    font-family: 'HelveticaBold', sans-serif;
     @media (max-width: 840px) {
         color: white;
     }
@@ -88,7 +92,7 @@ cafecito mars vecino #ffc5477d
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
 
 }
 
@@ -122,7 +126,7 @@ cafecito mars vecino #ffc5477d
     margin-bottom: 20px;
     text-align: center;
     margin-top: 0px;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
     color: #81267f;
     @media (max-width: 840px) {
         color: #ffc547;
@@ -137,7 +141,6 @@ cafecito mars vecino #ffc5477d
     margin-top: 50px;
     border-radius: 10px;
     background-color: transparent;
-    font-weight: bold;
     font-size: 25px;
     color: #81267f;
     border: 1px solid #81267f;
@@ -250,8 +253,7 @@ cafecito mars vecino #ffc5477d
         font-size: 65px;
         text-align: center;
         color: rgb(163, 24, 24);
-        font-family: 'Bahnschrift', sans-serif;
-        font-weight: 800;
+        font-family: 'HelveticaBold', sans-serif;
         margin:0 0 0 0;
         padding-top: 57px;
     }
@@ -260,8 +262,7 @@ cafecito mars vecino #ffc5477d
         font-size: 65px;
         text-align: center;
         color: rgb(163, 24, 24);
-        font-family: 'Bahnschrift', sans-serif;
-        font-weight: 800;
+        font-family: 'HelveticaBold', sans-serif;
         margin: 0 0 0 0;
         display: flex;
         justify-content: flex-start;
@@ -287,13 +288,12 @@ cafecito mars vecino #ffc5477d
         display: flex;
         flex-direction: column;
         padding-top: 50px;
-        font-family: 'Bahnschrift', sans-serif;
+        font-family: 'HelveticaBold', sans-serif;
     }
 
     .tituloIngreso {
         color: rgb(111 50 20);
         font-size: 30px;
-        font-weight: bold;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 50px;
@@ -334,7 +334,6 @@ cafecito mars vecino #ffc5477d
         border-radius: 10px;
         background-color: #ffc547;
         color: #6f3214;
-        font-weight: bold;
         font-size: 25px;
         border: none;
     }
@@ -433,7 +432,7 @@ cafecito mars vecino #ffc5477d
         border-radius: 8px;
         font-size: 22px;
         margin: 0 auto;
-        font-family: 'Bahnschrift', sans-serif;
+        font-family: 'HelveticaBold', sans-serif;
         box-shadow: 0 0 5px #ffffff7d;
         text-decoration: none;
         text-align: center;

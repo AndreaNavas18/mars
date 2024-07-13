@@ -64,7 +64,7 @@
                         </div>
                     <div class="divBtnQR">
                         <div class="divBtn">
-                            <label for="qr_image" class="btnQR" >Seleccionar imagen de galería</label>
+                            <h2 for="qr_image" class="btnQR" >Seleccionar de la galería</h2>
                             <input type="file" id="qr_image" name="qr_image" style="display:none" accept="image/*" onchange="handleImageUpload(event)">
                         </div>
                         <div class="divBtn">

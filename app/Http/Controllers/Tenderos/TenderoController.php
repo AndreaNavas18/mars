@@ -15,6 +15,10 @@ use App\Imports\TenderoImport;
 use App\Imports\TokenImport;
 use App\Imports\EmpleadoImport;
 use App\Models\Vendedor;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class TenderoController extends BaseController
 {
@@ -265,19 +269,6 @@ class TenderoController extends BaseController
     }
 
 
-    public function generarUsuario($nombre, $apellido){
-
-        $baseUsername = strtolower(substr($nombre, 0, 1) . $apellido);
-        $username = $baseUsername;
-        $counter = 1;
-    
-        while (User::where('username', $username)->exists()) {
-            $username = $baseUsername . $counter;
-            $counter++;
-        }
-    
-        return $username;
-    }
 
     public function storeVendedor(Request $request){
         try {
@@ -290,11 +281,10 @@ class TenderoController extends BaseController
                 $vendedor->telefono = $request->telefono;
                 $vendedor->save();
 
-                $usuarioGenerado = $this->generarUsuario($request->nombre, $request->apellido);
     
                 $user = new User();
                 $user->name = $request->nombre . ' ' . $request->apellido;
-                $user->username = $usuarioGenerado;
+                $user->username = $request->cedula;
                 $user->email = $request->email;
                 $user->password = bcrypt($request->cedula);
                 $user->save();
@@ -325,4 +315,26 @@ class TenderoController extends BaseController
         }
 
     }
+
+    public function cambioContrasena(Request $request)
+    {
+      \Log::info("Cambiando contraseña");
+      try {
+        \Log::info("Cambiando contraseña");
+          if($request->password != $request->password_confirmation){
+              return redirect()->back()->with('error', 'Las contraseñas no coinciden');
+          }else{
+              $user = Auth::user();
+              $user->password = Hash::make($request->password);
+              $user->passwordchanged = 1;
+              $user->save();
+              return redirect()->route('home');
+          }        
+      } catch (\Exception $e) {
+        \Log::error('Error al cambiar la contraseña: ' . $e->getMessage());
+        return response()->json(['message' => 'Error al cambiar contraseña'], 500);
+      }
+    }
+
+    
 }

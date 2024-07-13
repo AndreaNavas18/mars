@@ -58,46 +58,51 @@ class LoginController extends Controller
     }
 
     public function login(Request $request)
-{
-    // Verificar si el usuario existe
-    $user = User::where('username', $request->username)->first();
-    if (!$user) {
-        return redirect()->back()->with('error', 'Credenciales inválidas');
-        Log::info('Credenciales inválidas');
-    }
-    Log::info('Credenciales válidas');
-    $role = $user->getRole();
-    if ($role === 'tendero') {
-        Log::info('Es tendero');
-        $tendero = $user->tendero;
-        $tokenModel = Token::where('tendero_id', $tendero->id)->first();
-        if ($user && isset($tokenModel) && $tokenModel->status === 'activo') {
-            auth()->login($user);
-            return redirect()->route('home');    
-        } elseif (!isset($tokenModel) || $tokenModel->status === 'inactivo') {
-            return redirect()->back()->with('error', 'No tiene activo el token');
+    {
+        // Verificar si el usuario existe
+        $user = User::where('username', $request->username)->first();
+        if (!$user) {
+            return redirect()->back()->with('error', 'Credenciales inválidas');
+            Log::info('Credenciales inválidas');
         }
-    
-    } else {
-        if (Hash::check($request->password, $user->password)) {
-            auth()->login($user);
-            Log::info('No es tendero');
-            return redirect()->route('home');
+        Log::info('Credenciales válidas');
+        $role = $user->getRole();
+        if ($role === 'tendero') {
+            Log::info('Es tendero');
+            $tendero = $user->tendero;
+            $tokenModel = Token::where('tendero_id', $tendero->id)->first();
+            if ($user && isset($tokenModel) && $tokenModel->status === 'activo') {
+                auth()->login($user);
+                return redirect()->route('home');    
+            } elseif (!isset($tokenModel) || $tokenModel->status === 'inactivo') {
+                return redirect()->back()->with('error', 'No tiene activo el token');
+            }
         } else {
-            return redirect()->back()->with('error', 'Contraseña incorrecta');
+            if (Hash::check($request->password, $user->password)) {
+                if($user->passwordchanged == 0){
+                    //Validacion y redireccionamiento a cambio de contraseña
+                    Auth::login($user);
+                    return redirect()->route('home');
+                }else {
+                    auth()->login($user);
+                    Log::info('No es tendero');
+                    return redirect()->route('home');
+                }
+            } else {
+                return redirect()->back()->with('error', 'Contraseña incorrecta');
+            }
         }
     }
-}
 
-public function checkUserRole(Request $request)
-{
-    $user = User::where('username', $request->username)->first();
-    if ($user) {
-        return response()->json(['role' => $user->getRole()]);
-    } else {
-        return response()->json(['role' => null]);
+    public function checkUserRole(Request $request)
+    {
+        $user = User::where('username', $request->username)->first();
+        if ($user) {
+            return response()->json(['role' => $user->getRole()]);
+        } else {
+            return response()->json(['role' => null]);
+        }
     }
-}
 
     public function showLoginForm(Request $request)
     {
@@ -108,31 +113,5 @@ public function checkUserRole(Request $request)
         return view('auth.login', ['token' => $token]);
     }
 
-    // public function showLoginFormWithToken($token)
-    // {
-    //     $tokenModel = Token::where('token', $token)->first();
-
-    //     if ($tokenModel && $tokenModel->status === 'inactivo') {
-    //         return view('auth.login', ['token' => $token]);
-    //     } else {
-    //         return redirect()->route('login');
-    //     }
-    // }
-
-    // public function loginWithToken(Request $request, $token)
-    // {
-    //     $tokenModel = Token::where('token', $token)->first();
-
-    //     if ($tokenModel && $tokenModel->estado === 'inactivo') {
-    //        $user = User::where('username', $request->username)->first();
-
-    //        if ($user && !$tokenModel->tendero_id) {
-    //             $tokenModel->tendero_id = $user->tendero_id;
-    //             $tokenModel->status = 'activo';
-    //             $tokenModel->save();
-    //         }
-    //     }
-    //     return $this->login($request);
-
-    // }
+    
 }

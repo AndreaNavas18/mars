@@ -14,7 +14,7 @@
                 {{ session('error') }}
             </div>
         @endif
-        <h1>Tenderos con observaciones</h1>
+        <h1 style="color: #0000a0">Tenderos con observaciones</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>

@@ -143,8 +143,11 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-
 Route::post('/check-user-role', [LoginController::class, 'checkUserRole'])->name('check-user-role');
+
+Route::post('/change-password', [TenderoController::class, 'cambioContrasena'])->name('change.password');
+
+
 
 /**
  * Rutas para la PWA

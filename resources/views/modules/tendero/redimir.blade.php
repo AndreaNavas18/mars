@@ -16,9 +16,6 @@
             <h1 class="punTT">${{ number_format(auth()->user()->tendero->cuota_mes, 0, ',', '.') }}</h1>
             <h2 class="tituTTT">META PERIODO 1</h2>
         </div>
-        <div class="opcTT">
-            <h2 class="titu2TTT">Redimir bonos</h2>
-        </div>
         <ul>
             <li class="videoPromo">
                 <h2>Video Promocional</h2>

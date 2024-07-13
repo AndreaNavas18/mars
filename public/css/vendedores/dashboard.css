@@ -10,9 +10,14 @@ cafecito mars vecino #6f3214
 */
 
 @font-face {
-    src: url('../../fonts/bahschrift.ttf') format('truetype');
-    font-family: 'Bahnschrift';
+    src: url('../../fonts/HelveticaBold.ttf') format('truetype');
+    font-family: 'HelveticaBold';
 }
+
+body{
+    font-family: 'HelveticaBold', sans-serif;
+}
+
 
 
 /*Estilos moviles*/
@@ -41,7 +46,7 @@ cafecito mars vecino #6f3214
     display: flex;
     flex-direction: column;
     background-color: #ffc547;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
 
 }
 .primerDiv {
@@ -65,7 +70,6 @@ cafecito mars vecino #6f3214
 .bienvenida {
     color: white;
     font-size: 28px;
-    font-weight: bold;
     margin-bottom: 0px;
 }
 .fraseI {
@@ -115,7 +119,6 @@ cafecito mars vecino #6f3214
 .titulo2 {
     color: #000000;
     font-size: 25px;
-    font-weight:normal;
     margin-top: 5px;
     margin-left: 30px;
 }
@@ -152,7 +155,6 @@ cafecito mars vecino #6f3214
 .tit1{
     color: #000000;
     font-size: 30px;
-    font-weight: normal;
     margin-right: 10px;
     text-align: center;
 }

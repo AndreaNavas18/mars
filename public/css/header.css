@@ -10,9 +10,14 @@ amarrillo rgb(255,220,0)
 /* vertical */
 
 @font-face {
-    src: url('../fonts/bahschrift.ttf') format('truetype');
-    font-family: 'Bahnschrift';
+    src: url('../fonts/HelveticaBold.ttf') format('truetype');
+    font-family: 'HelveticaBold';
 }
+
+body{
+    font-family: 'HelveticaBold', sans-serif;
+}
+
 
 
 *{
@@ -79,7 +84,6 @@ amarrillo rgb(255,220,0)
 
 .nombreHH {
     font-size: 26px;
-    font-weight: 700;
     color: white;
     margin: 0;
 }
@@ -118,7 +122,7 @@ amarrillo rgb(255,220,0)
     border: 2px solid white;
     border-radius: 8px;
     font-size: 18px;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
     text-align: center;
     cursor: pointer;
     padding: 3px 8px 3px 8px;
@@ -169,7 +173,7 @@ amarrillo rgb(255,220,0)
     color: white;
     font-size: 20px;
     text-align: center;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
 }
 
 .header2Admin {
@@ -183,7 +187,6 @@ amarrillo rgb(255,220,0)
 
 .cardTitle{
     font-size: 20px;
-    font-weight: 700;
     color: #81267f;
     text-align: center;
     margin: 0;
@@ -194,6 +197,11 @@ amarrillo rgb(255,220,0)
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+}
+
+.card-body label{
+    color: #0000a0;
+
 }
 
 .formActivacion {
@@ -237,8 +245,8 @@ amarrillo rgb(255,220,0)
     color: white;
     border: 2px solid white;
     border-radius: 8px;
-    font-size: 18px;
-    font-family: 'Bahnschrift', sans-serif;
+    font-size: 15px;
+    font-family: 'HelveticaBold', sans-serif;
     text-align: center;
     cursor: pointer;
     padding: 3px 8px 3px 8px;
@@ -256,11 +264,11 @@ amarrillo rgb(255,220,0)
 
 .btnActivar {
     background-color: white;
-    color: black;
-    border: 2px solid black;
+    color: #0000a0;
+    border: 2px solid #0000a0;
     border-radius: 8px;
     font-size: 18px;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
     text-align: center;
     cursor: pointer;
     padding: 3px 8px 3px 8px;
@@ -270,9 +278,15 @@ amarrillo rgb(255,220,0)
 }
 
 .btnActivar:hover {
-    background-color: #81267f;
+    background-color: #0000a0;
     color: white;
     border: 2px solid white;
+    transition: 0.3s ease;
+}
+
+.btnActivar:active {
+    background-color: white;
+    color: #0000a0;
     transition: 0.3s ease;
 }
 
@@ -285,7 +299,7 @@ amarrillo rgb(255,220,0)
 
 .whatsapp-widget2 {
     position: fixed;
-    bottom: 95px;
+    bottom: 120px;
     right: 10px;
     z-index: 1000;
 

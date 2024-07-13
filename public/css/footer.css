@@ -1,12 +1,17 @@
 @font-face {
-    src: url('../fonts/bahschrift.ttf') format('truetype');
-    font-family: 'Bahnschrift';
+    src: url('../fonts/HelveticaBold.ttf') format('truetype');
+    font-family: 'HelveticaBold';
 }
+
+body{
+    font-family: 'HelveticaBold', sans-serif;
+}
+
 
 
 .footerFondo {
     background-color:#81267f;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'HelveticaBold', sans-serif;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -39,7 +44,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
     margin-top: 15px;
 }
 

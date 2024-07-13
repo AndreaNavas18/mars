@@ -19,7 +19,7 @@
                     {{ session('error') }}
                 </div>
             @endif
-            <h2 class="title2Admin">Qué desea hacer hoy?</h2>
+            <h2 class="title2Admin">¿Qué desea hacer hoy?</h2>
             <div class="obss btnInicial" id="menuObs">
                 <a href="{{ route('obs.tenderos')}}" id="botonObs" class="botonObs">Ver observaciones</a>
             </div>

@@ -17,7 +17,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 window.location.href = '{{ route('login') }}';
-            }, 4000);
+            }, 
+            3000);
         });
     </script>
 </head>
