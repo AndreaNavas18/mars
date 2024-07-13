@@ -22,7 +22,7 @@
             <button type="submit">Buscar</button>
         </form>
 
-        <h1>Administracion de vendedores</h1>
+        <h1 style="color: #0000a0;text-align:center">Administracion de vendedores</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <title>Creacion de usuario</title>
     <div class="divFormu" style="margin-bottom: 30px">
-        <h1>Creacion de usuario</h1>
+        <h1 style="color: #0000a0">Creacion de usuario</h1>
         @if (session('success'))
                 <div class="alert alert-success" style="background-color:#00800038;color:green;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px">
                 {{ session('success') }}

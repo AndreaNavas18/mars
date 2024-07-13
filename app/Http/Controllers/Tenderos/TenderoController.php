@@ -300,7 +300,7 @@ class TenderoController extends BaseController
             }else if($request->tipouusuario == 'admin'){
                 $administrador = new User();
                 $administrador->name = $request->nombre . ' ' . $request->apellido;
-                $administrador->username = $request->usuario;
+                $administrador->username = $request->cedula;
                 $administrador->email = $request->email;
                 $administrador->password = bcrypt($request->cedula);
                 $administrador->save();
