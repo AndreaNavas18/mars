@@ -58,6 +58,13 @@ Route::get('/saliendo', function () {
     return view('modules.before-logout');
 })->name('saliendo');
 
+Route::get('/terminosycondiciones', function () {
+    return view('modules.terminos');
+})->name('terminos');
+
+Route::post('/aceptar-terminos', [TenderoController::class,'aceptarTerminos'])->name('aceptar.terminos');
+
+
 
 /**************************************
  * 

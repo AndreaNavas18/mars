@@ -73,7 +73,11 @@ class LoginController extends Controller
             $tokenModel = Token::where('tendero_id', $tendero->id)->first();
             if ($user && isset($tokenModel) && $tokenModel->status === 'activo') {
                 auth()->login($user);
-                return redirect()->route('home');    
+                if($user->terms == 0){
+                    return redirect()->route('terminos');
+                }else{
+                    return redirect()->route('home');
+                }
             } elseif (!isset($tokenModel) || $tokenModel->status === 'inactivo') {
                 return redirect()->back()->with('error', 'No tiene activo el token');
             }

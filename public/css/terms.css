@@ -1,0 +1,209 @@
+@font-face {
+    src: url('../fonts/HelveticaBold.ttf') format('truetype');
+    font-family: 'HelveticaBold';
+}
+
+body{
+    font-family: 'HelveticaBold', sans-serif;
+    color: #0000a0;
+}
+
+#backgroundVideo {
+    /* position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    z-index: -2; */
+    
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    transform: translateX(calc((100% - 100vw) / 2));
+}
+
+.encima {
+    /* background-color: #ffc54756; */
+
+    background-color: rgba(255, 197, 71, 0.34); /* Ajusta el color y la opacidad según tus necesidades */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding-bottom: 20px;
+
+}
+
+.term {
+    /* display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    width: 90%;
+    max-width: 800px; /* Ajusta el ancho máximo según tu diseño */
+    margin: 0 auto; /* Centra el div horizontalmente */
+    position: relative; /* Asegura que está posicionado sobre el fondo de color */
+    z-index: 1;
+    
+}
+
+.term h1 {
+    font-size: 25px;
+    margin: 1em 0;
+    text-align: center;
+    color: #0000a0; /* Color del texto */
+    text-shadow: 
+        -1px -1px 0 #ffffffd0,  
+         1px -1px 0 #ffffffd0,
+        -1px  1px 0 #ffffffd0,
+         1px  1px 0 #ffffffd0; 
+}
+
+.term h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.term h3 {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.term h4 {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.term p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.term ul {
+    font-size: 15px;
+    text-align: left;
+    list-style: none;
+    padding: 8px 0 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.term li {
+    font-size: 15px;
+    margin: 1em 0;
+    text-align: justify;
+}
+
+.term a {
+    color: #0000a0;
+    text-decoration: none;
+}
+
+.term a:hover {
+    color: #0000a0;
+    text-decoration: underline;
+}
+
+.term table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.term th {
+    background-color: #0000a0;
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #ffffff;
+}
+
+.term td {
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid #0000a0;
+    text-align: center;
+}
+
+.term tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.term tr:hover {
+    background-color: #bfdbff;
+}
+
+.term img {
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.btn-disabled {
+    background-color: #f0f0f0;
+    color: #888888;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    cursor: not-allowed;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.btnT {
+    background-color: #0000a0;
+    color: white;
+    border: 2px solid #0000a0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.btnT:hover {
+    background-color: white;
+    color: #0000a0;
+    border: 2px solid #0000a0;
+    text-decoration: none;
+}
+
+.btnT:active {
+    background-color: white;
+    color: #0000a0;
+    border: 2px solid #0000a0;
+    text-decoration: none;
+}
+
+.term form {
+    margin-bottom: 20px;
+}
+

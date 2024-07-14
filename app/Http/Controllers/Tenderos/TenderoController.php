@@ -345,5 +345,16 @@ class TenderoController extends BaseController
       }
     }
 
+    public function aceptarTerminos(Request $request)
+    {
+        $user = auth()->user();
+        
+        // Cambiar el campo 'terms' de 0 a 1
+        $user->terms = 1;
+        $user->save();
+
+        return redirect('/home')->with('success', 'Términos y condiciones aceptados correctamente.');
+    }
+
     
 }
