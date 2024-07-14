@@ -64,7 +64,9 @@
                         </div>
                     <div class="divBtnQR">
                         <div class="divBtn">
-                            <h2 for="qr_image" class="btnQR" >Seleccionar de la galería</h2>
+                            <label for="qr_image" class="btnQR"> 
+                                <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Seleccionar de la galería</h2>
+                            </label>
                             <input type="file" id="qr_image" name="qr_image" style="display:none" accept="image/*" onchange="handleImageUpload(event)">
                         </div>
                         <div class="divBtn">
@@ -78,8 +80,8 @@
                     </div>
                         </form>
 
-                    <div id="video-container" style="display: none; margin-top: 20px;">
-                        <video id="video" width="320" height="240" style="border: 1px solid black"></video>
+                    <div id="video-container" style="display: none; margin-top: 20px;" class="escanearC">
+                        <video id="video" width="320" height="240"></video>
                         <button type="button" class="btn btn-danger" onclick="closeScanner()">Cerrar Cámara</button>
                     </div>
                 </div>
@@ -88,8 +90,42 @@
     </div>
 </div>
 
+<style>
+    .escanearC video {
+        border: 1px solid #ffc547;
+        border-radius: 5px;
+    }
+
+    .escanearC button {
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .escanearC button:hover {
+        background-color: white;
+        color: #ff0000;
+        border: 1px solid #ff0000;
+    }
+    
+    .escanearC button:active {
+        background-color: white;
+        color: #ff0000;
+        border: 1px solid #ff0000;
+    }
+</style>
+
 <script>
+
+document.getElementById('qr_image').addEventListener('change', handleImageUpload);
+
     function handleImageUpload(event) {
+        console.log('Galeria abierta');
         var file = event.target.files[0];
         var reader = new FileReader();
         reader.onload = function(event) {
@@ -107,6 +143,7 @@
             image.src = event.target.result;
         };
         reader.readAsDataURL(file);
+
     }
 
     function getImageDataFromCanvas(image) {

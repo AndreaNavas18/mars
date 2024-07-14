@@ -36,8 +36,11 @@
                     </td>
                     @if(auth()->user()->hasRole('admin'))
                         <td>
-                            @foreach($tendero->observations as $observation)
-                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $observation->user->name }} <br></h2>
+                            @php
+                                $uniqueUsers = $tendero->observations->pluck('user')->unique('id');
+                            @endphp
+                            @foreach($uniqueUsers as $user)
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $user->name }} <br></h2>
                             @endforeach
                         </td>
                     @endif

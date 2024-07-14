@@ -503,16 +503,16 @@ body{
 .custom-pagination a {
     display: inline-block;
     padding: 8px 5px;
-    background-color: #81267f;
-    color: #fff;
+    background-color: #ffc547;
+    color: #0000a0;
     text-decoration: none;
     border-radius: 4px;
 }
 
 .custom-pagination .active a {
     background-color: white;
-    color: #81267f;
-    border: 1px solid #81267f;
+    color: #ffc547;
+    border: 1px solid #ffc547;
 }
 
 .custom-pagination a:hover {
@@ -558,31 +558,55 @@ body{
 
 /* Estilos para el before-logouttt- */
 
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+
 .before {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* background-color: #ffc547; */
-    background-image: url('/../images/new/fon1.jpg');
+    /* background-image: url('/../images/new/fon1.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     height: 100vh;
     margin: 0;
     font-family: 'HelveticaBold', sans-serif;
+    background-color: #ffc54756;
+    z-index: 1;
 }
 
-.before h1 {
+.logoEnc2 {
+    width: auto;
+    vertical-align: inherit;
+    height: 20px; 
+}
+
+.eslEnc2 {
+    color: #0000a0;
+    font-size: 26px;
     text-align: center;
-    font-size: 30px;
-    color: white;
+    font-family: 'HelveticaBold', sans-serif;
 }
 
-.before img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50px;
+.avatar2 {
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+
+    @media (max-width: 840px) {
+        height: 200px;
+    }
 }
+
 
 /* Estilos para le modal de cambio de contraseña */
 .modalContra {

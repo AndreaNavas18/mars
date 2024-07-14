@@ -162,13 +162,22 @@ class TenderoController extends BaseController
         $user = auth()->user();
 
         if( $user->hasRole('admin') ){
-              $tenderos = Tendero::with(['observations.user'])->get();
+              $tenderos = Tendero::whereHas('observations')->with(['observations.user'])->get();
          }else{
             $observations = Observation::where('user_id', $user->id)->get();
             $tenderoIds = $observations->pluck('tendero_id')->unique();
-            $tenderos = Tendero::whereIn('id', $tenderoIds)->with(['observations' => function ($query) use ($user) {
+            // $tenderos = Tendero::whereIn('id', $tenderoIds)->with(['observations' => function ($query) use ($user) {
+            //     $query->where('user_id', $user->id)->with('user');
+            // }])->get();
+
+            $tenderos = Tendero::whereIn('id', $tenderoIds)
+            ->whereHas('observations', function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            })
+            ->with(['observations' => function ($query) use ($user) {
                 $query->where('user_id', $user->id)->with('user');
-            }])->get();
+            }])
+            ->get();
          }
 
         return view('modules.admin.observaciones', compact('tenderos'));

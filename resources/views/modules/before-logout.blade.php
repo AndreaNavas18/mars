@@ -18,14 +18,20 @@
             setTimeout(function() {
                 window.location.href = '{{ route('login') }}';
             }, 
-            3000);
+            10000);
         });
     </script>
 </head>
 <body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="{{ asset('videos/fondoanimado.mp4') }}" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
     <div class="before">
-        <img src="{{ asset('images/new/marsCo.png') }}" class="animate__animated animate__bounceInLeft" alt="Avatar">
-        <h1 class="animate__animated animate__bounceInRight">¡Con <span style="font-size: 33px;color:#0000a0;font-weight:bold">MARS</span> siempre cumples, siempre ganas!</h1>
+        <img src="{{ asset('images/new/marsCo.png') }}" class="avatar2 animate__animated animate__bounceInLeft" alt="Avatar">
+        <h3 class="eslEnc2 animate__animated animate__bounceInRight">¡Con 
+            <img src="{{ asset('images/new/marslogo.svg') }}" class="logoEnc2" alt="Mars"> 
+            siempre cumples, <br> siempre ganas!</h3>
     </div>
 </body>
 </html>
