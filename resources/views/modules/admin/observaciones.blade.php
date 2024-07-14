@@ -14,7 +14,7 @@
                 {{ session('error') }}
             </div>
         @endif
-        <h1 style="color: #0000a0">Tenderos con observaciones</h1>
+        <h1 style="color: #0000a0;text-align:center">Tenderos con observaciones</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>
@@ -28,14 +28,16 @@
             <tbody>
                 @foreach ($tenderos as $tendero)
                 <tr>
-                    <td>{{ $tendero->nombre }}</td>
+                    <td><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $tendero->nombre }}</h2></td>
                     <td>
-                        <a href="{{ route('listado.observations', $tendero->id) }}" class="btnTen">Abrir</a>
+                        <a href="{{ route('listado.observations', $tendero->id) }}" class="btnTen" style="display: flex;justify-content:center;align-items:center">
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Abrir</h2>
+                        </a>
                     </td>
                     @if(auth()->user()->hasRole('admin'))
                         <td>
                             @foreach($tendero->observations as $observation)
-                                {{ $observation->user->name }} <br>
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $observation->user->name }} <br></h2>
                             @endforeach
                         </td>
                     @endif

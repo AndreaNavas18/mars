@@ -19,7 +19,7 @@
         <ul>
             <li class="videoPromo">
                 <h2>Video Promocional</h2>
-                <video width="320" height="240" controls>
+                <video width="320" height="240" controls class="videoStylesT">
                     <source src="{{ asset('images/new/videoPromocional.mp4') }}" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
                 </video>

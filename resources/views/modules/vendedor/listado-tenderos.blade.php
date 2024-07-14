@@ -18,11 +18,11 @@
          <!-- Formulario de búsqueda -->
         <form action="{{ route('search.tenderos') }}" method="GET" class="search-form">
             @csrf
-            <input type="text" name="search" placeholder="Buscar por nombre, cédula o región Nielsen">
-            <button type="submit">Buscar</button>
+            <input type="text" name="search" placeholder="Buscar nombre, cédula o región Nielsen">
+            <button type="submit"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Buscar</h2></button>
         </form>
 
-        <h1 style="color:#0000a0">Listado de tenderos</h1>
+        <h1 style="color:#0000a0;text-align:center">Listado de tenderos</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>
@@ -33,9 +33,11 @@
             <tbody>
                 @foreach ($tenderos as $tendero)
                 <tr>
-                    <td>{{ $tendero->nombre }}</td>
+                    <td><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $tendero->nombre }}</h2></td>
                     <td style="display: flex;justify-content:center;align-items:center">
-                        <a href="{{ route('create.observations', $tendero->id) }}" class="btnTen">Crear Observación</a>
+                        <a href="{{ route('create.observations', $tendero->id) }}" class="btnTen">
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Crear Observación</h2>
+                        </a>
                     </td>
                 </tr>
                 @endforeach

@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <title>Administrar tendero</title>
+    <title>Administrar tenderos</title>
 
     <div class="adminTendTT">
         @if (session('success'))
@@ -19,10 +19,10 @@
          <form action="{{ route('search.admin.tenderos') }}" method="GET" class="search-form">
             @csrf
             <input type="text" name="search" placeholder="Busca nombre-cédula-región Nielsen">
-            <button type="submit">Buscar</button>
+            <button type="submit"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Buscar</h2></button>
         </form>
 
-        <h1 style="color: #0000a0; text-align:center">Administracion de tendero</h1>
+        <h1 style="color: #0000a0; text-align:center">Administracion de tenderos</h1>
         <table class="tablaTendero">
             <thead>
                 <tr>
@@ -33,9 +33,11 @@
             <tbody>
                 @foreach ($tenderos as $tendero)
                 <tr>
-                    <td>{{ $tendero->nombre }}</td>
+                    <td><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $tendero->nombre }}</h2></td>
                     <td>
-                        <a href="{{ route('edit.tendero', $tendero->id) }}" class="btnTen">Editar</a>
+                        <a href="{{ route('edit.tendero', $tendero->id) }}" class="btnTen" style="display: flex;justify-content:center;align-items:center"> 
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Editar</h2>
+                        </a>
                     </td>
                 </tr>
                 @endforeach

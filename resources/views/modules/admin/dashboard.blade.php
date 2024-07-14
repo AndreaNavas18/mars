@@ -21,19 +21,19 @@
             @endif
             <h2 class="title2Admin">¿Qué desea hacer hoy?</h2>
             <div class="obss btnInicial" id="menuObs">
-                <a href="{{ route('obs.tenderos')}}" id="botonObs" class="botonObs">Ver observaciones</a>
+                <a href="{{ route('obs.tenderos')}}" id="botonObs" class="botonObs"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Ver observación</h2></a>
             </div>
             <div class="creacionn btnInicial" id="menuCrear">
-                <a href="{{ route('create.tenderos')}}" id="botonCrear" class="botonCrear">Crear tendero</a>
+                <a href="{{ route('create.tenderos')}}" id="botonCrear" class="botonCrear"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Crear tendero</h2></a>
             </div>
             <div class="creacionnV btnInicial" id="menuCrearV">
-                <a href="{{ route('create.vendedores')}}" id="botonCrearV" class="botonCrearV">Crear usuario</a>
+                <a href="{{ route('create.vendedores')}}" id="botonCrearV" class="botonCrearV"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Crear usuario</h2></a>
             </div>
             <div class="administrar btnInicial" id="menuAdmin">
-                <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin">Administrar tenderos</a>
+                <a href="{{ url('administrar-tenderos')}}" id="botonAdmin" class="botonAdmin"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Administrar tenderos</h2></a>
             </div>
             <div class="administrarV btnInicial" id="menuAdminV">
-                <a href="{{ url('administrar-vendedores')}}" id="botonAdminV" class="botonAdminV">Administrar vendedores</a>
+                <a href="{{ url('administrar-vendedores')}}" id="botonAdminV" class="botonAdminV"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Administrar vendedores</h2></a>
             </div>
             <div style="display: none">
                 <div class="import btnInicial" id="menuImport">

@@ -15,14 +15,14 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="cardTitle">{{ __('Activar Tendero') }}</div>
+                <div class="cardTitle"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:24px">{{ __('Activar Tendero') }}</h2></div>
 
                 <div class="card-body">
                     <form class="formActivacion" method="POST" action="{{ route('activar.tendero') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="cedula" class="col-md-4 col-form-label text-md-right">{{ __('Cédula') }}</label>
+                            <label for="cedula" class="col-md-4 col-form-label text-md-right"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:18px">{{ __('Cédula') }}</h2></label>
 
                             <div class="col-md-6">
                                 <input id="cedula" type="text" class="form-control @error('cedula') is-invalid @enderror" name="cedula" required autofocus>
@@ -36,7 +36,7 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="telefono" class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
+                            <label for="telefono" class="col-md-4 col-form-label text-md-right"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:18px">{{ __('Teléfono') }}</h2></label>
 
                             <div class="col-md-6">
                                 <input id="telefono" type="number" class="form-control @error('telefono') is-invalid @enderror" name="telefono" autofocus>
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="token" class="col-md-4 col-form-label text-md-right">{{ __('Token QR') }}</label>
+                            <label for="token" class="col-md-4 col-form-label text-md-right"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:18px">{{ __('Token QR') }}</h2></label>
 
                             <div class="col-md-6">
                                 <input id="token" type="text" class="form-control @error('token') is-invalid @enderror" name="token" readonly>
@@ -68,12 +68,12 @@
                             <input type="file" id="qr_image" name="qr_image" style="display:none" accept="image/*" onchange="handleImageUpload(event)">
                         </div>
                         <div class="divBtn">
-                            <button type="button" class="btnQR" onclick="openScanner()">Escanear con cámara</button>
+                            <button type="button" class="btnQR" onclick="openScanner()"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Escanear con cámara</h2></button>
                         </div>
                     </div>
                     <div class="divBtnActivar">
                         <button type="submit" class="btnActivar">
-                            {{ __('Activar Tendero') }}
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ __('Activar Tendero') }}</h2>
                         </button>
                     </div>
                         </form>

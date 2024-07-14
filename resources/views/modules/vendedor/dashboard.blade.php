@@ -21,16 +21,16 @@
             @endif
             <h2 class="title2Admin">¿Qué desea hacer hoy?</h2>
             <div class="obss btnInicial" id="menuObs">
-                <a href="{{ route('listado.tenderos')}}" id="botonObs" class="botonObs">Crear observacion</a>
+                <a href="{{ route('listado.tenderos')}}" id="botonObs" class="botonObs"> <h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Crear observación</h2></a>
             </div>
             <div class="creacionn btnInicial" id="menuCrear">
-                <a href="{{ route('historial.observations')}}" id="botonCrear" class="botonCrear">Historial observaciones</a>
+                <a href="{{ route('historial.observations')}}" id="botonCrear" class="botonCrear"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Historial observaciones</h2></a>
             </div>
             <div class="administrar btnInicial" id="menuAdmin">
-                <a href="{{ route('activar.vista.tendero') }}" id="botonAdmin" class="botonAdmin">Activar tendero</a>
+                <a href="{{ route('activar.vista.tendero') }}" id="botonAdmin" class="botonAdmin"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Activar tendero</h2></a>
             </div>
             <div class="administrar btnInicial" id="menuAdmin">
-                <a href="{{ route('recursos.vendedor') }}" id="botonAdmin" class="botonAdmin">¿Cómo participar?</a>
+                <a href="{{ route('recursos.vendedor') }}" id="botonAdmin" class="botonAdmin"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">¿Cómo participar?</h2></a>
             </div>
         </div>
     </div>

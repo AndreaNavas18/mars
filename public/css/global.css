@@ -26,7 +26,7 @@ body{
 
 
 .enc {
-    background-color: #ffc547;
+    /* background-color: #ffc547; */
     /* #d174cf8c */
     display: flex;
     flex-direction: column;
@@ -35,8 +35,9 @@ body{
 }
 
 .logoEnc {
-    width: 70px;
-    height: 50px;
+    width: auto;
+    vertical-align: inherit;
+    height: 18px; 
 
 }
 
@@ -146,36 +147,45 @@ body{
 }
 
 .botonAdmin, .botonAdminV {
-    background-color: #81267f;
-    color: #ffffff;
+    background-color: #ffc547;
+    color: #0000a0;
     font-size: 1.2rem;
     padding: 20px 10px 20px 10px;
     border-radius: 10px;
     margin: 10px;
     text-align: center;
     text-decoration: none;
+    box-shadow: 0px 0px 5px 0px #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .botonCrear, .botonCrearV {
-    background-color: #81267f;
-    color: white;
+    background-color: #ffc547;
+    color: #0000a0;
     font-size: 1.2rem;
     padding: 20px 10px 20px 10px;
     border-radius: 10px;
     margin: 10px;
     text-align: center;
     text-decoration: none;
+    box-shadow: 0px 0px 5px 0px #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .botonObs {
-    background-color: #81267f;
-    color: white;
+    background-color: #ffc547;
+    color: #0000a0;
     font-size: 1.2rem;
     padding: 20px 10px 20px 10px;
     border-radius: 10px;
     margin: 10px;
     text-align: center;
     text-decoration: none;
+    box-shadow: 0px 0px 5px 0px #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .administrar, .administrarV{
@@ -271,6 +281,8 @@ body{
 .adminTendTT {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
@@ -289,15 +301,15 @@ body{
 }
 
 .tablaTendero td, th {
-    border: 1px solid #000;
+    border: 1px solid #0000a0;
     padding: 8px 3px 8px 3px;
     text-align: center;
     color: #0000a0;
 }
 
 .tablaTendero th {
-    background-color: #81267f;
-    color: white;
+    background-color: #ffc547;
+    color: #0000a0;
 }
 
 .tablaTendero td {
@@ -305,9 +317,9 @@ body{
 }
 
 .btnTen {
-    background-color: #81267f;
-    color: white;
-    padding: 6px 10px;
+    background-color: #ffc547;
+    color: #0000a0;
+    padding: 6px 6px;
     border: none;
     border-radius: 4px;
     text-decoration: none;
@@ -316,21 +328,21 @@ body{
 .btnTen:active {
     background-color: #ffffff;
     transform: translateY(2px);
-    border: 1px solid #81267f;
-    color: #81267f;
+    border: 1px solid #ffc547;
+    color: #ffc547;
 }
 
 .btnTen:hover {
     background-color: #ffffff;
     transform: translateY(2px);
-    border: 1px solid #81267f;
-    color: #81267f;
+    border: 1px solid #ffc547;
+    color: #ffc547;
 }
 
 .btnTen2 {
     background-color: red;
     color: white;
-    padding: 6px 10px;
+    padding: 6px 6px;
     border: none;
     border-radius: 4px;
     text-decoration: none;
@@ -366,8 +378,8 @@ body{
 }
 
 .btnH {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: #0000a0;
+    color: rgb(255, 255, 255);
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -381,10 +393,12 @@ body{
 }
 
 .divFormu h1 {
-    font-size: 1.5rem;
-    color: black;
+    font-size: 24px;
+    color: #0000a0;
     text-align: center;
     margin-top: 20px;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .formCrear {
@@ -400,31 +414,53 @@ body{
 .formCrear label {
     font-size: 1.2rem;
     color: #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+
+}
+
+.formCrear textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffc547;
+    box-shadow: 0px 0px 5px 0px #ffc547;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .formCrear input {
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #0000a0;
-    box-shadow: 0px 0px 5px 0px #81267f;
+    border: 1px solid #ffc547;
+    box-shadow: 0px 0px 5px 0px #ffc547;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .formCrear button {
-    background-color: #81267f;
-    color: white;
+    background-color: #ffc547;
+    color: #0000a0;
     padding: 10px;
     border-radius: 10px;
     border: none;
     font-size: 18px;
     margin-top: 15px;
     cursor: pointer;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .formCrear button:active {
     background-color: #ffffff;
     transform: translateY(2px);
-    border: 1px solid #81267f;
-    color: #81267f;
+    border: 1px solid #ffc547;
+    color: #ffc547;
+}
+
+.formCrear button:hover {
+    background-color: #ffffff;
+    transform: translateY(2px);
+    border: 1px solid #ffc547;
+    color: #ffc547;
 }
 
 .formCrear select {
@@ -432,15 +468,19 @@ body{
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
-    box-shadow: 0px 0px 5px 0px #81267f;
+    box-shadow: 0px 0px 5px 0px #ffc547;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 .formCrear span {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #81267f;
+    color: #ffc547;
     font-size: 25px;
     margin-left: 10px;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 .custom-pagination {
     text-align: center;
@@ -496,8 +536,8 @@ body{
 
 .search-form button {
     padding: 10px 20px;
-    background-color: #81267f;
-    color: #fff;
+    background-color: #ffc547;
+    color: #0000a0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -507,8 +547,8 @@ body{
 
 .search-form button:hover {
     background-color: white;
-    color: #81267f;
-    border: 1px solid #81267f;
+    color: #ffc547;
+    border: 1px solid #ffc547;
 }
 
 .search-form button:active {
@@ -624,6 +664,43 @@ body{
 .modalContra form div button:active {
     background-color: #0000a0;
     color: white;
+}
+
+.videoStyles {
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #ffc547;
+}
+
+.obsStyles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.obsStyles label h1{
+    font-size: 1.2rem;
+    color: #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+}
+
+.obsStyles textarea {
+    color: #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-buttons a,
+.action-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 575.98px)and (orientation:portrait) {

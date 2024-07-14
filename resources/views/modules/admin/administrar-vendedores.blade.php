@@ -19,7 +19,7 @@
          <form action="{{ route('search.admin.vendedores') }}" method="GET" class="search-form">
             @csrf
             <input type="text" name="search" placeholder="Busca nombre o cédula">
-            <button type="submit">Buscar</button>
+            <button type="submit"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Buscar</h2></button>
         </form>
 
         <h1 style="color: #0000a0;text-align:center">Administracion de vendedores</h1>
@@ -33,15 +33,33 @@
             <tbody>
                 @foreach ($vendedores as $vendedor)
                 <tr>
-                    <td>{{ $vendedor->nombre }} {{ $vendedor->apellido }} </td>
+                    <td><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $vendedor->nombre }} {{ $vendedor->apellido }}</h2></td>
                     <td>
-                        <a href="{{ route('edit.vendedor', $vendedor->id) }}" class="btnTen">Editar</a>
+                        <div class="action-buttons" style="display: flex; flex-direction: column; align-items: center;">
+                            <a href="{{ route('edit.vendedor', $vendedor->id) }}" class="btnTen" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
+                                <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Editar</h2>
+                            </a>
+                            <form action="{{ route('destroy.vendedor', $vendedor->id) }}" method="POST" style="display: flex; justify-content: center; align-items: center;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btnTen2" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px;" onclick="return confirm('¿Estás seguro de que deseas eliminar este vendedor?');">
+                                    <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Eliminar</h2>
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                    {{-- <td>
+                        <a href="{{ route('edit.vendedor', $vendedor->id) }}" class="btnTen" style="display: flex;justify-content:center;align-items:center">
+                            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Editar</h2>
+                        </a>
                         <form action="{{ route('destroy.vendedor', $vendedor->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btnTen2" onclick="return confirm('¿Estás seguro de que deseas eliminar este vendedor?');">Eliminar</button>
+                            <button type="submit" class="btnTen2" style="display: flex;justify-content:center;align-items:center" onclick="return confirm('¿Estás seguro de que deseas eliminar este vendedor?');">
+                                <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Eliminar</h2>
+                            </button>
                         </form>
-                    </td>
+                    </td> --}}
                 </tr>
                 @endforeach
             </tbody>
