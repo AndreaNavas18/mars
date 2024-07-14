@@ -157,6 +157,18 @@ body{
     background-repeat: no-repeat;
 }
 
+#backgroundVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+
+}
+
 .soloHeaderAdmin {
     display: flex;
     flex-direction: column;

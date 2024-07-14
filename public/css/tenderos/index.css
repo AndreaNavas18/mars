@@ -15,17 +15,32 @@ cafecito mars vecino #ffc5477d
 
 body{
     font-family: 'HelveticaBold', sans-serif;
+    overflow: hidden;
+    position: relative;
 }
 
 
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+
 .fondoImg {
     width: 100%;
-    @media (max-width: 840px) {
+    z-index: 1;
+    height: 100vh;
+    background-color: #ffc54756;
+    /* @media (max-width: 840px) {
         height: 100vh;
         background-image: url('../../images/new/fon1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-    }
+    } */
 }
 
 .fondoEnc {
@@ -63,13 +78,13 @@ body{
 
 .nuevoTT {
     font-size: 40px;
-    color: white;
+    color: #0000a0;
     margin-bottom: 10px;
     text-align: center;
     font-family: 'HelveticaBold', sans-serif;
     margin-top: 0px;
     @media (max-width: 840px) {
-        color: white;
+        color: #0000a0;
     }
 }
 .nuevo2TT {
@@ -102,23 +117,19 @@ body{
     margin: 0 auto;
     padding-left: 50px;
     font-size: 20px;
-    color: black;
+    color: #0000a0;
     background-color: transparent;
     border-top: transparent;
     border-right: transparent;
     border-left: transparent;
-    border-bottom: 2px solid #ffffff;
-    @media (max-width: 840px) {
-        color: white;
-    }
+    border-bottom: 2px solid #0000a0;
 }
 
 .labelTT {
     font-size: 20px;
-    color: #81267f;
-    @media (max-width: 840px) {
-        color: white;
-    }
+    color: #0000a0;
+    font-family: 'HelveticaBold', sans-serif;
+
 }
 
 .nuevo3TT {
@@ -127,10 +138,7 @@ body{
     text-align: center;
     margin-top: 0px;
     font-family: 'HelveticaBold', sans-serif;
-    color: #81267f;
-    @media (max-width: 840px) {
-        color: #ffc547;
-    }
+    color: #0000a0;
 }
 
 .btnIngresoTT {
@@ -142,20 +150,14 @@ body{
     border-radius: 10px;
     background-color: transparent;
     font-size: 25px;
-    color: #81267f;
-    border: 1px solid #81267f;
-    @media (max-width: 840px) {
-        color: #ffc547;
-        border: 1px solid #ffc547;
-    }
+    color: #0000a0;
+    border: 2px solid #0000a0;
 }
 
 .btnIngresoTT:active {
-    color: #000000;
+    color: white;
     transition: 0.3s ease;
-    @media (max-width: 840px) {
-        background-color: #ffc547;
-    }
+    background-color: #0000a0;
 }
 
 .iconocedulaTT {
@@ -181,12 +183,12 @@ body{
     margin-left: -245px;
     margin-top: 1px;
     @media (max-width: 840px) {
-        width: 28px;
-        height: 28px;
         top: 50%;
-        left: 12px;
+        width: 35px;
+        height: 35px;
+        left: 8px;
+        margin-left: 0px;
         transform: translateY(-50%);
-        margin-top: 8px;
     }
 }
 

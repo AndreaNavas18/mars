@@ -16,6 +16,10 @@
 <body>
     <div class="headerCompletoAdmin" >
         <div class="soloHeaderImgAdmin">
+            {{-- <video autoplay muted loop id="backgroundVideo">
+                <source src="{{ asset('videos/encabe.mp4') }}" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video> --}}
             <div class="soloHeaderAdmin">
                 <div class="iconosHH">
                     <img src="{{ asset('images/new/menu1.png') }}" class="menuTTAdmin" alt="Menu" id="menuHamburguesa">

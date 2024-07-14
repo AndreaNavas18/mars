@@ -19,7 +19,11 @@
     <title>Ingreso</title>
 </head>
 
-<body style="margin: 0px;background-color: #ffc547;">
+<body style="margin: 0px">
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="{{ asset('videos/fondoanimado.mp4') }}" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
     <div class="fondoImg">
         <div class="fondoEnc">
             <div class="bienvenn">
@@ -37,7 +41,7 @@
                         </label>
                             <div class="divinput">
                                 <input id="username" name="username" type="text" class="inputIngresoTT @error('username') is-invalid @enderror" value="{{ old('username') }}" required autocomplete="username" autofocus>
-                                <img src="{{ asset('images/new/icon2.png') }}" class="iconocedulaTT" alt="#">
+                                <img src="{{ asset('images/new/icon3.png') }}" class="iconocedulaTT" alt="#">
                                 @if (session('error'))
                                 <div class="">
                                     {{ session('error') }}
@@ -46,7 +50,7 @@
                             </div>
                             <div class="divinput2" id="passwordDiv" style="display: none">
                                 <input id="password" name="password" type="password" placeholder="********" class="inputIngreso2 @error('password') is-invalid @enderror" autocomplete="current-password" >
-                                <img src="{{ asset('images/new/llave.png') }}" class="iconotienda" alt="#">
+                                <img src="{{ asset('images/new/llave2.png') }}" class="iconotienda" alt="#">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
