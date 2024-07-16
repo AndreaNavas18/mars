@@ -345,6 +345,15 @@ class TenderoController extends BaseController
       }
     }
 
+    public function verTerminos() {
+        $user = auth()->user();
+        $showMenu = $user->terms == 1 || $user->hasRole('vendedor');
+        $showForm = $user->terms == 0 && $user->hasRole('tendero');
+
+
+        return view('modules.terminos', compact('showMenu', 'showForm'));
+    }
+
     public function aceptarTerminos(Request $request)
     {
         $user = auth()->user();

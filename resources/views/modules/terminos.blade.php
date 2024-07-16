@@ -14,7 +14,12 @@
         Tu navegador no soporta la etiqueta de video.
     </video>
     <div class="encima">
-    <div class="term">
+        <div class="term">
+        @if($showMenu)
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/new/inicio.png') }}" class="menuTTX" alt="Home" id="menuAjustes">
+            </a> 
+        @endif
         <h1>TÉRMINOS Y CONDICIONES CAMPAÑA MI MARS VECINO LEAL</h1>
         <p>El presente reglamento (los “Términos y Condiciones” o “T&C”) contiene los parámetros de participación, así como las exclusiones, restricciones, términos y condiciones de la campaña MI MARS VECINO LEAL 2024 (la “Campaña”). </p>
         <h2>INFORMACIÓN DE LA CAMPAÑA</h2>
@@ -276,6 +281,15 @@
                 </li>
             </ul>
 
+
+            @if($showMenu)
+                {{-- boton que suba hasta arriba todo  --}}
+                <button id="backToTopBtn" class="btnT" style="margin-bottom:20px" onclick="scrollToTop()">Subir</button>
+            @endif
+
+    
+            @if($showForm)
+
             <form method="POST" action="{{ route('aceptar.terminos') }}">
                 @csrf
                 <div class="form-check">
@@ -287,6 +301,8 @@
     
                 <button type="submit" class="mt-3 btn-disabled" id="btnAceptar" disabled>Aceptar</button>
             </form>
+
+            @endif
             
 
     </div>
@@ -308,4 +324,12 @@
             btnAceptar.classList.add('btn-disabled');
         }
     });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
 </script>

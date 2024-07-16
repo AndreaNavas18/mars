@@ -6,12 +6,6 @@
             <img class="iconoFooter" src="{{asset('images/new/wp.png')}}" alt="">
         </a> --}}
     </div>
-    
-    <div class="terminn" >
-        <a href="{{ route('terminos')}} " class="textFoo">
-            <h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Términos y condiciones</h2>
-        </a>
-    </div>
 
     <div class="marcasFoo">
         <div class="cardFoo">

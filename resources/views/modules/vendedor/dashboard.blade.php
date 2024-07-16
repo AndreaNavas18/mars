@@ -30,6 +30,9 @@
                 <a href="{{ route('activar.vista.tendero') }}" id="botonAdmin" class="botonAdmin"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Activar tendero</h2></a>
             </div>
             <div class="administrar btnInicial" id="menuAdmin">
+                <a href="{{ route('terminos')}}" id="botonAdmin" class="botonAdmin"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Términos y condiciones</h2></a>
+            </div>
+            <div class="administrar btnInicial" id="menuAdmin">
                 <a href="{{ route('recursos.vendedor') }}" id="botonAdmin" class="botonAdmin"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">¿Cómo participar?</h2></a>
             </div>
         </div>

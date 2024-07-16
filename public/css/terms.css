@@ -151,6 +151,11 @@ body{
     background-color: #bfdbff;
 }
 
+.menuTTX {
+    width: 29px !important;
+    height: 29px !important;
+   
+}
 .term img {
     width: 100%;
     height: auto;

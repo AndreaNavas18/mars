@@ -58,9 +58,12 @@ Route::get('/saliendo', function () {
     return view('modules.before-logout');
 })->name('saliendo');
 
-Route::get('/terminosycondiciones', function () {
-    return view('modules.terminos');
-})->name('terminos');
+// Route::get('/terminosycondiciones', function () {
+//     return view('modules.terminos');
+// })->name('terminos');
+
+Route::get('/terminosycondiciones', [TenderoController::class,'verTerminos'])->name('terminos');
+
 
 Route::post('/aceptar-terminos', [TenderoController::class,'aceptarTerminos'])->name('aceptar.terminos');
 
@@ -138,11 +141,18 @@ Route::get('/recursos-vendedor', [VendedorController::class, 'recursos'])->name(
  * Rutas para generales
  */
 
-Auth::routes();
+Route::post('/change-password', [TenderoController::class, 'cambioContrasena'])->name('change.password');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+
+
+
 // Route::get('/login/token/{token}', [LoginController::class, 'loginWithToken'])->name('login.token');
 // Route::get('/login/token/{token}', [LoginController::class, 'showLoginFormWithToken'])->name('login.token');
+
+Auth::routes();
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
@@ -152,7 +162,6 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/check-user-role', [LoginController::class, 'checkUserRole'])->name('check-user-role');
 
-Route::post('/change-password', [TenderoController::class, 'cambioContrasena'])->name('change.password');
 
 
 
