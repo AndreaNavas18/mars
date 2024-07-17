@@ -33,7 +33,7 @@
             <tbody>
                 @foreach ($vendedores as $vendedor)
                 <tr>
-                    <td><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $vendedor->nombre }} {{ $vendedor->apellido }}</h2></td>
+                    <td><h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">{{ $vendedor->nombre }}</h2></td>
                     <td>
                         <div class="action-buttons" style="display: flex; flex-direction: column; align-items: center;">
                             <a href="{{ route('edit.vendedor', $vendedor->id) }}" class="btnTen" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">

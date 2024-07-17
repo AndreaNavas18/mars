@@ -99,7 +99,6 @@ class TenderoController extends BaseController
         try {
             $vendedor = Vendedor::findOrFail($id);
             $vendedor->nombre = $request->nombre;
-            $vendedor->apellido = $request->apellido;
             $vendedor->cedula = $request->cedula;
             $vendedor->email = $request->email;
             $vendedor->telefono = $request->telefono;
@@ -284,7 +283,6 @@ class TenderoController extends BaseController
             if($request->tipouusuario == 'vendedor'){
                 $vendedor = new Vendedor();
                 $vendedor->nombre = $request->nombre;
-                $vendedor->apellido = $request->apellido;
                 $vendedor->cedula = $request->cedula;
                 $vendedor->email = $request->email;
                 $vendedor->telefono = $request->telefono;

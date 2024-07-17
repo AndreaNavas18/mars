@@ -18,10 +18,8 @@
             @csrf
             @method('PUT')
             <div class="formCrear">
-                <label for="nombre">Nombre</label>
+                <label for="nombre">Nombre completo</label>
                 <input type="text" name="nombre" id="nombre" value="{{ $vendedor->nombre }}">
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" value="{{ $vendedor->apellido }}">
                 <label for="cedula">Cédula</label>
                 <input type="number" name="cedula" id="cedula" value="{{ $vendedor->cedula }}" >
                 <label for="email">Email</label>

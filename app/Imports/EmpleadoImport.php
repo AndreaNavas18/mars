@@ -14,7 +14,6 @@ class EmpleadoImport implements ToModel, WithHeadingRow
         $user = User::create([
             'name' => $row['nombre'],
             'username' => $row['cedula'],
-            'email' => $row['email'],
             'password' => bcrypt($row['cedula']),
         ]);
     
@@ -27,7 +26,8 @@ class EmpleadoImport implements ToModel, WithHeadingRow
         $vendedor = Vendedor::create([
             'nombre' => $row['nombre'],
             'cedula' => $row['cedula'],
-            'email' => $row['email'],
+            'perfil' => $row['perfil'],
+            'canal' => $row['canal'],
             'user_id' => $user_id,
         ]);
 
