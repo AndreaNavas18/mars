@@ -727,6 +727,13 @@ body{
     margin-bottom: 5px;
 }
 
+.pdf-viewer {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #0000a0; /* Agregar borde al visor de PDF */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar sombra al visor de PDF */
+}
+
 @media (max-width: 575.98px)and (orientation:portrait) {
     body{background: white;}
     

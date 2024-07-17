@@ -13,6 +13,12 @@
                     Tu navegador no soporta el elemento de video.
                 </video>
             </li>
+            <li class="videoPromo" style="margin-top:20px">
+                <h2 style="color: #0000a0; text-align:center">Manual de usuario vendedor</h2>
+                <div style="text-align:center">
+                    <embed src="{{ asset('archivos/manual_vendedor.pdf') }}" width="320" height="240" type="application/pdf" class="pdf-viewer">
+                </div>
+            </li>
         </ul>
     </div>
 @endsection
