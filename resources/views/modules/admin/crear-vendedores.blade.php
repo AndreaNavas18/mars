@@ -41,6 +41,21 @@
                 <label for="telefono" id="telefono-label">Telefono</label>
                 <input type="number" name="telefono" id="telefono" >
 
+                <label for="perfil" id="perfil-label">Perfil</label>
+                <select name="perfil" id="perfil">
+                    <option value="">---Seleccione una opción---</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="vendedor_base">Vendedor Base</option>
+                    <option value="vendedor_focalizado">Vendedor Focalizado</option>
+                </select>
+
+                <label for="canal" id="canal-label">Canal</label>
+                <select name="canal" id="canal">
+                    <option value="">---Seleccione una opción---</option>
+                    <option value="multicanal">Multicanal</option>
+                    <option value="tat">TAT</option>
+                </select>
+
                 <button style="cursor: pointer" type="submit">Crear usuario</button>
             </div>
         </form>
@@ -52,14 +67,26 @@
             var tipoUsuarioSelect = document.getElementById('tipouusuario');
             var telefonoLabel = document.getElementById('telefono-label');
             var telefonoInput = document.getElementById('telefono');
+            var perfilLabel = document.getElementById('perfil-label');
+            var perfilSelect = document.getElementById('perfil');
+            var canalLabel = document.getElementById('canal-label');
+            var canalSelect = document.getElementById('canal');
 
             tipoUsuarioSelect.addEventListener('change', function () {
                 if (tipoUsuarioSelect.value === 'admin') {
                     telefonoLabel.style.display = 'none';
                     telefonoInput.style.display = 'none';
+                    perfilLabel.style.display = 'none';
+                    perfilSelect.style.display = 'none';
+                    canalLabel.style.display = 'none';
+                    canalSelect.style.display = 'none';
                 } else {
                     telefonoLabel.style.display = 'block';
                     telefonoInput.style.display = 'block';
+                    perfilLabel.style.display = 'block';
+                    perfilSelect.style.display = 'block';
+                    canalLabel.style.display = 'block';
+                    canalSelect.style.display = 'block';
                 }
             });
 
@@ -67,6 +94,10 @@
             if (tipoUsuarioSelect.value === 'admin') {
                 telefonoLabel.style.display = 'none';
                 telefonoInput.style.display = 'none';
+                perfilLabel.style.display = 'none';
+                perfilSelect.style.display = 'none';
+                canalLabel.style.display = 'none';
+                canalSelect.style.display = 'none';
             }
         });
     </script>

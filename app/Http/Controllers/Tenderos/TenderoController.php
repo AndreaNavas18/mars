@@ -276,8 +276,6 @@ class TenderoController extends BaseController
         return view('modules.admin.crear-vendedores');
     }
 
-
-
     public function storeVendedor(Request $request){
         try {
             if($request->tipouusuario == 'vendedor'){
@@ -286,8 +284,9 @@ class TenderoController extends BaseController
                 $vendedor->cedula = $request->cedula;
                 $vendedor->email = $request->email;
                 $vendedor->telefono = $request->telefono;
+                $vendedor->canal = $request->canal;
+                $vendedor->perfil = $request->perfil;
                 $vendedor->save();
-
     
                 $user = new User();
                 $user->name = $request->nombre . ' ' . $request->apellido;
