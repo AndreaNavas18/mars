@@ -23,6 +23,7 @@
             <div class="soloHeaderAdmin">
                 <div class="iconosHH">
                     <img src="{{ asset('images/new/menu1.png') }}" class="menuTTAdmin" alt="Menu" id="menuHamburguesa">
+                    <button id="installApp" style="display:none;" class="install-button">Instalar Aplicacion</button>
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('images/new/inicio.png') }}" class="menuTT" alt="Menu" id="menuAjustes">
                     </a> 
