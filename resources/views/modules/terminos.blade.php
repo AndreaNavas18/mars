@@ -26,16 +26,16 @@
         <h3>1. ¿Qué definiciones se deben tener en cuenta para la participación en la Campaña?</h3>
         <ul>
             <li><strong>a. Agencia:</strong> Se refiere a BTL, quien ha sido contratado por Mars como operador logístico de la Campaña y en consecuencia es el desarrollador y administrador de la Plataforma.</li>
-            <li><strong>b. Bonos:</strong> Se refiere a los bonos que pueden obtener los Participantes, en cumplimiento de los presentes Términos y Condiciones, los cuales tendrán diferentes valores – entre [40.000] y [400.000]- y se materializarán mediante la recepción de una tarjeta donde podrán escanear un código QR y redimir (viene con un instructivo para redención en Premios).</li>
+            <li><strong>b. Bonos:</strong> Se refiere a los bonos que pueden obtener los Participantes, en cumplimiento de los presentes Términos y Condiciones, los cuales tendrán diferentes valores – entre [25.000] y [120.000]- y se materializarán mediante la recepción de una tarjeta donde podrán escanear un código QR y redimir (viene con un instructivo para redención en Premios).</li>
             <li><strong>c. Campaña:</strong> Significa la actividad a llevarse a cabo por Masterfoods en virtud de la cual los Participantes podrán obtener puntos redimibles en Bonos.</li>
             <li><strong>d. Cuota:</strong> Se refiere a la meta/cuota de pedido mínimo que debe pedir en una única orden cada Participante en Productos Participantes (exclusivamente) por un valor establecido por el vendedor que atiende cada punto de venta (el vendedor es del distribuidor en cada región).</li>
             <li><strong>e. Masterfoods/Mars:</strong> Masterfoods Colombia Ltda., sociedad constituida y existente de conformidad con las leyes de Colombia, identificada con el N.I.T. 830.037.955-1, domiciliada en Bogotá D.C., quien organiza la presente actividad de acuerdo con los presentes T&Cs.</li>
             <li><strong>f. Participantes:</strong> Toda persona natural “tendera” que se registre para participar en esta Campaña, y sea ratificado por el distribuidor o vendedor autorizado de Masterfoods en la Campaña, y acepte participar bajo las condiciones establecidas en los presentes T&C, autorice el tratamiento de sus datos personales y cumpla con los requisitos establecidos en el punto 2 del presente documento. En cualquier caso, MARS se reserva el derecho de admisión y permanencia a la Campaña.</li>
             <li><strong>g. Plataforma:</strong> Masterfoods operará la Campaña a través de la Plataforma que la Agencia ha desarrollado para éste propósito.</li>
-            <li><strong>h. Premios:</strong> Dentro de los premios que se pueden redimir con el Bono están: electrodomésticos, elementos de tecnología, merchandising y elementos varios de uso diario.</li>
-            <li><strong>i. Productos Participantes:</strong> Se refiere a los productos de las siguientes categorías y marcas: Pet Care: Pedigree®, Whiskas®. C&T: Dentastix®, Temptations®. MW: M&Ms®, Snickers®, Milkyway®, Skittles®, y Gomas de Mascar Doublemint® cuyas características están señaladas en el punto 3.1. de los Términos y Condiciones. Los Productos Participantes, podrán ser adquiridos dependiente de la disponibilidad en el distribuidor.</li>
-            <li><strong>j. Puntos de Venta o Distribuidores Autorizados:</strong> Altipal, Meico, Distrijass, Surtilider, Pandapan, Baracaldo, Select Pets, Multiventas, Distri al Gusto, T&T.</li>
-            <li><strong>k. Sectores:</strong> Los PDV de Bogotá que cumplan con los criterios de compra.</li>
+            <li><strong>h. Premios:</strong> Dentro de los premios que se pueden redimir con el Bono están: electrodomésticos, elementos de tecnología, merchandising textil (gorras, camisetas) y elementos varios de uso diario (sombrillas, bonos de helados, bonos Sodexo, entre otros).</li>
+            <li><strong>i. Productos Participantes:</strong> Se refiere a los productos de las siguientes categorías y marcas: Pet Care: Pedigree®, Whiskas®. C&T: Dentastix®, Temptations®. MW: M&Ms®, Snickers®, Milkyway®, Skittles®, y Gomas de Mascar Doublemint® cuyas características están señaladas en el punto 3.1. de los Términos y Condiciones. Los Productos Participantes, podrán ser adquiridos dependiente de la disponibilidad en el distribuidor. Tendrán combos de descuentos.</li>
+            <li><strong>j. Puntos de Venta o Distribuidores Autorizados:</strong> Surtilider (Prueba Piloto), posterior a esto podrán participar Altipal, Pandapan, Baracaldo, Meico, Distrijass, Select Pets, Multiventas, entre otros distribuidores que ingresen luego del plan.</li>
+            <li><strong>k. Sectores:</strong> Aplica a nivel nacional en los PDV que cumplan con los criterios de compra.</li>
         </ul>
 
         <h3>2. ¿Cómo debe hacerse el registro para participar en la presente Campaña?</h3>
@@ -51,7 +51,7 @@
         <ul>
             <li><strong>a.</strong> Ser persona natural residente en Colombia (puede ser el dueño del punto de venta, o en su defecto el dueño podrá ceder su cupo a un dependiente que atiende el punto para que éste pueda participar en representación del punto de venta).</li>
             <li><strong>b.</strong> Ser mayor de dieciocho (18) años.</li>
-            <li><strong>c.</strong> Comprar el monto mínimo de los PRODUCTOS PARTICIPANTES en la Campaña con constancia de 5 periodos, en caso de que quiera ganar todos los premios.</li>
+            <li><strong>c.</strong> Comprar el monto mínimo de los PRODUCTOS PARTICIPANTES en la Campaña con constancia de 5 meses, en caso de que quiera ganar todos los premios.</li>
             <li><strong>d.</strong> Estar ubicados en los Sectores con cobertura del distribuidor para la Campaña.</li>
             <li><strong>e.</strong> Haber leído y aceptado los presentes Términos y Condiciones y la Política de Tratamiento de Datos Personales de Masterfoods.</li>
             <li><strong>f.</strong> No ser un representante legal de empresas dedicadas a la distribución de productos Masterfood, ni sus cónyuges y familiares hasta en segundo grado (inclusive) de consanguinidad, segundo de afinidad (inclusive) y único civil.</li>
@@ -63,7 +63,7 @@
 
         <h4>a. ¿Quiénes y cómo pueden obtener los Bonos?</h4>
 
-        <p>Para poder obtener un Bono, los Participantes, de forma individual y exclusiva, deberán cumplir con la Cuota mínima de compra al vendedor, de acuerdo con el cronograma establecido y los T&C aquí establecidos. Si cumple las cuotas mensuales, ganará premios que irán incrementando su valor percibido con un límite de 5 meses de duración del plan.</p>
+        <p>Para poder obtener un Bono, los Participantes, de forma individual y exclusiva, deberán cumplir con la Cuota mínima de compra al vendedor, de acuerdo con el cronograma establecido y los T&C aquí establecidos. Si cumple las cuotas mensuales, ganará premios que irán incrementando su valor percibido con un limite de 5 meses de duración del plan.</p>
         <p>El Participante sólo podrá obtener los Bonos si adquiere los Productos Participantes con los vendedores de los distribuidores autorizados por Masterfoods.</p>
         <p>La siguiente tabla ilustra la relación entre la Cuota adquirida y el Bono (los valores del bono cambian dependiendo de la cuota del punto, estos son montos tentativos):</p>
 
@@ -77,28 +77,29 @@
             <tbody>
                 <tr>
                     <td>Mes 1</td>
-                    <td>Merchandising (Basic)</td>
+                    <td>(Iniciación)	Calculadora + Esfero + Tarjeta</td>
                 </tr>
                 <tr>
                     <td>Mes 2</td>
-                    <td>Premio (Medium)</td>
+                    <td>Boletas Dobles Cine</td>
                 </tr>
                 <tr>
                     <td>Mes 3</td>
-                    <td>Bono A</td>
+                    <td>Merchandising A (Basic)</td>
                 </tr>
                 <tr>
                     <td>Mes 4</td>
-                    <td>Bono AA</td>
+                    <td>Electrodomesticos AAA (Basic) <br> Tecnología AAA (Basic)</td>
                 </tr>
                 <tr>
                     <td>Mes 5</td>
-                    <td>Bono AAA</td>
+                    <td>Electrodomesticos AA (Top) <br>
+                        Tecnología AA (Top)</td>
                 </tr>
             </tbody>
         </table>
 
-            <p>Igualmente, como se indican a continuación en el grafico llamado (“Dinámica”). Los cuales van a aumentar su valor progresivamente hasta llegar al final del plan y obtener un gran premio al llegar al mes número cinco (5) desde su iniciación (si cumplió todas las cuotas por mes). </p>
+            <p>Igualmente, como se indican a continuación en el grafico llamado (“Dinámica”). Los cuales van a aumentar su valor progresivamente hasta llegar al final del plan y obtener un gran premio al llegar al mes número seis (6) desde su iniciación (si cumplió todas las cuotas por mes). Podrán redimir el premio en cualquier compra en los establecimientos comerciales. La tabla anterior muestra una sugerencia del valor del bono y en lo que puede ser redimido, pero será responsabilidad del Tendero realizarlo a su libre albedrio. </p>
 
             <img src="{{ asset('images/terms/figura1.jpg') }}" alt="Dinámica">
 
@@ -119,7 +120,7 @@
 
             <h4>c. ¿Cuál es el término y cronograma de las actividades de la presente Campaña?</h4>
 
-            <p>Vigencia o término total de la Campaña: será de cinco (5) periodos contados a partir del primero Catorce (14) de julio de 2024 desde las 8:00am, hasta el siete (07) de agosto de 2024 a las 23:59 horas. </p>
+            <p>Vigencia o término total de la Campaña: será de seis (6) meses contados a partir del primero (1ero) de julio de 2024 desde las 8:00am, hasta el treinta y uno (31) de diciembre de 2024 a las 23:59 horas. </p>
 
             <table>
                 <thead>
@@ -134,14 +135,14 @@
                     </tr>
                     <tr>
                         <td>Registro o inscripción del Participante con la compra de la primera cuota</td>
-                        <td>Del 14 de Julio hasta el 7 de Agosto del 2024</td>
+                        <td>Del 15 de Julio hasta el 15 de Agosto de 2024 (o podría finalizar la inscripción para nuevos puntos de venta el 15 de Septiembre)</td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="text-align: center"><strong>Periodo 2 al Periodo 5</strong></td>
+                        <td colspan="2" style="text-align: center"><strong>Periodo 2 al Periodo 6</strong></td>
                     </tr>
                     <tr>
                         <td>Los Participantes sólo tendrán derecho a recibir Bonos a cambio de la adquisición de las Cuotas durante el siguiente periodo</td>
-                        <td>Desde el 7 de Agosto hasta el 31 de diciembre de 2024.</td>
+                        <td>Desde el 15 de julio hasta el 31 de diciembre de 2024.</td>
                     </tr>
                 </tbody>
             </table>
@@ -150,7 +151,7 @@
 
             <h4>a. ¿Cómo se realizará la entrega de los Bonos?</h4>
 
-            <p>Una vez el Participante haya efectuado la compra de la Cuota mínima de los Productos Participantes a través de los vendedores autorizados, el vendedor le entregará la tarjeta única e intransferible y la Plataforma emitirá la confirmación correspondiente después del registro, la cual a su vez será notificado al participante por medio de mensaje de texto (“SMS”) al celular suministrado en la Plataforma por el Participante. </p>
+            <p>Una vez el Participante haya efectuado la compra de la Cuota mínima de los Productos Participantes a través de los vendedores autorizados (primer compra), el distribuidor le despachará junto con el pedido (en menos de 24 horas) la tarjeta única e intransferible y la Plataforma emitirá la confirmación correspondiente después del registro, la cual a su vez será notificado al participante por medio de mensaje de texto (“SMS”) al celular suministrado en la Plataforma por el Participante. </p>
 
             <p>Al final del mes (y de acuerdo con el Cronograma) la Agencia y/o Masterfoods, según corresponda, enviarán al participante el Bono que será “cargado” a la tarjeta física que no debe perder. Si esta se pierde tendrá un costo reponerla y no es obligación de Mars entregar una de nuevo. Podrá redimir también de manera virtual por la plataforma, pero este tendría otro proceso aparte el cual se entregará un instructivo claro.</p>
 
@@ -160,7 +161,7 @@
 
             <h4>c. ¿Cómo puedo redimir mi Bono?</h4>
 
-            <p>Los bonos serán redimibles a través de la Plataforma o en el punto físico. La Agencia será la encargada de gestionar y realizar la entrega de los bonos y la redención de estos pero cada participante será el responsable de ir hacia el punto de venta autorizado (o comercio), a redimir su premio. Será responsabilidad exclusiva del comercio todo el tema de la garantía del premio redimido. </p>
+            <p>Los bonos serán redimibles a través de la Plataforma o en el punto físico de los establecimientos comerciales autorizados. La Agencia será la encargada de gestionar y realizar la entrega de los bonos y la redención de estos pero cada participante será el responsable de ir hacia el punto de venta autorizado (o comercio), a redimir su premio. Será responsabilidad exclusiva del comercio todo el tema de la garantía del premio redimido. </p>
 
             <p>Masterfoods se reserva el derecho de solicitar información adicional de soporte al Participante para verificar que su identidad sí corresponde a los datos del titular de la cuenta en la Campaña. Los datos deben coincidir con lo declarado en el registro en la Campaña para poder recibir los beneficios.</p>
 
@@ -185,7 +186,7 @@
 
             <p>Los Participantes podrán contactarse con Masterfoods en el marco de la presente Campaña a través de los siguientes canales:</p>
 
-            <p>Teléfono: 3025899441 <br> Correo electrónico: mimarsvecinoleal@gmail.com</p>
+            <p>Teléfono: 312 4333953 <br> Correo electrónico: dperez@mestrategico.com</p>
 
             <h2>DISPOSICIONES ADICIONALES</h2>
 
@@ -226,7 +227,7 @@
 
             <p>Usted podrá ejercer sus derechos como titular de los Datos Personales a través de los siguientes canales de contacto:</p>
 
-            <p> <strong>Celular:</strong> +57 3025899441 <br> <strong>Correo:</strong> mimarsvecinoleal@gmail.com</p>
+            <p> <strong>Nombre:</strong> Daniela Perez <br> <strong>Celular:</strong> +57 312 4333953 <br> <strong>Correo:</strong> dperez@mestrategico.com</p>
 
             <p>Con su aceptación de estos Términos y Condiciones, el Participante acepta que ha leído y conoce la Política de Tratamiento y Protección de Datos Personales de Masterfoods, la cual podrá ser consultada en https://www.mars.com/privacy-policy-spanish-latin-american En todo caso, Masterfoods no se hace responsable por interceptaciones ilegales o violación de sus sistemas o bases de datos por parte de personas no autorizadas, ni por la indebida utilización de la información obtenida por esos medios. A pesar de lo anterior, Masterfoods se compromete a emplear sus mejores esfuerzos para mantener los Datos Personales bajo parámetros de seguridad y confidencialidad.</p>
 
