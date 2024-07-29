@@ -27,6 +27,7 @@
     <div class="fondoImg">
         <div class="fondoEnc">
             <div class="bienvenn">
+                <button id="installApp" style="display:none;" class="install-button">Instalar Aplicacion</button>
                 <div class="inicioTTT">
                     <h1 class="nuevoTT animate__animated animate__backInDown">Bienvenido</h1>
                     <img src="{{ asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
@@ -111,5 +112,33 @@
                     console.error('Hubo un error al verificar el rol del usuario:', error);
                 });
         }
+    });
+    
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        document.getElementById('installApp').style.display = 'block';
+        console.log(deferredPrompt);
+    });
+  
+    window.addEventListener('appinstalled', (event) => {
+        console.log('PWA instalada con éxito');
+        console.log(event);
+    });
+  
+    document.getElementById('installApp').addEventListener('click', async () => {
+    console.log(deferredPrompt);
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+        console.log('Usuario aceptó la instalación');
+        } else {
+        console.log('Usuario rechazó la instalación');
+        }
+        deferredPrompt = null;
+    }
     });
 </script>

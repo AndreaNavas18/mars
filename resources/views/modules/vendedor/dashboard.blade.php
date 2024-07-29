@@ -107,7 +107,7 @@
             })
             .catch(function(error) {
                 console.error(error);
-                showError('Error al cambiar la contraseña');
+                showErrors('Error al cambiar la contraseña');
             });
         }
 
