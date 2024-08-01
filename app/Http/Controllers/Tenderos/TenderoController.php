@@ -14,6 +14,7 @@ use App\Models\Cumplimiento;
 use App\Imports\TenderoImport;
 use App\Imports\TokenImport;
 use App\Imports\EmpleadoImport;
+use App\Imports\CumplimientoImport;
 use App\Models\Vendedor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -243,6 +244,21 @@ class TenderoController extends BaseController
         }else {
             Alert::error('Error', 'Error al importar archivo.');
             return redirect()->back()->with('error', 'No se importaron correctamente los empleados');
+        }
+
+    }
+
+    public function importCumplimientos(Request $request){
+
+        if($request->hasFile('cumplimientodocumento')){
+
+            $file = $request->file('cumplimientodocumento');
+            Excel::import(new CumplimientoImport, $file);
+
+            return redirect()->back()->with('success', 'Listado de cumplimiento importado exitosamente');
+        }else {
+            Alert::error('Error', 'Error al importar archivo.');
+            return redirect()->back()->with('error', 'No se importó correctamente la información');
         }
 
     }

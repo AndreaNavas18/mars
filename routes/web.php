@@ -98,6 +98,8 @@ Route::post('/importar-tokens', [ TenderoController::class, 'importTokens' ])->n
 
 Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados' ])->name('import.empleados');
 
+Route::post('/importar-cumplimiento', [ TenderoController::class, 'importCumplimientos' ])->name('import.cumplimientos');
+
 Route::get('/search-admin-tenderos', [TenderoController::class, 'searchTenderos'])->name('search.admin.tenderos');
 
 Route::get('/administrar-vendedores', [TenderoController::class, 'adminVendedores'])->name('admin.vendedores');
