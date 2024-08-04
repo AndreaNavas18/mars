@@ -53,4 +53,96 @@
                 </div>
             </div>
         </div>
+
+        <dialog class="modalTel" id="changeTelefonoModal">
+            @if (session('error'))
+                <div class="alert alert-danger" style="text-align:center;background-color:#ff000024;color:red;font-weight:bold;height:50px;display:flex;align-items:center;justify-content:center;border-radius:10px;font-family:'HelveticaBold', sans-serif">
+                    {{ session('error') }}
+                </div>
+            @endif
+            <form id="changeTelefonoForm">
+                @csrf
+                <h5>Hola tendero, bienvenido😊</h5>
+                <h6>Solicitamos tu teléfono para poder contactarte más adelante</h6>
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="telefono" name="telefono" required>
+                </div>
+                <div>
+                    <button type="button" onclick="changeTelefono()">Guardar</button>
+                </div>
+            </form>
+        </dialog>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                @if(auth()->user()->tendero->telefono == null)
+                    document.getElementById('changeTelefonoModal').showModal();
+                @endif
+            });
+    
+            document.getElementById('changeTelefonoModal').addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    event.preventDefault();
+                }
+            });
+    
+            function changeTelefono() {
+                let telefono = document.getElementById('telefono').value;
+    
+                clearErrors();
+    
+                let errors = [];
+    
+                if (telefono.length < 10) {
+                    errors.push('Teléfono invalido');
+                }
+    
+                if (errors.length > 0) {
+                    showErrors(errors);
+                    return;
+                }
+    
+                axios.post('{{ route("change.telefono") }}', {
+                    telefono: telefono,
+                })
+                .then(function(response) {
+                    console.log(response.data);
+                    document.getElementById('changeTelefonoModal').close();
+                    window.location.replace("{{ route('home') }}");
+                })
+                .catch(function(error) {
+                    console.error(error);
+                    showErrors('Error al guardar el teléfono');
+                });
+            }
+    
+            
+            function showErrors(messages) {
+                messages.forEach(function(message) {
+                    let errorDiv = document.createElement('div');
+                    errorDiv.className = 'alert alert-danger';
+                    errorDiv.style.backgroundColor = '#ff000024';
+                    errorDiv.style.color = 'red';
+                    errorDiv.style.fontWeight = 'bold';
+                    errorDiv.style.height = '50px';
+                    errorDiv.style.display = 'flex';
+                    errorDiv.style.alignItems = 'center';
+                    errorDiv.style.justifyContent = 'center';
+                    errorDiv.style.borderRadius = '10px';
+                    errorDiv.innerHTML = message;
+                    
+                    let form = document.getElementById('changeTelefonoForm');
+                    form.parentNode.insertBefore(errorDiv, form);
+                });
+            }
+    
+            function clearErrors() {
+                let errorMessages = document.querySelectorAll('.alert.alert-danger');
+                errorMessages.forEach(function(message) {
+                    message.remove();
+                });
+            }
+    
+        </script>
 @endsection

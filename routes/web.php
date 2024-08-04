@@ -145,6 +145,8 @@ Route::get('/recursos-vendedor', [VendedorController::class, 'recursos'])->name(
 
 Route::post('/change-password', [TenderoController::class, 'cambioContrasena'])->name('change.password');
 
+Route::post('/change-telefono', [TenderoController::class, 'cambioTelefono'])->name('change.telefono');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 

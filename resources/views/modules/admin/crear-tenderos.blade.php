@@ -21,8 +21,10 @@
             <div class="formCrear">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" required>
-                <label for="cedula">Codigo PDV (NIT)</label>
+                <label for="cedula">Codigo PDV (NIT/CEDULA)</label>
                 <input type="number" name="cedula" id="cedula" >
+                <label for="telefono">Teléfono *</label>
+                <input type="number" name="telefono" id="telefono" required>
                 <label for="producto">Producto</label>
                 <select name="producto" id="producto">
                     <option value="WET">WET</option>

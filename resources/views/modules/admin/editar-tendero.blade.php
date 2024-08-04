@@ -20,10 +20,10 @@
             <div class="formCrear">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" value="{{ $tendero->nombre }}">
-                <label for="puntos">Puntos</label>
-                <input type="text" name="puntos" id="puntos" value="{{ $tendero->puntos }}">
-                <label for="cedula">Código PDV (NIT)</label>
+                <label for="cedula">Código PDV (NIT/CEDULA)</label>
                 <input type="number" name="cedula" id="cedula" value="{{ $tendero->cedula }}" >
+                <label for="telefono">Teléfono *</label>
+                <input type="number" name="telefono" id="telefono" value="{{ $tendero->telefono }}">
                 <label for="producto">Producto</label>
                 <select name="producto" id="producto">
                     <option value="wet" {{ $tendero->producto == 'wet' ? 'selected' : '' }}>WET</option>

@@ -60,6 +60,7 @@ class TenderoController extends BaseController
             $tendero->nombre = $request->nombre;
             $tendero->puntos = 0;
             $tendero->cedula = $request->cedula;
+            $tendero->telefono = $request->telefono;
             $tendero->producto = $request->producto;
             $tendero->canal = $request->canal;
             $tendero->subcanal = $request->subcanal;
@@ -124,7 +125,7 @@ class TenderoController extends BaseController
             $tendero = Tendero::findOrFail($id);
             $tendero->nombre = $request->nombre;
             $tendero->cedula = $request->cedula;
-            $tendero->puntos = $request->puntos;
+            $tendero->telefono = $request->telefono;
             $tendero->producto = $request->producto;
             $tendero->canal = $request->canal;
             $tendero->subcanal = $request->subcanal;
@@ -356,6 +357,20 @@ class TenderoController extends BaseController
         \Log::error('Error al cambiar la contraseña: ' . $e->getMessage());
         return response()->json(['message' => 'Error al cambiar contraseña'], 500);
       }
+    }
+
+    public function cambioTelefono(Request $request){
+        try {
+            $user = Auth::user();
+            $tendero = Tendero::where('user_id', $user->id)->first();
+            $tendero->telefono = $request->telefono;
+            $tendero->save();
+            
+            return redirect()->route('home');
+        } catch (QueryException $e) {
+            Log::error($e->getMessage());
+            return redirect()->route('home');
+        }
     }
 
     public function verTerminos() {

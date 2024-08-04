@@ -39,7 +39,7 @@
                             <label for="telefono" class="col-md-4 col-form-label text-md-right"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:18px">{{ __('Teléfono') }}</h2></label>
 
                             <div class="col-md-6">
-                                <input id="telefono" type="number" class="form-control @error('telefono') is-invalid @enderror" name="telefono" autofocus>
+                                <input id="telefono" type="number" class="form-control @error('telefono') is-invalid @enderror" name="telefono" autofocus required>
 
                                 @error('telefono')
                                     <span class="invalid-feedback" role="alert">
