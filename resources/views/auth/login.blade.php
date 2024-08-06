@@ -125,11 +125,10 @@
   
     window.addEventListener('appinstalled', (event) => {
         console.log('PWA instalada con éxito');
-        console.log(event);
+        document.getElementById('installApp').style.display = 'none';
     });
   
     document.getElementById('installApp').addEventListener('click', async () => {
-    console.log(deferredPrompt);
     if (deferredPrompt) {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
