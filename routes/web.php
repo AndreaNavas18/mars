@@ -24,8 +24,8 @@ use App\Http\Controllers\Vendedores\VendedorController;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('login');
+Route::get('/login', function () {
+    return redirect()->route('/');
 });
 
 // Ruta para la página de ingreso con token
@@ -158,11 +158,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/', [LoginController::class, 'showLoginForm']);
 
-Route::post('/login', [LoginController::class, 'login']);
+//Route::post('/login', [LoginController::class, 'login']);
 
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/check-user-role', [LoginController::class, 'checkUserRole'])->name('check-user-role');
 
