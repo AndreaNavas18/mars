@@ -281,7 +281,6 @@ class TenderoController extends BaseController
 
         $vendedores = DB::table('vendedores')
                     ->where('nombre', 'like', "%$searchTerm%")
-                    ->orWhere('apellido', 'like', "%$searchTerm%")
                     ->orWhere('cedula', 'like', "%$searchTerm%")
                     ->paginate(10);
 
@@ -334,7 +333,7 @@ class TenderoController extends BaseController
             }
         } catch (QueryException $e) {
             Log::error($e->getMessage());
-            return redirect()->route('modules.admin.crear-vendedores')->with('error', 'Error al crear vendedor');
+            return redirect()->route('modules.admin.create.vendedores')->with('error', 'Error al crear vendedor');
         }
 
     }
