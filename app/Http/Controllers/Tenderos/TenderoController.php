@@ -392,5 +392,7 @@ class TenderoController extends BaseController
         return redirect('/home')->with('success', 'Términos y condiciones aceptados correctamente.');
     }
 
+    public function reestablecerPassVendedor()
+
     
 }

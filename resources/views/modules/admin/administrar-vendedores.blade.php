@@ -39,6 +39,9 @@
                             <a href="{{ route('edit.vendedor', $vendedor->id) }}" class="btnTen" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
                                 <h2 style="font-family:'HelveticaBold', sans-serif;font-size:15px">Editar</h2>
                             </a>
+                            <a href="{{ route('pass.vendedor', $vendedor->id) }}" class="btnTen" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
+                                <h2 style="font-family:'HelveticaBold', sans-serif;font-size:13px">Reestablecer</h2>
+                            </a>
                             <form action="{{ route('destroy.vendedor', $vendedor->id) }}" method="POST" style="display: flex; justify-content: center; align-items: center;">
                                 @csrf
                                 @method('DELETE')

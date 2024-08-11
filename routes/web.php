@@ -106,6 +106,8 @@ Route::get('/administrar-vendedores', [TenderoController::class, 'adminVendedore
 
 Route::get('/editar-vendedor/{id}', [TenderoController::class, 'editVendedor'])->name('edit.vendedor');
 
+Route::get('/reestablecer-pass-vendedor/{id}', [TenderoController::class, 'reestablecerPassVendedor'])->name('pass.vendedor');
+
 Route::put('/editar-vendedor/{id}', [TenderoController::class, 'updateVendedor'])->name('update.vendedor');
 
 Route::get('/search-admin-vendedores', [TenderoController::class, 'searchVendedores'])->name('search.admin.vendedores');
