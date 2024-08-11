@@ -392,7 +392,21 @@ class TenderoController extends BaseController
         return redirect('/home')->with('success', 'Términos y condiciones aceptados correctamente.');
     }
 
-    public function reestablecerPassVendedor()
+    public function reestablecerPassVendedor($id)
+    {
+        try {
+            $vendedor = Vendedor::findOrFail($id);
+            $user = User::findOrFail($vendedor->user_id);
+            $user->password = bcrypt($vendedor->cedula);
+            $user->passwordchanged = 0;
+            $user->save();
+            return redirect()->route('admin.vendedores')->with('success', 'Contraseña reestablecida correctamente.');
+        } catch (QueryException $e) {
+            Log::error($e->getMessage());
+            return redirect()->route('admin.vendedores')->with('error', 'Hubo un error al reestablecer la contraseña.');
+        }
+
+    }
 
     
 }

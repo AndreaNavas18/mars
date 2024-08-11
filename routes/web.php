@@ -24,161 +24,139 @@ use App\Http\Controllers\Vendedores\VendedorController;
 |
 */
 
-Route::get('/login', function () {
-    return redirect()->route('/');
-});
+    Route::get('/login', function () {
+        return redirect()->route('/');
+    });
 
-// Ruta para la página de ingreso con token
-Route::get('/token/{token}', function ($token) {
-    return redirect()->route('login', ['token' => $token]);
-});
+    // Ruta para la página de ingreso con token
+    Route::get('/token/{token}', function ($token) {
+        return redirect()->route('login', ['token' => $token]);
+    });
 
-/**************************************
- * 
- * Rutas para el modulo de tenderos
- */
+     /**************************************
+     * 
+     * Rutas para el modulo de tenderos
+     */
 
-Route::get('/marcas', function () {
-    return view('modules.tendero.marcas');
-});
+    Route::get('/saliendo', function () { return view('modules.before-logout'); })->name('saliendo');
 
-Route::get('/premios', function () {
-    return view('modules.tendero.premios');
-});
+    
+    Route::get('/terminosycondiciones', [TenderoController::class,'verTerminos'])->name('terminos');
+    
+    
+    Route::post('/aceptar-terminos', [TenderoController::class,'aceptarTerminos'])->name('aceptar.terminos');
+    
+    
+    Route::middleware(['auth'])->group(function () {
+        
+    /**************************************
+     * 
+     * Rutas para el modulo de tenderos
+     */
+    
+    Route::get('/marcas', function () { return view('modules.tendero.marcas'); });
+    
+    Route::get('/premios', function () { return view('modules.tendero.premios'); });
+    
+    Route::get('/recursos', function () { return view('modules.tendero.recursos'); });
+    
+    Route::get('/redimir', function () { return view('modules.tendero.redimir'); });
 
-Route::get('/recursos', function () {
-    return view('modules.tendero.recursos');
-});
+    /**************************************
+     * 
+     * Rutas para el modulo de administradores
+     */
+    Route::get('/crear-tenderos', [TenderoController::class, 'create'])->name('create.tenderos');
 
-Route::get('/redimir', function () {
-    return view('modules.tendero.redimir');
-});
+    Route::post('/crear-tenderos', [TenderoController::class, 'store'])->name('store.tenderos');
 
-Route::get('/saliendo', function () {
-    return view('modules.before-logout');
-})->name('saliendo');
+    Route::get('/crear-vendedores', [TenderoController::class, 'createVendedor'])->name('create.vendedores');
 
-// Route::get('/terminosycondiciones', function () {
-//     return view('modules.terminos');
-// })->name('terminos');
+    Route::post('/crear-vendedores', [TenderoController::class, 'storeVendedor'])->name('store.vendedores');
 
-Route::get('/terminosycondiciones', [TenderoController::class,'verTerminos'])->name('terminos');
+    Route::get('/administrar-tenderos', [TenderoController::class, 'adminTenderos'])->name('admin.tenderos');
 
+    Route::get('/editar-tendero/{id}', [TenderoController::class, 'edit'])->name('edit.tendero');
 
-Route::post('/aceptar-terminos', [TenderoController::class,'aceptarTerminos'])->name('aceptar.terminos');
+    Route::put('/editar-tendero/{id}', [TenderoController::class, 'update'])->name('update.tendero');
 
+    Route::get('/ver-observaciones', [TenderoController::class, 'historialObs'])->name('obs.tenderos');
 
+    Route::get('/listado-observaciones/{id}', [TenderoController::class, 'listObs'])->name('listado.observations');
 
-/**************************************
- * 
- * Rutas para el modulo de administradores
- */
+    Route::post('/importar-tenderos', [ TenderoController::class, 'importTenderos' ])->name('import.tenderos');
 
-Route::get('/crear-tenderos', [TenderoController::class, 'create'])->name('create.tenderos');
+    Route::post('/importar-tokens', [ TenderoController::class, 'importTokens' ])->name('import.tokens');
 
-Route::post('/crear-tenderos', [TenderoController::class, 'store'])->name('store.tenderos');
+    Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados' ])->name('import.empleados');
 
-Route::get('/crear-vendedores', [TenderoController::class, 'createVendedor'])->name('create.vendedores');
+    Route::post('/importar-cumplimiento', [ TenderoController::class, 'importCumplimientos' ])->name('import.cumplimientos');
 
-Route::post('/crear-vendedores', [TenderoController::class, 'storeVendedor'])->name('store.vendedores');
+    Route::get('/search-admin-tenderos', [TenderoController::class, 'searchTenderos'])->name('search.admin.tenderos');
 
-Route::get('/administrar-tenderos', [TenderoController::class, 'adminTenderos'])->name('admin.tenderos');
+    Route::get('/administrar-vendedores', [TenderoController::class, 'adminVendedores'])->name('admin.vendedores');
 
-Route::get('/editar-tendero/{id}', [TenderoController::class, 'edit'])->name('edit.tendero');
+    Route::get('/editar-vendedor/{id}', [TenderoController::class, 'editVendedor'])->name('edit.vendedor');
 
-Route::put('/editar-tendero/{id}', [TenderoController::class, 'update'])->name('update.tendero');
+    Route::post('/reestablecer-pass-vendedor/{id}', [TenderoController::class, 'reestablecerPassVendedor'])->name('pass.vendedor');
 
-Route::get('/ver-observaciones', [TenderoController::class, 'historialObs'])->name('obs.tenderos');
+    Route::put('/editar-vendedor/{id}', [TenderoController::class, 'updateVendedor'])->name('update.vendedor');
 
-Route::get('/listado-observaciones/{id}', [TenderoController::class, 'listObs'])->name('listado.observations');
+    Route::get('/search-admin-vendedores', [TenderoController::class, 'searchVendedores'])->name('search.admin.vendedores');
 
-Route::post('/importar-tenderos', [ TenderoController::class, 'importTenderos' ])->name('import.tenderos');
-
-Route::post('/importar-tokens', [ TenderoController::class, 'importTokens' ])->name('import.tokens');
-
-Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados' ])->name('import.empleados');
-
-Route::post('/importar-cumplimiento', [ TenderoController::class, 'importCumplimientos' ])->name('import.cumplimientos');
-
-Route::get('/search-admin-tenderos', [TenderoController::class, 'searchTenderos'])->name('search.admin.tenderos');
-
-Route::get('/administrar-vendedores', [TenderoController::class, 'adminVendedores'])->name('admin.vendedores');
-
-Route::get('/editar-vendedor/{id}', [TenderoController::class, 'editVendedor'])->name('edit.vendedor');
-
-Route::get('/reestablecer-pass-vendedor/{id}', [TenderoController::class, 'reestablecerPassVendedor'])->name('pass.vendedor');
-
-Route::put('/editar-vendedor/{id}', [TenderoController::class, 'updateVendedor'])->name('update.vendedor');
-
-Route::get('/search-admin-vendedores', [TenderoController::class, 'searchVendedores'])->name('search.admin.vendedores');
-
-Route::delete('/vendedor/eliminar/{id}', [ TenderoController::class, 'destroyVendedor' ])->name('destroy.vendedor');
+    Route::delete('/vendedor/eliminar/{id}', [ TenderoController::class, 'destroyVendedor' ])->name('destroy.vendedor');
 
 
-/**************************************
- * 
- * Rutas para el modulo de vendedores
- */
+    /**************************************
+     * 
+     * Rutas para el modulo de vendedores
+     */
 
-Route::get('/crear-observaciones/{id} ', [VendedorController::class, 'create'])->name('create.observations');
+    Route::get('/crear-observaciones/{id} ', [VendedorController::class, 'create'])->name('create.observations');
 
-Route::post('/crear-observaciones/{id}', [VendedorController::class, 'store'])->name('store.observations');
+    Route::post('/crear-observaciones/{id}', [VendedorController::class, 'store'])->name('store.observations');
 
-Route::get('/listado-tenderos', [VendedorController::class, 'listTenderos'])->name('listado.tenderos');
+    Route::get('/listado-tenderos', [VendedorController::class, 'listTenderos'])->name('listado.tenderos');
 
-Route::get('/historial-observaciones', [VendedorController::class, 'historialObs'])->name('historial.observations');
+    Route::get('/historial-observaciones', [VendedorController::class, 'historialObs'])->name('historial.observations');
 
-Route::get('/listado-observaciones/{id}', [VendedorController::class, 'listObs'])->name('listado.observations');
+    Route::get('/listado-observaciones/{id}', [VendedorController::class, 'listObs'])->name('listado.observations');
 
-Route::get('/activar-tendero', [VendedorController::class, 'activarVista'])->name('activar.vista.tendero');
+    Route::get('/activar-tendero', [VendedorController::class, 'activarVista'])->name('activar.vista.tendero');
 
-Route::post('/activar-tendero', [VendedorController::class, 'activar'])->name('activar.tendero');
+    Route::post('/activar-tendero', [VendedorController::class, 'activar'])->name('activar.tendero');
 
-Route::get('/search-tenderos', [VendedorController::class, 'searchTenderos'])->name('search.tenderos');
+    Route::get('/search-tenderos', [VendedorController::class, 'searchTenderos'])->name('search.tenderos');
 
-Route::get('/recursos-vendedor', [VendedorController::class, 'recursos'])->name('recursos.vendedor');
+    Route::get('/recursos-vendedor', [VendedorController::class, 'recursos'])->name('recursos.vendedor');
 
+    /**************************************
+     * 
+     * Rutas para generales
+     */
+    
+    Route::post('/change-password', [TenderoController::class, 'cambioContrasena'])->name('change.password');
+    
+    Route::post('/change-telefono', [TenderoController::class, 'cambioTelefono'])->name('change.telefono');
+    
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+ });
 
-/**************************************
- * 
- * Rutas para generales
- */
-
-Route::post('/change-password', [TenderoController::class, 'cambioContrasena'])->name('change.password');
-
-Route::post('/change-telefono', [TenderoController::class, 'cambioTelefono'])->name('change.telefono');
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
-
-
-
-// Route::get('/login/token/{token}', [LoginController::class, 'loginWithToken'])->name('login.token');
-// Route::get('/login/token/{token}', [LoginController::class, 'showLoginFormWithToken'])->name('login.token');
 
 Auth::routes();
 
 Route::get('/', [LoginController::class, 'showLoginForm']);
-
-//Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/check-user-role', [LoginController::class, 'checkUserRole'])->name('check-user-role');
 
 
-
-
 /**
  * Rutas para la PWA
  */
 Route::get('/offline', [HomeController::class, 'offline'])->name('offline');
-
-
-
-
 
 
 // Login Routes...

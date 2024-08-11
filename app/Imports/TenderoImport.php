@@ -6,11 +6,19 @@ use App\Models\Tendero;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use App\Models\Cumplimiento;
+use Illuminate\Support\Facades\Log;
 
 class TenderoImport implements ToModel, WithHeadingRow
 {
     public function model(array $row)
     {
+        $existingTendero = Tendero::where('cedula', $row['codigo_pdv'])->first();
+
+        if ($existingTendero) {
+            \Log::info('Tendero ya existe: ' . $row['codigo_pdv']);
+            return $existingTendero;
+        }
+
         $tendero = new Tendero([
             'producto' => $row['producto'],
             'canal' => $row['canal'],

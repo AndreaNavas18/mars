@@ -32,6 +32,11 @@
                     <h1 class="nuevoTT animate__animated animate__backInDown">Bienvenido</h1>
                     <img src="{{ asset('images/new/marsCo.png') }}" class="vecinoTT animate__animated animate__flipInY" alt="Vecino">
                 </div>
+                @if(session('message'))
+                    <div class="alert alert-warning">
+                        {{ session('message') }}
+                    </div>
+                @endif
                 <form method="POST" action="{{ generate_url('login') }}">
                     @csrf
                     <input type="hidden" name="token" value="{{ request()->query('token') }}">
