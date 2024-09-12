@@ -54,6 +54,7 @@
                     <option value="">---Seleccione una opción---</option>
                     <option value="multicanal">Multicanal</option>
                     <option value="tat">TAT</option>
+                    <option value="pet">PET</option>
                 </select>
 
                 <button style="cursor: pointer" type="submit">Crear usuario</button>

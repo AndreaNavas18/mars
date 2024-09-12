@@ -36,6 +36,7 @@
                 <select name="canal" id="canal">
                     <option value="multicanal" {{ $vendedor->canal == 'multicanal' ? 'selected' : '' }}>Multicanal</option>
                     <option value="tat" {{ $vendedor->canal == 'tat' ? 'selected' : '' }}>TAT</option>
+                    <option value="pet" {{ $vendedor->canal == 'pet' ? 'selected' : '' }}>PET</option>
                 </select>
 
 
