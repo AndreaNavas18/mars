@@ -27,6 +27,7 @@
                 <label for="producto">Producto</label>
                 <select name="producto" id="producto">
                     <option value="wet" {{ $tendero->producto == 'wet' ? 'selected' : '' }}>WET</option>
+                    <option value="pet" {{ $tendero->producto == 'pet' ? 'selected' : '' }}>PET</option>
                     <option value="choco" {{ $tendero->producto == 'choco' ? 'selected' : '' }}>CHOCO</option>
                 </select>
                 <label for="canal">Canal</label>

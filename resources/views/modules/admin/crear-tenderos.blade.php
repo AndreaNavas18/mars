@@ -28,6 +28,7 @@
                 <label for="producto">Producto</label>
                 <select name="producto" id="producto">
                     <option value="WET">WET</option>
+                    <option value="PET">PET</option>
                     <option value="CHOCO">CHOCO</option>
                 </select>
                 <label for="canal">Canal</label>
