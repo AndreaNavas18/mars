@@ -32,15 +32,16 @@
                 </select>
                 <label for="canal">Canal</label>
                 <select name="canal" id="canal">
-                    <option value="sr" {{ $tendero->canal == 'sr' ? 'selected' : '' }}>SR</option>
+                    <option value="SR" {{ $tendero->canal == 'SR' ? 'selected' : '' }}>SR</option>
+                    <option value="SPT" {{ $tendero->canal == 'SPT' ? 'selected' : '' }}>SPT</option>
                 </select>
                 <label for="subcanal">Sub-Canal</label>
                 <select name="subcanal" id="subcanal">
-                    <option value="tat" {{ $tendero->subcanal == 'tat' ? 'selected' : '' }}>TAT</option>
+                    <option value="TAT" {{ $tendero->subcanal == 'TAT' ? 'selected' : '' }}>TAT</option>
                 </select>
                 <label for="region_nielsen">Región Nielsen</label>
                 <select name="region_nielsen" id="region_nielsen">
-                    <option value="cundiboy" {{ $tendero->region_nielsen == 'cundiboy' ? 'selected' : '' }}>CUNDI-BOY</option>
+                    <option value="CUNDI-BOY" {{ $tendero->region_nielsen == 'CUNDI-BOY' ? 'selected' : '' }}>CUNDI-BOY</option>
                 </select>
                 <label for="drop_size">Drop size</label>
                 <input type="number" name="drop_size" id="drop_size" value="{{ $tendero->drop_size }}" >

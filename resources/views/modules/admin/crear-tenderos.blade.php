@@ -34,6 +34,7 @@
                 <label for="canal">Canal</label>
                 <select name="canal" id="canal">
                     <option value="SR">SR</option>
+                    <option value="SPT">SPT</option>
                 </select>
                 <label for="subcanal">Sub-Canal</label>
                 <select name="subcanal" id="subcanal">
