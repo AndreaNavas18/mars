@@ -26,9 +26,9 @@
                 <input type="number" name="telefono" id="telefono" value="{{ $tendero->telefono }}">
                 <label for="producto">Producto</label>
                 <select name="producto" id="producto">
-                    <option value="wet" {{ $tendero->producto == 'wet' ? 'selected' : '' }}>WET</option>
-                    <option value="pet" {{ $tendero->producto == 'pet' ? 'selected' : '' }}>PET</option>
-                    <option value="choco" {{ $tendero->producto == 'choco' ? 'selected' : '' }}>CHOCO</option>
+                    <option value="WET" {{ $tendero->producto == 'WET' ? 'selected' : '' }}>WET</option>
+                    <option value="PET" {{ $tendero->producto == 'PET' ? 'selected' : '' }}>PET</option>
+                    <option value="CHOCO" {{ $tendero->producto == 'CHOCO' ? 'selected' : '' }}>CHOCO</option>
                 </select>
                 <label for="canal">Canal</label>
                 <select name="canal" id="canal">
