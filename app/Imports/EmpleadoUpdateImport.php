@@ -16,7 +16,7 @@ class EmpleadoUpdateImport implements ToModel, WithHeadingRow
         // Si existe el vendedor, lo actualizamos
         if ($vendedor) {
             $vendedor->update([
-                'perfil' => $row['perfil'],
+                'telefono' => $row['telefono'],
                 'canal' => $row['canal'],
             ]);
 
