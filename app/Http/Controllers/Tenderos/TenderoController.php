@@ -14,6 +14,7 @@ use App\Models\Cumplimiento;
 use App\Imports\TenderoImport;
 use App\Imports\TokenImport;
 use App\Imports\EmpleadoImport;
+use App\Imports\EmpleadoUpdateImport;
 use App\Imports\CumplimientoImport;
 use App\Models\Vendedor;
 use Illuminate\Support\Facades\Auth;
@@ -260,6 +261,21 @@ class TenderoController extends BaseController
         }else {
             Alert::error('Error', 'Error al importar archivo.');
             return redirect()->back()->with('error', 'No se importó correctamente la información');
+        }
+
+    }
+
+    public function importEmpleadosUpdate (Request $request){
+
+        if($request->hasFile('empleadoupdatedocumento')){
+
+            $file = $request->file('empleadoupdatedocumento');
+            Excel::import(new EmpleadoUpdateImport, $file);
+
+            return redirect()->back()->with('success', 'Listado actualizado de empleados importados exitosamente');
+        }else {
+            Alert::error('Error', 'Error al importar archivo.');
+            return redirect()->back()->with('error', 'No se actualizaron correctamente los empleados');
         }
 
     }

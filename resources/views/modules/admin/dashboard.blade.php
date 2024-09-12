@@ -35,7 +35,7 @@
             <div class="administrarV btnInicial" id="menuAdminV">
                 <a href="{{ url('administrar-vendedores')}}" id="botonAdminV" class="botonAdminV"><h2 style="font-family:'HelveticaBold', sans-serif;font-size:20px">Administrar vendedores</h2></a>
             </div>
-            <div style="margin-left:70px;display:none">
+            <div style="margin-left:70px;display:">
                 <div class="import btnInicial" id="menuImport">
                     <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.tenderos') }}" enctype="multipart/form-data">
                         @csrf
@@ -103,6 +103,25 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-12  mb-4">
                                 <input type="file" name="cumplimientodocumento" class="uppp">
+                            </div>
+                            <div class="col-md-3 col-sm-12 mb-4 mt-2">
+                                <button class="btnImm"
+                                    type="submit"
+                                    name="action"
+                                    value="importar">
+                                    <i class="fas fa-arrow-up-from-bracket"></i> Importar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="import btnInicial" id="menuImport">
+                    <form method="POST" id="frmImport" class="botonImport" action="{{ route('import.empleados.update') }}" enctype="multipart/form-data">
+                        @csrf
+                        <p class="titImport">Actualizar empleado(s)</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12  mb-4">
+                                <input type="file" name="empleadoupdatedocumento" class="uppp">
                             </div>
                             <div class="col-md-3 col-sm-12 mb-4 mt-2">
                                 <button class="btnImm"

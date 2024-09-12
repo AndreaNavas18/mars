@@ -91,6 +91,8 @@ use App\Http\Controllers\Vendedores\VendedorController;
     Route::post('/importar-empleados', [ TenderoController::class, 'importEmpleados' ])->name('import.empleados');
 
     Route::post('/importar-cumplimiento', [ TenderoController::class, 'importCumplimientos' ])->name('import.cumplimientos');
+    
+    Route::post('/importar-empleados-update', [ TenderoController::class, 'importEmpleadosUpdate' ])->name('import.empleados.update');
 
     Route::get('/search-admin-tenderos', [TenderoController::class, 'searchTenderos'])->name('search.admin.tenderos');
 

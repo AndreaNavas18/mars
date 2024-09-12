@@ -14,6 +14,9 @@ class Vendedor extends Model
     ['nombre',
     'cedula',
     'email',
+    'telefono',
+    'perfil',
+    'canal',
     'user_id',
     ];
 

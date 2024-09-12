@@ -26,9 +26,10 @@ class EmpleadoImport implements ToModel, WithHeadingRow
         $vendedor = Vendedor::create([
             'nombre' => $row['nombre'],
             'cedula' => $row['cedula'],
-            'canal' => $row['canal'],
             'email' => $row['email'],
             'telefono' => $row['telefono'],
+            'perfil' => $row['perfil'],
+            'canal' => $row['canal'],
             'user_id' => $user_id,
         ]);
 

@@ -12,8 +12,8 @@ class Tendero extends Model
     protected $table = 'tenderos';
     protected $fillable = 
     ['nombre', 
-    'telefono',
     'cedula',
+    'telefono',
     'user_id',
     'producto',
     'canal',
