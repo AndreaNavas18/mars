@@ -28,15 +28,15 @@
                 <input type="number" name="telefono" id="telefono" value="{{ $vendedor->telefono }}" >
                 <label for="perfil">Perfil</label>
                 <select name="perfil" id="perfil">
-                    <option value="supervisor" {{ $vendedor->perfil == 'supervisor' ? 'selected' : '' }}>Supervisor</option>
-                    <option value="vendedor_base" {{ $vendedor->perfil == 'vendedor_base' ? 'selected' : '' }}>Vendedor base</option>
-                    <option value="vendedor_focalizado" {{ $vendedor->perfil == 'vendedor_focalizado' ? 'selected' : '' }}>Vendedor focalizado</option>
+                    <option value="SUPERVISOR" {{ $vendedor->perfil == 'supervisor' ? 'selected' : '' }}>Supervisor</option>
+                    <option value="VENDEDOR BASE" {{ $vendedor->perfil == ('vendedor_base' || 'VENDEDOR BASE') ? 'selected' : '' }}>Vendedor base</option>
+                    <option value="VENDEDOR FOCALIZADO" {{ $vendedor->perfil == ('vendedor_focalizado' || 'VENDEDOR FOCALIZADO') ? 'selected' : '' }}>Vendedor focalizado</option>
                 </select>
                 <label for="canal">Canal</label>
                 <select name="canal" id="canal">
-                    <option value="multicanal" {{ $vendedor->canal == 'multicanal' ? 'selected' : '' }}>Multicanal</option>
-                    <option value="tat" {{ $vendedor->canal == 'tat' ? 'selected' : '' }}>TAT</option>
-                    <option value="pet" {{ $vendedor->canal == 'pet' ? 'selected' : '' }}>PET</option>
+                    <option value="MULTICANAL" {{ $vendedor->canal == 'MULTICANAL' ? 'selected' : '' }}>Multicanal</option>
+                    <option value="TAT" {{ $vendedor->canal == 'TAT' ? 'selected' : '' }}>TAT</option>
+                    <option value="PET" {{ $vendedor->canal == 'PET' ? 'selected' : '' }}>PET</option>
                 </select>
 
 

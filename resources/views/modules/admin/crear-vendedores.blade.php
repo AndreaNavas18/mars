@@ -44,17 +44,17 @@
                 <label for="perfil" id="perfil-label">Perfil</label>
                 <select name="perfil" id="perfil">
                     <option value="">---Seleccione una opción---</option>
-                    <option value="supervisor">Supervisor</option>
-                    <option value="vendedor_base">Vendedor Base</option>
-                    <option value="vendedor_focalizado">Vendedor Focalizado</option>
+                    <option value="SUPERVISOR">Supervisor</option>
+                    <option value="VENDEDOR BASE">Vendedor Base</option>
+                    <option value="VENDEDOR FOCALIZADO">Vendedor Focalizado</option>
                 </select>
 
                 <label for="canal" id="canal-label">Canal</label>
                 <select name="canal" id="canal">
                     <option value="">---Seleccione una opción---</option>
-                    <option value="multicanal">Multicanal</option>
-                    <option value="tat">TAT</option>
-                    <option value="pet">PET</option>
+                    <option value="MULTICANAL">Multicanal</option>
+                    <option value="TAT">TAT</option>
+                    <option value="PET">PET</option>
                 </select>
 
                 <button style="cursor: pointer" type="submit">Crear usuario</button>
