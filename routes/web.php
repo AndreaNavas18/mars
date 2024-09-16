@@ -148,6 +148,8 @@ use App\Http\Controllers\Vendedores\VendedorController;
 
 Auth::routes();
 
+Route::post('login', [LoginController::class, 'login'])->middleware('throttle:3,1')->name('login');
+
 Route::get('/', [LoginController::class, 'showLoginForm']);
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
