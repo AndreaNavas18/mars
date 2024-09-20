@@ -8,7 +8,7 @@
         </div>
         <div class="contentTT">
             <div class="divPTT">
-                <h1 class="punTT">${{ number_format(auth()->user()->tendero->cuota_mes, 0, ',', '.') }}</h1>
+                <h1 class="punTT">${{ number_format(auth()->user()->tendero->drop_size, 0, ',', '.') }}</h1>
                 <h2 class="tituTTT">META PERIODO 1</h2>
             </div>
             <div class="opcTT">
