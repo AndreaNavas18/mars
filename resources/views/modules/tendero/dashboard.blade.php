@@ -9,7 +9,7 @@
         <div class="contentTT">
             <div class="divPTT">
                 <h1 class="punTT">${{ number_format(auth()->user()->tendero->drop_size, 0, ',', '.') }}</h1>
-                <h2 class="tituTTT">META P10</h2>
+                <h2 class="tituTTT">META P11</h2>
             </div>
             <div class="opcTT">
                 <h2 class="titu2TTT">Categorias</h2>
