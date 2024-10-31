@@ -1,5 +1,11 @@
 @extends('layouts.appT')
-
+@php
+    $periodos = [
+        'pet' => 'P11',
+        'wet' => 'P12',
+        'choco' => 'P12'
+    ]
+@endphp
 @section('content')
         <link rel="stylesheet" href="{{ asset('css/tenderos/dashboard.css') }}">
         <script src="{{ asset('js/load.js') }}" defer></script>
@@ -9,7 +15,7 @@
         <div class="contentTT">
             <div class="divPTT">
                 <h1 class="punTT">${{ number_format(auth()->user()->tendero->drop_size, 0, ',', '.') }}</h1>
-                <h2 class="tituTTT">META P12</h2>
+                <h2 class="tituTTT">META {{$periodos[strtolower(auth()->user()->tendero->producto)]}}</h2>
             </div>
             <div class="opcTT">
                 <h2 class="titu2TTT">Categorias</h2>
