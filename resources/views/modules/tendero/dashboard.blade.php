@@ -1,7 +1,7 @@
 @extends('layouts.appT')
 @php
     $periodos = [
-        'pet' => 'P11',
+        'pet' => 'P12',
         'wet' => 'P12',
         'choco' => 'P12'
     ]
